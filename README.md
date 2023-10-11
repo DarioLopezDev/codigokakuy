@@ -24,4 +24,13 @@ Lopez, Dario
 Vettorazzo, Nicolas
 21 años, estudio diseño y animacion digital, voy al gimnasio, vivo en capital de santiago del estero, iniciando en la programacion, me gusta mucho las series animadas, el anime generos variados, libros favoritos Five nights at Freddy's de Scott Cawthon, me gusta salir con amigos pasarla bien, juntadas en casa, etc. 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Paginas relacionadas con nuestro proyecto para inspirarnos:
+
+(https://www.amazon.es/)
+(https://www.casadellibro.com)
+(https://www.audible.es/)
+(https://tiendamia.com/ar/Libros)
+(https://www.planetadelibros.com.ar/libros/comics/00021)
+(https://mangadex.org/)
