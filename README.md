@@ -11,8 +11,12 @@ Pagina para venta de libros electrónicos, tantos libros fisicos como e-books, c
 
 ### Integrantes:
 
-* Abdala, Santiago 
-25 años, estudiante de gastronomía, iniciando en la programacion, vivo en Capital. Libros favoritos: House of Leaves, Martin Fierro, etc.
+* Abdala, Santiago :
+- Edad 25 años. 
+- Localidad: Vivo en Capital.
+- Ocupación: Estudiante de gastronomía.
+- Iniciando en la programacion.
+- Libros favoritos: House of Leaves, Martin Fierro, Metro series, Mangas, 
 
 * Antuz, Adolfo Javier:
 - Edad: 33 años.
