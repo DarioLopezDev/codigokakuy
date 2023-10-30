@@ -31,7 +31,14 @@ Pagina para venta de libros electrónicos, tantos libros fisicos como e-books, c
 34 años, Tengo un Negocio de Bebidas, estudiante de Desarrollo Web, Experiencia en HTML5, CSS3, JAVASCRIPT, BOOTSTRAP, GITHUB, GIT, vivo en capital de Santiago del Estero pero naci en Tucuman, libros favoritos: La rebelion de Atlas de Ayn Rand, Padre Rico Padre Pobre de Robert Kiyosaki, entre otros autores como Ken Follet, etc. 
 
 * Vettorazzo, Nicolas
-21 años, estudio diseño y animacion digital, voy al gimnasio, vivo en capital de santiago del estero, iniciando en la programacion, me gusta mucho las series animadas, el anime generos variados, libros favoritos Five nights at Freddy's de Scott Cawthon, me gusta salir con amigos pasarla bien, juntadas en casa, etc. 
+- 21 años.
+- Estudio diseño y animacion digital.
+- Voy al gimnasio.
+- Vivo en capital de santiago del estero.
+- Iniciando en la programacion.
+- Me gusta el anime de cualquier tipo de genero.
+- Libro favorito: Five nights at Freddy's, de Scott Cawthon.
+- Me gusta salir con amigos, juntadas en casa, etc. 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
