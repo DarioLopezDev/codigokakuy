@@ -4,6 +4,15 @@
     margin: 0;
 }
 
+:root {
+    --color1: rgb(165,91,64);
+    --color2: rgb(255,182,53);
+    --color3: rgb(196,120,62);
+    --color4: rgb(122,89,72);
+    --color5: rgb(142,86,73);
+    --color6: rgb(179,133,109);
+}
+
 button {
     background: none;
     border: 0;
@@ -13,16 +22,46 @@ button {
     line-height: normal;
     overflow: visible;
     padding: 0;
+    display: contents;
 }
 
 /***********************************************************HEADER***********************************************************/
 
 header {
-    background-color: gray;
+    background-color: var(--color2);
+    padding: 20px 10px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu {
+    width: 25%;
+    text-align: center;
+}
+
+header h2 {
+    text-align: center;
+    display: block;
+    width: 50%;
+    font-size: 16px;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 25%;
+    background-color: white;
+    margin-left: 0px;
+    
+}
+
+.searchBar input {
+    max-width: 80%; 
+    border: none;
 }
 
 /***********************************************************MAIN***********************************************************/
@@ -30,17 +69,29 @@ main {
     background-color: brown;
 }
 
+main h2 {
+    text-align: center;
+}
+
 .only-images {
-    width: 50vw;
+    width: 60vw;
+    margin: auto;
 }
 
 .big-image {
     width: 100%;
 }
 
-.small-images {
-    width: 10%
+.images-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+.small-images {
+    width: 20%
+}   
 
 
 /***********************************************************ASIDE***********************************************************/
@@ -53,6 +104,15 @@ aside {
 
 footer {
     background-color: gray;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /***********************************************************MEDIA***********************************************************/
