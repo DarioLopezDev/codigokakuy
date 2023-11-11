@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color1: rgb(165,91,64);
+    --color2: rgb(255,182,53);
+    --color3: rgb(196,120,62);
+    --color4: rgb(122,89,72);
+    --color5: rgb(142,86,73);
+    --color6: rgb(179,133,109);
+}
