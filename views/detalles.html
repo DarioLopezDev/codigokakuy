@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/detalles.css">
+    <!---------------- Íconos ---------------->
+    <script src="https://kit.fontawesome.com/93d15c86bc.js" crossorigin="anonymous"></script>
     <title>Detalles del Producto</title>
 </head>
 
 <body>
     <header>
-        <a href="" class="menu">B</a>
+        <a href="" class="menu"><i class="fa-solid fa-list"></i></a>
         <h2><a href="/">Tienda de libros Kakuy</a></h2>
         <div class="searchBar">
             <input type="text" placeholder="Busque su libro">
-            <button>L</button>
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </header>
 
@@ -24,16 +26,16 @@
             <button><img src="images/cien años de soledad tapa frontal.png" alt="imagen-grande"
                     class="big-image"></button>
             <div class="images-container">
-                <button>=</button>
-                <button><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
+                <button><i class="fa-solid fa-chevron-left"></i></button>
+                <button><img src="images/cien años de soledad tapa frontal.png" alt="tapa-imagen-chica"
                         class="small-images"></button>
-                <button><img src="images/cien años de soledad diagonal.png" alt="imagen-chica"
+                <button><img src="images/cien años de soledad diagonal.png" alt="diagonal-imagen-chica"
                         class="small-images"></button>
-                <button><img src="images/cien años de soledad hojas.png" alt="imagen-chica"
+                <button><img src="images/cien años de soledad hojas.png" alt="hojas-imagen-chica"
                         class="small-images"></button>
-                <button><img src="images/cien años de soledad tapa frontal dorso posterior.png" alt="imagen-chica"
+                <button><img src="images/cien años de soledad tapa frontal dorso posterior.png" alt="posterior-imagen-chica"
                         class="small-images"></button>
-                <button>=</button>
+                <button><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </section>
         <section>
@@ -71,46 +73,51 @@
 
     <aside>
         <h2>Productos Relacionados</h2>
-        <button>=</button>
-        <button><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></button>
-        <button><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></button>
-        <button><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></button>
-        <button><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></button>
-        <button><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></button>
-        <button>=</button>
+        <div class="aside-container">
+            <button><i class="fa-solid fa-chevron-left"></i></button>
+        <a href="#"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
+                class="small-images"></a>
+        <a href="#"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
+                class="small-images"></a>
+        <a href="#"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
+                class="small-images"></a>
+        <a href="#" class="aside-tablet"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
+                class="small-images"></a>
+        <a href="#" class="aside-pc"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
+                class="small-images"></a>
+        <button><i class="fa-solid fa-chevron-right"></i></button>
     </aside>
+        </div>
+        
 
     <footer>
         <section>
             <h3>Contáctanos</h3>
-            <ul>
-                <li>Teléfono</li>
-                <li>Email</li>
-                <li>Dirección</li>
-                <li>Correo</li>
+            <ul class="footer-contact">
+                <li>Teléfono: +54 9 385 5 123-4567</li>
+                <li>Email: tiendakakuy@mail.com</li>
+                <li>Dirección: Calle Falsa 123</li>
             </ul>
-            <ul>Nuestras Redes Sociales:
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
+            <br>
+            <h3>Nuestras Redes Sociales:</h3>
+            <ul class="footer-social-networks">
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
             </ul>
         </section>
+        <br>
         <section>
             <h3>Medios de pago</h3>
-            <ul>
-                <li><a href="#">a</a></li>
-                <li><a href="#">b</a></li>
-                <li><a href="#">c</a></li>
-                <li><a href="#">d</a></li>
-                <li><a href="#">e</a></li>
-                <li><a href="#">f</a></li>
-                <li><a href="#">g</a></li>
-                <li><a href="#">h</a></li>
+            <ul class="footer-payments">
+                <li><i class="fa-brands fa-cc-visa"></i></li>
+                <li><i class="fa-brands fa-cc-mastercard"></i></li>
+                <li><i class="fa-brands fa-cc-paypal"></i></li>
+                <li><i class="fa-brands fa-cc-stripe"></i></li>
+                <li><i class="fa-brands fa-cc-jcb"></i></li>
+                <li><i class="fa-brands fa-cc-discover"></i></li>
+                <li><i class="fa-brands fa-cc-apple-pay"></i></li>
+                <li><i class="fa-brands fa-cc-amazon-pay"></i></li>
             </ul>
         </section>
     </footer>

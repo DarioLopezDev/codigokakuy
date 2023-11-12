@@ -52,7 +52,7 @@ header h2 {
 .searchBar {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
     width: 25%;
     background-color: white;
     margin-left: 0px;
@@ -66,7 +66,8 @@ header h2 {
 
 /***********************************************************MAIN***********************************************************/
 main {
-    background-color: brown;
+    background-color: var(--color5);
+    color: #ffffff;
 }
 
 main h2 {
@@ -74,7 +75,7 @@ main h2 {
 }
 
 .only-images {
-    width: 60vw;
+    width: 80vw;
     margin: auto;
 }
 
@@ -88,6 +89,7 @@ main h2 {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
 }
 
 .small-images {
@@ -98,14 +100,33 @@ main h2 {
 /***********************************************************ASIDE***********************************************************/
 
 aside {
-    background-color: burlywood;
+    background-color: var(--color3);
 }
+
+aside h2 {
+    text-align: center;
+}
+
+.aside-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+aside a {
+    display: contents;
+}
+
+.aside-tablet, .aside-pc {
+    display: none;
+}
+
+
 
 /***********************************************************FOOTER***********************************************************/
-
-footer {
-    background-color: gray;
-}
 
 ul {
     list-style: none;
@@ -116,4 +137,37 @@ a {
     color: black;
 }
 
+footer {
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-social-networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-social-networks li {
+    display: contents;
+    font-size: 36px;
+}
+
+.footer-payments{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-payments li {
+    width: 25%;
+    font-size: 36px;
+}
+
 /***********************************************************MEDIA***********************************************************/
+@media (min-width: 395px) {}
+
+@media (min-width: 790px) {}
