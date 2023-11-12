@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    
     <title>Login</title>
+
 </head>
+
+<header>
+
+    <a href="" class="menu">B</a>
+        <h2><a href="/">Tienda de libros Kakuy</a></h2>
+        <div class="searchBar">
+            <input type="text" placeholder="Busque su libro">
+            <button>L</button>
+        </div>
+
+</header>
+
 <body>
-    <h1><a href="/">Ir al Home</a></h1>
+
+    <form id="formularioLoginBox" action="/" method="post">
+
+        <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+
+        <input type="password" id="contrasena" name="contrasena" placeholder="Elegí tu Contraseña" required>
+
+        <div class="recordarmeBox">
+
+            <label for="recordarme" id="recordarmeTitulo">Recordarme</label>
+            <input type="checkbox" id="recordarme" name="recordarme" value="Recordarme">
+
+        </div>
+
+        <ul>
+
+            <li><a href="#">Politica de Privacidad</a></li>
+
+        </ul>
+
+        <input id="botonEnviarLogin" type="submit" value="Enviar">
+
+    </form>
+
+    <ul class="linksLogin">
+
+        <li><a href="/register">Crear una cuenta</a></li>
+        <li><a href="#">Perdiste tu contraseña?</a></li>
+        <li><a href="/">Pagina Principal</a></li>
+
+    </ul>
+
 </body>
+
+<footer>
+
+    <section>
+
+        <h3>Contáctanos</h3>
+
+        <ul>
+            <li>Teléfono</li>
+            <li>Email</li>
+            <li>Dirección</li>
+            <li>Correo</li>
+        </ul>
+
+        <ul>Nuestras Redes Sociales:
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h3>Medios de pago</h3>
+        <ul>
+            <li><a href="#">a</a></li>
+            <li><a href="#">b</a></li>
+            <li><a href="#">c</a></li>
+            <li><a href="#">d</a></li>
+            <li><a href="#">e</a></li>
+            <li><a href="#">f</a></li>
+            <li><a href="#">g</a></li>
+            <li><a href="#">h</a></li>
+        </ul>
+
+    </section>
+
+</footer>
+
 </html>

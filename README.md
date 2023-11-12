@@ -12,7 +12,7 @@ Pagina para venta de libros electrónicos, tantos libros fisicos como e-books, c
 ### Integrantes:
 
 * Abdala, Santiago :
-   - Edad 25 años. 
+   - Edad 26 años. 
    - Localidad: Vivo en Capital.
    - Ocupación: Estudiante de gastronomía.
    - Iniciando en la programacion.

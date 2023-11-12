@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="css/register.css">
+    
+    <title>Registro</title>
+
 </head>
+
+<header>
+
+    <a href="" class="menu">B</a>
+        <h2><a href="/">Tienda de libros Kakuy</a></h2>
+        <div class="searchBar">
+            <input type="text" placeholder="Busque su libro">
+            <button>L</button>
+        </div>
+
+</header>
+
 <body>
-    <h1><a href="/">Ir al Home</a></h1>
+
+    <form id="formularioRegistroBox" action="/" method="post">
+
+        <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
+
+
+        <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required>
+
+
+        <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required>
+
+
+        <input type="email" id="email" name="email" placeholder="Email" required>
+
+
+        <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+
+        <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
+        <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+
+
+        <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
+        <input type="file" id="foto" name="foto">
+
+
+        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+
+        <input type="password" id="confirmarContrasena" name="confirmarContrasena" placeholder="Confirmar Contraseña" required>
+
+        <div class="terminosServiciosBox">
+
+            <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y Servicios</label>
+            <input type="checkbox" id="terminosServicios" name="terminosServicios" value="Terminos y Servicios" required>
+
+        </div>
+
+        <input id="botonEnviarRegister" type="submit" value="Enviar">
+        <input id="botonBorrarRegister" type="reset" value="Borrar">
+
+    </form>
+
+    <ul class="linksRegistro">
+
+        <li><a href="/">Pagina Principal</a></li>
+        <li><a href="/login">Ya tengo una cuenta</a></li>
+
+    </ul>
+
 </body>
+
+<footer>
+
+    <section>
+
+        <h3>Contáctanos</h3>
+
+        <ul>
+            <li>Teléfono</li>
+            <li>Email</li>
+            <li>Dirección</li>
+            <li>Correo</li>
+        </ul>
+
+        <ul>Nuestras Redes Sociales:
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h3>Medios de pago</h3>
+        <ul>
+            <li><a href="#">a</a></li>
+            <li><a href="#">b</a></li>
+            <li><a href="#">c</a></li>
+            <li><a href="#">d</a></li>
+            <li><a href="#">e</a></li>
+            <li><a href="#">f</a></li>
+            <li><a href="#">g</a></li>
+            <li><a href="#">h</a></li>
+        </ul>
+
+    </section>
+
+</footer>
+
 </html>
