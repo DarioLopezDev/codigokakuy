@@ -13,6 +13,95 @@
     --color6: rgb(179,133,109);
 }
 
+body {
+    background-color: var(--color5);
+    display: flex;
+    flex-direction: column;
+}
+
+#formularioLoginBox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color1);
+    padding-top: 20px;
+}
+
+#datosLoginTitulo {
+    margin: 2px;
+    padding: 2px;
+    font-size: 18px;
+}
+
+#usuario {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#contrasena {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.recordarmeBox {
+    padding: 20px;
+}
+
+#recordarmeTitulo {
+    margin: 2px;
+    padding: 2px;
+    font-size: 18px;
+}
+
+#botonEnviarLogin {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.politicaPrivacidadBox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px 0;
+}
+
+#politicaPrivacidadTitulo {
+    margin: 2px;
+    padding: 2px;
+    font-size: 18px;
+}
+
+.politicaPrivacidadBox li {
+    margin: 2px;
+    padding: 2px;
+    font-size: 18px;
+}
+
+.linksLogin {
+    display: flex;
+    background-color: var(--color1);
+    flex-wrap: wrap;
+    justify-content: center;
+    color:blue;
+    text-decoration: underline;
+    padding: 20px 0;
+}
+
+.linksLogin li {
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
 /***********************************************************HEADER***********************************************************/
 
 header {
@@ -54,10 +143,6 @@ header h2 {
 
 /***********************************************************FOOTER***********************************************************/
 
-footer {
-    background-color: gray;
-}
-
 ul {
     list-style: none;
 }
@@ -65,4 +150,34 @@ ul {
 a {
     text-decoration: none;
     color: black;
+}
+
+footer {
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-social-networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-social-networks li {
+    display: contents;
+    font-size: 36px;
+}
+
+.footer-payments{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-payments li {
+    width: 25%;
+    font-size: 36px;
 }
