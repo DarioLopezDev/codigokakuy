@@ -135,6 +135,7 @@ margin-right: 10px;
 background-color: black;
 color: var(--color2);
 }
+
 #select2 {
     border-radius: 5px;
     border-style: 1px;
@@ -142,6 +143,7 @@ color: var(--color2);
     background-color: black;
     color: var(--color2);
 }
+
 #select3 {
     margin-left: 10px;
     border-radius: 5px;
