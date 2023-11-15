@@ -82,17 +82,27 @@
 
 .portada{
     text-align: center;
-    border: solid 1px red;
+    border: solid 1px grey;
     width: 150px;
     height: 200px;
     position: relative;
-    top: 20px;
+    top: 30px;
     left: 25px;
+}
+
+.portada1{
+    text-align: center;
+    border: solid 1px grey;
+    width: 150px;
+    height: 200px;
+    position: relative;
+    bottom: 170px;
+    left: 175px;
 }
 
 .portada2{
     text-align: center;
-    border: solid 1px blueviolet;
+    border: solid 1px grey;
     width: 150px;
     height: 200px;
     position: relative;
@@ -100,22 +110,60 @@
     left: 25px;
 }
 
-.portada3{
+.portada20{
     text-align: center;
-    border: solid 1px blue;
+    border: solid 1px grey;
     width: 150px;
     height: 200px;
     position: relative;
-    bottom: 380px;
+    bottom: 160px;
+    left: 175px;
+}
+
+.portada3{
+    text-align: center;
+    border: solid 1px grey;
+    width: 150px;
+    height: 200px;
+    position: relative;
+    bottom: 770px;
     left: 450px;
+}
+
+.portada30{
+    text-align: center;
+    border: solid 1px grey;
+    width: 150px;
+    height: 200px;
+    position: relative;
+    bottom: 970px;
+    left: 600px;
 }
 
 .portada4{
     text-align: center;
-    border: solid 1px green;
+    border: solid 1px grey;
     width: 150px;
     height: 200px;
     position: relative;
-    bottom: 360px;
+    bottom: 760px;
     left: 450px;
+}
+
+.portada40{
+    text-align: center;
+    border: solid 1px grey;
+    width: 150px;
+    height: 200px;
+    position: relative;
+    bottom: 960px;
+    left: 600px;
+}
+
+.fa-heart{
+    width: 100px;
+}
+
+body{
+    background-color: var(--color1);
 }
