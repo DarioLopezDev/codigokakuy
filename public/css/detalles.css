@@ -25,11 +25,15 @@ button {
     display: contents;
 }
 
+body {
+    background-color: var(--color5);
+}
+
 /***********************************************************HEADER***********************************************************/
 
 header {
     background-color: var(--color2);
-    padding: 20px 10px;
+    padding: 15px 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -46,16 +50,17 @@ header h2 {
     text-align: center;
     display: block;
     width: 50%;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .searchBar {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 25%;
-    background-color: white;
+    max-width: 25%;
+    background-color: #ffffff;
     margin-left: 0px;
+    border-radius: 5px;
     
 }
 
@@ -64,10 +69,21 @@ header h2 {
     border: none;
 }
 
+nav {
+    flex: auto;
+    margin-top: 15px;
+    font-size: 12px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
 /***********************************************************MAIN***********************************************************/
 main {
     background-color: var(--color5);
     color: #ffffff;
+    border: solid 3px black;
+    margin: 10px;
 }
 
 main h2 {
@@ -77,10 +93,18 @@ main h2 {
 .only-images {
     width: 80vw;
     margin: auto;
+    background-color: var(--color6);
 }
 
-.big-image {
-    width: 100%;
+.big-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.big-image img {
+    width: 80%;
 }
 
 .images-container {
@@ -90,21 +114,75 @@ main h2 {
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
+    margin-bottom: 10px;
+}
+
+.main-info  {
+    background-color: var(--color6);
+    border: solid 1px black;
+    margin: 5px 10px;
+}
+
+main article {
+    padding: 15px;
+    margin: 10px;
+}
+
+main article p {
+    margin-bottom: 5px;
 }
 
 .small-images {
-    width: 20%
+    width: 18%
 }   
 
+.main-first {
+    border: solid 3px black;
+}
+
+.main-second {
+    border: solid 2px black;
+}
+
+.main-third {
+    text-align: center;
+}
+
+.main-buyit h2 {
+    background-color: var(--color2);
+    color: black;
+    font-size: 16px;
+    max-width: 200px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.main-review {
+    background-color: var(--color6);
+    margin: 10px;
+    padding: 10px;
+    border: solid 2px black;
+}
+
+.main-review h3 {
+    text-align: center;
+}
 
 /***********************************************************ASIDE***********************************************************/
 
 aside {
     background-color: var(--color3);
+    margin: 10px;
+    border-radius: 8px;
+    padding-bottom: 5px;
 }
 
 aside h2 {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .aside-container {
@@ -113,14 +191,27 @@ aside h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+    border: dashed 3px black;
+    padding: 5px;
+    margin: 5px;
 }
 
 aside a {
     display: contents;
 }
 
-.aside-tablet, .aside-pc {
+aside p {
+    text-align: center;
+}
+
+.aside-element {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.aside-element-tablet, .aside-element-pc {
     display: none;
 }
 
@@ -168,6 +259,134 @@ footer {
 }
 
 /***********************************************************MEDIA***********************************************************/
-@media (min-width: 395px) {}
+@media (min-width: 395px) {
+    header h2 {
+        font-size: 22px;
+    }
 
-@media (min-width: 790px) {}
+    nav {
+        font-size: 14px;
+    }
+
+    .only-images {
+        width: 70vw;
+        margin: auto;
+    }
+
+    .big-image img {
+        width: 70%;
+    }
+
+    .main-info  {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 545px;
+        margin: auto;
+    }
+
+    .main-first, .main-second {
+        width: 44%;
+    }
+
+    .main-buyit h2 {
+        font-size: 18px;
+    }
+
+    .aside-element {
+        width: 21%;
+    }
+
+    .aside-element-tablet {
+        display: flex;
+        flex-direction: column;
+        width: 21%;
+    }
+}
+
+@media (min-width: 790px) {
+    header h2 {
+        font-size: 24px;
+    }
+
+    nav {
+        font-size: 16px;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+     .only-images {
+        width: 50%;
+        margin: auto;
+    }      
+
+    .main-info-container  {
+        display: block;
+        margin-top: 0px;
+        width: 50%;
+        height: 50%;
+    }
+    .main-info {
+        border: none;
+    }
+
+    .main-first, .main-second {
+        width: 90%;
+    }
+
+    .main-buyit h2 {
+        font-size: 20px;
+    }
+
+    .aside-element, .aside-element-tablet {
+        width: 18%;
+    }
+
+    .aside-element-pc {
+        display: flex;
+        flex-direction: column;
+        width: 18%;
+    }
+
+    footer {
+        flex-direction: row;
+        padding: 15px;
+        justify-content: space-evenly;
+    }
+
+    .footer-contact-section {
+        display: flex;
+    }
+
+    .footer-contact-container {
+        margin: 0px 15px
+    }
+
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-payments-container {
+        width: 50%;
+        padding: 0px 15px;
+        margin-left: 15px;
+    }
+
+}
+
+@media (min-width: 1100px) {
+
+    header, main, aside, footer {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .only-images {
+        width: 605px;
+        margin: auto;
+    } 
+}

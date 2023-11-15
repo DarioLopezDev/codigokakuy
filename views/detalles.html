@@ -18,56 +18,69 @@
             <input type="text" placeholder="Busque su libro">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
+        <nav>
+            <a href="/register"><i class="fa-solid fa-address-card"></i>Creá tu cuenta</a>
+            <a href="/login"><i class="fa-solid fa-user"></i>Ingresá</a>
+        </nav>
     </header>
 
     <main>
         <h2>Cien años de soledad</h2>
-        <section class="only-images">
-            <button><img src="images/cien años de soledad tapa frontal.png" alt="imagen-grande"
-                    class="big-image"></button>
-            <div class="images-container">
-                <button><i class="fa-solid fa-chevron-left"></i></button>
-                <button><img src="images/cien años de soledad tapa frontal.png" alt="tapa-imagen-chica"
-                        class="small-images"></button>
-                <button><img src="images/cien años de soledad diagonal.png" alt="diagonal-imagen-chica"
-                        class="small-images"></button>
-                <button><img src="images/cien años de soledad hojas.png" alt="hojas-imagen-chica"
-                        class="small-images"></button>
-                <button><img src="images/cien años de soledad tapa frontal dorso posterior.png" alt="posterior-imagen-chica"
-                        class="small-images"></button>
-                <button><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="main-container">
+            <section class="only-images">
+                <div class="big-image">
+                    <img src="images/cien años de soledad tapa frontal.png" alt="imagen-grande">
+                </div>
+                <div class="images-container">
+                    <button><i class="fa-solid fa-chevron-left"></i></button>
+                    <button><img src="images/cien años de soledad tapa frontal.png" alt="tapa-imagen-chica"
+                            class="small-images"></button>
+                    <button><img src="images/cien años de soledad diagonal.png" alt="diagonal-imagen-chica"
+                            class="small-images"></button>
+                    <button><img src="images/cien años de soledad hojas.png" alt="hojas-imagen-chica"
+                            class="small-images"></button>
+                    <button><img src="images/cien años de soledad tapa frontal dorso posterior.png"
+                            alt="posterior-imagen-chica" class="small-images"></button>
+                    <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <div class="main-info-container">
+                <section class="main-info">
+                    <article class="main-first">
+                        <p>Autor: Gabriel García Márquez</p>
+                        <p>Editorial: Alfaguara</p>
+                        <p>Idioma: Español</p>
+                        <p>Año: 2008</p>
+                        <p>Colección: R.a.e.</p>
+                    </article>
+                    <article class="main-second">
+                        <p>Dimensiones: 20.5 x 13.5 cm</p>
+                        <p>Género: Narración</p>
+                        <p>Subgéneros: Novela</p>
+                        <p>Páginas: 752</p>
+                        <p>Peso: 2kg</p>
+                    </article>
+                    <article class="main-third">
+                        <h3>Valoración: *****</h3>
+                        <h3>Stock: x/x</h3>
+                        <h3>Precio: $xxxx</h3>
+                    </article>
+                </section>
+                <button class="main-buyit">
+                    <h2>Agregar al Carrito</h2>
+                </button>
             </div>
-        </section>
-        <section>
-            <article>
-                <p>Autor:</p>
-                <p>Editorial</p>
-                <p>Idioma:</p>
-                <p>Año:</p>
-                <p>Tapa del Libro:</p>
-                <p>Tamaño de la letra</p>
-                <p>Indice:</p>
-            </article>
-            <article>
-                <p>Dimensiones:</p>
-                <p>Género:</p>
-                <p>Subgéneros:</p>
-                <p>Páginas:</p>
-            </article>
-            <article>
-                <h3>Valoración:</h3>
-                <h3>Stock:</h3>
-                <h3>Precio:</h3>
-            </article>
-            <button>
-                <h2>Agregar al Carrito</h2>
-            </button>
-        </section>
-        <section>
+
+        </div>
+
+        <section class="main-review">
             <h3>Reseña:</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, eos voluptate, quis cum doloremque
-                quae ea enim quaerat dolores sit quas iusto dicta! Necessitatibus cupiditate laudantium debitis
-                possimus, quis iste.</p>
+            <p>Relata la historia de una aldea imaginaria, Macondo. La novela se encuentra dividida en veinte secuencias
+                narrativas que carecen de título e incluso de enumeración. Cien años de soledad cuenta una serie de
+                sucesos insólitos, insospechas, que ni el narrador ni los personajes se asombran de ello. En este libro
+                cabe aclarar que los nombres de los personajes se repiten de generación en generación, es por este
+                motivo que se vuelve confuso, ya que prácticamente son idénticos.</p>
         </section>
     </main>
 
@@ -75,39 +88,70 @@
         <h2>Productos Relacionados</h2>
         <div class="aside-container">
             <button><i class="fa-solid fa-chevron-left"></i></button>
-        <a href="#"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></a>
-        <a href="#"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></a>
-        <a href="#"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></a>
-        <a href="#" class="aside-tablet"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></a>
-        <a href="#" class="aside-pc"><img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica"
-                class="small-images"></a>
-        <button><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="aside-element">
+                <a href="#">
+                    <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
+                </a>
+                <p>Título</p>
+                <p>Precio</p>
+            </div>
+            <div class="aside-element">
+                <a href="#">
+                    <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
+                </a>
+                <p>Título</p>
+                <p>Precio</p>
+            </div>
+            <div class="aside-element">
+                <a href="#">
+                    <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
+                </a>
+                <p>Título</p>
+                <p>Precio</p>
+            </div>
+            <div class="aside-element-tablet">
+                <a href="#">
+                    <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
+                </a>
+                <p>Título</p>
+                <p>Precio</p>
+            </div>
+            <div class="aside-element-pc">
+                <a href="#">
+                    <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
+                </a>
+                <p>Título</p>
+                <p>Precio</p>
+            </div>
+            <button><i class="fa-solid fa-chevron-right"></i></button>
     </aside>
-        </div>
-        
+    </div>
+
 
     <footer>
-        <section>
-            <h3>Contáctanos</h3>
-            <ul class="footer-contact">
-                <li>Teléfono: +54 9 385 5 123-4567</li>
-                <li>Email: tiendakakuy@mail.com</li>
-                <li>Dirección: Calle Falsa 123</li>
-            </ul>
+        <section class="footer-contact-section">
+            <div class="footer-contact-container">
+                <h3>Contáctanos</h3>
+                <ul class="footer-contact">
+                    <li>Teléfono: +54 9 385 5 123-4567</li>
+                    <li>Email: tiendakakuy@mail.com</li>
+                    <li>Dirección: Calle Falsa 123</li>
+                </ul>
+            </div>
+
             <br>
-            <h3>Nuestras Redes Sociales:</h3>
-            <ul class="footer-social-networks">
-                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
+
+            <div>
+                <h3>Nuestras Redes Sociales:</h3>
+                <ul class="footer-social-networks">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
         </section>
         <br>
-        <section>
+        <section class="footer-payments-container">
             <h3>Medios de pago</h3>
             <ul class="footer-payments">
                 <li><i class="fa-brands fa-cc-visa"></i></li>
