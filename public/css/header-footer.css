@@ -1,9 +1,10 @@
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
 :root {
     --color1: rgb(165,91,64);
     --color2: rgb(255,182,53);
@@ -14,7 +15,9 @@
 }
 
 /***********************************************************HEADER***********************************************************/
-
+body {
+    font-family: Aladin;
+}
 header {
     background-color: black;
     display: flex;
@@ -47,29 +50,107 @@ header {
     justify-content: flex-start;
     align-items: flex-end;
 }
+
 #area-busqueda {
     display: flex;
     flex-direction: column;
     width: 40%;
+    height: 100%;
     flex-wrap: wrap;
 }
 
 #area-busqueda p {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 75%;
+    width: 100%;
     height: auto;
+    justify-content: center;
+    margin-bottom: 1em;
+
     }
     
 #area-busqueda div {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 50%;
+    width: 100%;
     height: auto;
     }
-    
+
+#area-busqueda div select {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 50%;
+        height: 3em;
+        }
+
+#area-busqueda div div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 50%;
+        height: auto;
+        }
+
+#boton-busqueda-header{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 10%;
+            height: 3em;
+            border-radius: 5px 0 0 5px;
+            border-style: 1px;
+            border-color: var(--color2);
+            background-color: black;
+            color: var(--color2);
+            border-right: 0;
+            }
+
+#entrada-busqueda-header{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 90%;
+                height: 3em;
+                border-radius: 0 5px 5px 0;
+                border-style: 1px;
+                border-color: var(--color2);
+                background-color: black;
+                color: var(--color2);
+                }
+
+#select-div {
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+#select-select {
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+#select1 {
+border-radius: 5px;
+border-style: 1px;
+border-color: var(--color2);
+margin-right: 10px;
+background-color: black;
+color: var(--color2);
+}
+#select2 {
+    border-radius: 5px;
+    border-style: 1px;
+    border-color: var(--color2);
+    background-color: black;
+    color: var(--color2);
+}
+#select3 {
+    margin-left: 10px;
+    border-radius: 5px;
+    border-style: 1px;
+    border-color: var(--color2);
+    background-color: black;
+    color: var(--color2);
+}
+
 #darkmode {
     width: 10%;
     height: 100%;
@@ -214,10 +295,4 @@ footer {
 
 }
 
-@media (min-width: 1100px) {
 
-    header, footer {
-        max-width: 1100px;
-        margin: auto;
-    } 
-}
