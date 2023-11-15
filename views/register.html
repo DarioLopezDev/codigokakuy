@@ -56,69 +56,77 @@
                     <li><a href="/register">Register</a></li>
                 </ul>
             </div>
-            
+
         </div>
 
     </header>
 
-    <div class="formularioRegistroShadow">
+    <div class="imagenRegistro">
 
-        <form id="formularioRegistroBox" action="/" method="post">
+        <div id="imagen-fondo">
+            <img src="/images/libreria-register.jpg" alt="imagenRegistroFondo">
+        </div>
 
-            <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
+        <div class="formularioRegistroShadow">
 
+            <form id="formularioRegistroBox" action="/" method="post">
 
-            <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required>
-
-
-            <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required>
-
-
-            <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
 
 
-            <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
-            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required>
 
 
-            <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
-            <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+                <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required>
 
 
-            <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
-            <input type="file" id="foto" name="foto">
+                <input type="email" id="email" name="email" placeholder="Email" required>
 
 
-            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
 
-            <input type="password" id="confirmarContrasena" name="confirmarContrasena"
-                placeholder="Confirmar Contraseña" required>
 
-            <div class="terminosServiciosBox">
+                <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
+                <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
 
-                <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y Servicios</label>
-                <input type="checkbox" id="terminosServicios" name="terminosServicios" value="Terminos y Servicios"
-                    required>
 
-            </div>
+                <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
+                <input type="file" id="foto" name="foto">
 
-            <div class="botonesBox">
 
-                <input id="botonBorrarRegister" type="reset" value="Borrar">
-                <input id="botonEnviarRegister" type="submit" value="Enviar">
+                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
 
-            </div>
+                <input type="password" id="confirmarContrasena" name="confirmarContrasena"
+                    placeholder="Confirmar Contraseña" required>
 
-        </form>
+                <div class="terminosServiciosBox">
+
+                    <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y Servicios</label>
+                    <input type="checkbox" id="terminosServicios" name="terminosServicios" value="Terminos y Servicios"
+                        required>
+
+                </div>
+
+                <div class="botonesBox">
+
+                    <input id="botonBorrarRegister" type="reset" value="Borrar">
+                    <input id="botonEnviarRegister" type="submit" value="Enviar">
+
+                </div>
+
+            </form>
+
+            <ul class="linksRegistro">
+
+                <li><a href="/login">Ya tengo una cuenta</a></li>
+                <li><a href="/">Pagina Principal</a></li>
+
+            </ul>
+
+        </div>
 
     </div>
-
-    <ul class="linksRegistro">
-
-        <li><a href="/login">Ya tengo una cuenta</a></li>
-        <li><a href="/">Pagina Principal</a></li>
-
-    </ul>
 
     <footer>
 
