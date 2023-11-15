@@ -18,65 +18,100 @@
 
     <header>
 
-        <a href="" class="menu"><i class="fa-solid fa-list"></i></a>
-        <h2><a href="/">Tienda de libros Kakuy</a></h2>
+        <div id="logo-principal">
+            <img src="/images/Logo3.png" alt="imagenBiblioteca">
+        </div>
 
-        <div class="searchBar">
+        <div id="area-lateral-logo">
 
-            <input type="text" placeholder="Busque su libro">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div id="area-busqueda">
+                <p>CODIGO KAKUY</p>
+                <select name="" id=""></select>
+                <input type="button" value="">
+                <input type="text">
+                <select name="" id=""></select>
+                <select name="" id=""></select>
+            </div>
 
+            <div id="darkmode">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <div id="carrusell">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-caret-left"></i></a></li>
+                    <li><a href="">Mas Buscados</a></li>
+                    <li><a href="">Mas Vendidos</a></li>
+                    <li><a href="">Audiolibros</a></li>
+                    <li><a href="">Manga</a></li>
+                    <li><a href=""><i class="fa-solid fa-caret-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div login-carrito>
+                <ul>
+                    <li><a href="/carrito"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a href="/detalles">Detalles</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </div>
+            
         </div>
 
     </header>
 
-    <form id="formularioRegistroBox" action="/" method="post">
+    <div class="formularioRegistroShadow">
 
-        <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
+        <form id="formularioRegistroBox" action="/" method="post">
 
-
-        <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required>
-
-
-        <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required>
+            <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
 
 
-        <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required>
 
 
-        <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
-        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required>
 
 
-        <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
-        <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
 
 
-        <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
-        <input type="file" id="foto" name="foto">
+            <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
 
 
-        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+            <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
+            <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
 
-        <input type="password" id="confirmarContrasena" name="confirmarContrasena" placeholder="Confirmar Contraseña"
-            required>
 
-        <div class="terminosServiciosBox">
+            <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
+            <input type="file" id="foto" name="foto">
 
-            <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y Servicios</label>
-            <input type="checkbox" id="terminosServicios" name="terminosServicios" value="Terminos y Servicios"
-                required>
 
-        </div>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
 
-        <div class="botonesBox">
+            <input type="password" id="confirmarContrasena" name="confirmarContrasena"
+                placeholder="Confirmar Contraseña" required>
 
-            <input id="botonBorrarRegister" type="reset" value="Borrar">
-            <input id="botonEnviarRegister" type="submit" value="Enviar">
+            <div class="terminosServiciosBox">
 
-        </div>
+                <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y Servicios</label>
+                <input type="checkbox" id="terminosServicios" name="terminosServicios" value="Terminos y Servicios"
+                    required>
 
-    </form>
+            </div>
+
+            <div class="botonesBox">
+
+                <input id="botonBorrarRegister" type="reset" value="Borrar">
+                <input id="botonEnviarRegister" type="submit" value="Enviar">
+
+            </div>
+
+        </form>
+
+    </div>
 
     <ul class="linksRegistro">
 

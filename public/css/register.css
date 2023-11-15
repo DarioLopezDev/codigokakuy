@@ -19,12 +19,25 @@ body {
     flex-direction: column;
 }
 
+
+
+.formularioRegistroShadow {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: 0 20vw 0 20vw;
+    margin-top: 20px;
+}
+
 #formularioRegistroBox {
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: var(--color1);
-    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #datosTitulo {
@@ -140,6 +153,10 @@ body {
     padding: 20px 0;
     color:blue;
     text-decoration: underline;
+    margin: 0 20vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .linksRegistro li {

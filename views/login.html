@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
 
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/header-footer.css">
     <script src="https://kit.fontawesome.com/93d15c86bc.js" crossorigin="anonymous"></script>
-    
+
     <title>Login</title>
 
 </head>
@@ -18,42 +18,78 @@
 
     <header>
 
-        <a href="" class="menu"><i class="fa-solid fa-list"></i></a>
-        <h2><a href="/">Tienda de libros Kakuy</a></h2>
-    
-        <div class="searchBar">
-    
-            <input type="text" placeholder="Busque su libro">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-    
+        <div id="logo-principal">
+            <img src="/images/Logo3.png" alt="imagenBiblioteca">
         </div>
-    
+
+        <div id="area-lateral-logo">
+
+            <div id="area-busqueda">
+                <p>CODIGO KAKUY</p>
+                <select name="" id=""></select>
+                <input type="button" value="">
+                <input type="text">
+                <select name="" id=""></select>
+                <select name="" id=""></select>
+            </div>
+
+            <div id="darkmode">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <div id="carrusell">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-caret-left"></i></a></li>
+                    <li><a href="">Mas Buscados</a></li>
+                    <li><a href="">Mas Vendidos</a></li>
+                    <li><a href="">Audiolibros</a></li>
+                    <li><a href="">Manga</a></li>
+                    <li><a href=""><i class="fa-solid fa-caret-right"></i></a></li>
+                </ul>
+            </div>
+
+            <div login-carrito>
+                <ul>
+                    <li><a href="/carrito"><i class="fa-solid fa-basket-shopping"></i></a></li>
+                    <li><a href="/detalles">Detalles</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
     </header>
 
-    <form id="formularioLoginBox" action="/" method="post">
+    <div class="formularioLoginShadow">
 
-        <label for="datosLogin" id="datosLoginTitulo">Datos de Usuario:</label>
-        <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+        <form id="formularioLoginBox" action="/" method="post">
 
-        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+            <label for="datosLogin" id="datosLoginTitulo">Datos de Usuario:</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
 
-        <div class="recordarmeBox">
+            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
 
-            <label for="recordarme" id="recordarmeTitulo">Recordarme</label>
-            <input type="checkbox" id="recordarme" name="recordarme" value="Recordarme">
+            <div class="recordarmeBox">
 
-        </div>
+                <label for="recordarme" id="recordarmeTitulo">Recordarme</label>
+                <input type="checkbox" id="recordarme" name="recordarme" value="Recordarme">
 
-        <ul class="politicaPrivacidadBox">
+            </div>
 
-            <input type="checkbox" id="politicaPrivacidadTitulo" name="politicaPrivacidad" value="politicaPrivacidad" required>
-            <li><a href="#">Politica de Privacidad</a></li>
+            <ul class="politicaPrivacidadBox">
 
-        </ul>
+                <input type="checkbox" id="politicaPrivacidadTitulo" name="politicaPrivacidad"
+                    value="politicaPrivacidad" required>
+                <li><a href="#">Politica de Privacidad</a></li>
 
-        <input id="botonEnviarLogin" type="submit" value="Enviar">
+            </ul>
 
-    </form>
+            <input id="botonEnviarLogin" type="submit" value="Enviar">
+
+        </form>
+
+    </div>
 
     <ul class="linksLogin">
 
