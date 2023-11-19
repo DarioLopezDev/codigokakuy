@@ -29,60 +29,10 @@ body {
     background-color: var(--color5);
 }
 
-/***********************************************************HEADER***********************************************************/
-
-header {
-    background-color: var(--color2);
-    padding: 15px 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu {
-    width: 25%;
-    text-align: center;
-}
-
-header h2 {
-    text-align: center;
-    display: block;
-    width: 50%;
-    font-size: 20px;
-}
-
-.searchBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    max-width: 25%;
-    background-color: #ffffff;
-    margin-left: 0px;
-    border-radius: 5px;
-    
-}
-
-.searchBar input {
-    max-width: 80%; 
-    border: none;
-}
-
-nav {
-    flex: auto;
-    margin-top: 15px;
-    font-size: 12px;
-    display: flex;
-    justify-content: end;
-    gap: 10px;
-}
-
 /***********************************************************MAIN***********************************************************/
 main {
     background-color: var(--color5);
     color: #ffffff;
-    border: solid 3px black;
     margin: 10px;
 }
 
@@ -93,7 +43,6 @@ main h2 {
 .only-images {
     width: 80vw;
     margin: auto;
-    background-color: var(--color6);
 }
 
 .big-image{
@@ -138,14 +87,18 @@ main article p {
 
 .main-first {
     border: solid 3px black;
+    font-size: 12px;
 }
 
 .main-second {
     border: solid 2px black;
 }
 
-.main-third {
-    text-align: center;
+.main-info-details {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .main-buyit h2 {
@@ -192,7 +145,6 @@ aside h2 {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    border: dashed 3px black;
     padding: 5px;
     margin: 5px;
 }
@@ -215,65 +167,10 @@ aside p {
     display: none;
 }
 
-
-
-/***********************************************************FOOTER***********************************************************/
-/* 
-ul {
-    list-style: none;
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--color2);
-}
-
-footer h3, footer, li, footer i {
-    color: var(--color2);
-}
-
-footer {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.footer-social-networks {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.footer-social-networks li {
-    display: contents;
-    font-size: 36px;
-}
-
-.footer-payments{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.footer-payments li {
-    width: 25%;
-    font-size: 36px;
-} */
-
 /***********************************************************MEDIA***********************************************************/
 
 @media (min-width: 395px) {
-    /* header h2 {
-        font-size: 22px;
-    }
-
-    nav {
-        font-size: 14px;
-    } */
-
-    .only-images {
+    .only-images, .main-info {
         width: 70vw;
         margin: auto;
     }
@@ -282,16 +179,8 @@ footer {
         width: 70%;
     }
 
-    .main-info  {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        max-width: 545px;
-        margin: auto;
-    }
-
-    .main-first, .main-second {
-        width: 44%;
+    .main-first {
+        font-size: 1em;
     }
 
     .main-buyit h2 {
@@ -310,14 +199,6 @@ footer {
 }
 
 @media (min-width: 790px) {
-    /* header h2 {
-        font-size: 24px;
-    }
-
-    nav {
-        font-size: 16px;
-    } */
-
     .main-container {
         display: flex;
         flex-direction: row;
@@ -334,7 +215,13 @@ footer {
         width: 50%;
         height: 50%;
     }
-    .main-info {
+
+    .main-info  {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
         border: none;
     }
 
@@ -355,43 +242,4 @@ footer {
         flex-direction: column;
         width: 18%;
     }
-
-    /* footer {
-        flex-direction: row;
-        padding: 15px;
-        justify-content: space-evenly;
-    }
-
-    .footer-contact-section {
-        display: flex;
-    }
-
-    .footer-contact-container {
-        margin: 0px 15px
-    }
-
-    .footer-contact {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer-payments-container {
-        width: 50%;
-        padding: 0px 15px;
-        margin-left: 15px;
-    } */
-
-}
-
-@media (min-width: 1100px) {
-
-    header, main, aside, footer {
-        max-width: 1100px;
-        margin: auto;
-    }
-
-    .only-images {
-        width: 605px;
-        margin: auto;
-    } 
 }
