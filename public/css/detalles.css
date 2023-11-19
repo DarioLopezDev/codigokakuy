@@ -30,6 +30,46 @@ body {
 }
 
 /***********************************************************MAIN***********************************************************/
+#main-arrow {
+    position: fixed;
+    left: 0;
+    bottom: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: all 0.5s;
+    font-size: 1em;
+    opacity: 0.5;
+}
+
+#main-arrow i {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+#main-arrow:hover {
+    font-size: 2em;
+    opacity: 1;
+}
+
+#main-basket {
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    transition: all 0.5s;
+    font-size: 1em;
+    opacity: 0.5;
+}
+
+#main-basket i {
+    font-size: 2em;
+    color: #ffffff;
+}
+
+#main-basket:hover {
+    font-size: 2em;
+    opacity: 1;
+}
+
 main {
     background-color: var(--color5);
     color: #ffffff;
@@ -227,6 +267,10 @@ aside p {
 
     .main-first, .main-second {
         width: 90%;
+    }
+
+    .main-first {
+        font-size: 1.5em;
     }
 
     .main-buyit h2 {
