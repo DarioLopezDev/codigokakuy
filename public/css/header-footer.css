@@ -25,24 +25,27 @@ header {
     flex-wrap: nowrap;
     justify-content: flex-start;
     color: var(--color2);
+    width: 100%;
+}
+header a {
+    display: flex;
+    width: 30%;
 }
 #logo-principal{
     display: flex;
-    width: 12.5%;
-    height: auto;
-    
+    width: 100%;
+    align-items: center;
 }
 #logo-principal img {
     width: 100%;
-    height: auto;
+    height: 80%;
     border-radius: 100%;
     background-size:contain;
     padding: 10px
 }
 
 #area-lateral-logo {
-    width: 87.5%;
-    height: auto;
+    width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -61,13 +64,13 @@ header {
 
 #area-busqueda p {
     display: flex;
+    flex-wrap: nowrap;
     width: 100%;
     height: auto;
     justify-content: center;
     margin-bottom: 1em;
-
     }
-    
+
 #area-busqueda div {
     display: flex;
     flex-direction: row;
@@ -167,27 +170,54 @@ color: var(--color2);
 }
 #carrusell{
     width: 35%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: center;
-    align-items: stretch;
-    height: 100%;
-    width: auto;
-}
-#login-carrito{
-    display: flex;
-    position: relative;
+    display: none;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 15%;
-    align-items: flex-start;
+    height: 100%;
+
 }
+
+#carrusell li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 15px;
+}
+
+#carrusell li a {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+#login-carrito{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 15%;
+    justify-content: center;
+    height: 100%;
+}
+
 #area-lateral-logo ul {
     display:flex
 }
+#login-carrito ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    align-items: stretch;
+    height: auto;
+}
 
+#login-carrito ul li {
+    text-align: center;
+}
+#estonodebeverse {
+    display: none;
+}
 #area-lateral-logo ul li{
     border-radius: 5px;
     border-style:groove ;
@@ -295,4 +325,10 @@ footer {
         margin-left: 15px;
     }
 
+}
+
+@media (min-width: 1024px) {
+#carrusell{
+    display: flex;
+}
 }
