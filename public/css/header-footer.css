@@ -352,4 +352,13 @@ footer {
 #carrusell{
     display: flex;
 }
+
+header  {
+    max-height: 30vh;
+}
+
+#logo-principal img {
+    max-width: 16vw;
+    max-height: 30vh;
+}
 }

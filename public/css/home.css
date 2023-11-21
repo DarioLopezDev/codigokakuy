@@ -49,7 +49,7 @@ main {
     align-content: center;
     justify-content: center;
     overflow: scroll;
-    color: var(--color2);;
+    color: var(--color2);
 }
 
 #cuadro-textual::-webkit-scrollbar {
