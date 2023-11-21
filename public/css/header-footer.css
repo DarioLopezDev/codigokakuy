@@ -113,7 +113,7 @@ header a {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    position: fixed;
+    position: absolute;
     background-color: rgba(0, 0, 0, 0);
     align-items: center;
     text-align: center;
