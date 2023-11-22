@@ -19,33 +19,11 @@ body {
     flex-direction: column;
 }
 
-.imagenRegistro {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-#imagen-fondo {
-    display: flex;
-    background-color:black;
+.mainRegistro {
+    background-image:url("/images/homeFondo.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-#imagen-fondo img {
-    display: flex;
-    width: 100%;
-    height: 100%;
 }
 
 .formularioRegistroShadow {
@@ -72,6 +50,7 @@ body {
     margin: 2px;
     padding: 2px;
     font-size: 18px;
+    color: var(--color2);
 }
 
 #nombreApellido {
@@ -96,6 +75,7 @@ body {
     margin: 5px;
     padding: 5px;
     font-size: 18px;
+    color: var(--color2);
 }
 
 #fechaNacimiento {
@@ -107,6 +87,7 @@ body {
     margin: 2px;
     padding: 2px;
     font-size: 18px;
+    color: var(--color2);
 }
 
 #domicilio {
@@ -119,6 +100,7 @@ body {
     margin: 2px;
     padding: 2px;
     font-size: 18px;
+    color: var(--color2);
 }
 
 #foto {
@@ -147,6 +129,7 @@ body {
     margin: 2px;
     padding: 2px;
     font-size: 18px;
+    color: var(--color2);
 }
 
 #terminosServicios {
@@ -178,8 +161,13 @@ body {
     flex-wrap: nowrap;
     flex-direction: row;
     padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
 }
 
 .linksRegistro li {
     margin: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    opacity: 1;
 }

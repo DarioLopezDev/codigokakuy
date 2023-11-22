@@ -19,32 +19,11 @@ body {
     flex-direction: column;
 }
 
-.imagenLogin {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-#imagen-fondo {
-    display: flex;
-    background-color:black;
+.mainLogin {
+    background-image:url("/images/libro-login.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-#imagen-fondo img {
-    display: flex;
-    width: 100%;
 }
 
 .formularioLoginShadow {
@@ -74,6 +53,7 @@ body {
     margin: 2px;
     padding: 2px;
     font-size: 18px;
+    color: var(--color2);
 }
 
 #usuario {
@@ -96,6 +76,7 @@ body {
     margin: 2px;
     padding: 2px;
     font-size: 18px;
+    color: var(--color2);
 }
 
 #botonEnviarLogin {
@@ -128,8 +109,13 @@ body {
     flex-wrap: nowrap;
     flex-direction: row;
     padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
 }
 
 .linksLogin li {
     margin: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    opacity: 1;
 }
