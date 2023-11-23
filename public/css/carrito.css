@@ -4,7 +4,6 @@
     margin: 0;
 }
 
-<<<<<<< HEAD
 
 header{
     background-color: black;
@@ -73,16 +72,7 @@ header{
 }
 
 
-.conteiner{
-    overflow: scroll;
-    width: 900px;
-    height: 500px;
-    position: relative;
-    left: 40px;
-    border: solid 5px rgba(255,182,53,255);
-    border-radius: 5px;
-    background-color: white;
-}
+
 
 .Costo{
     width: 170px;
@@ -102,7 +92,8 @@ header{
     bottom: 500px;
     padding: 2px;
     border: solid 2px;
-=======
+
+}
 :root {
     --color1: rgb(165, 91, 64);
     --color2: rgb(255, 182, 53);
@@ -176,7 +167,6 @@ main {
 
 .busqueda-bottom ::placeholder {
     color: var(--color2);
->>>>>>> 39c1eeae13d45b3c09421640edcd1aa939041191
 }
 
 #busqueda-autor-texto {
@@ -319,7 +309,6 @@ main {
     color: var(--color2);
 }
 
-<<<<<<< HEAD
 .portada{
     text-align: center;
     border: solid 1px rgba(255,182,53,255);
@@ -407,7 +396,7 @@ main {
 body{
     background-color: rgba(165,91,64,255);
 }
-=======
+
 
 @media (min-width: 395px) {
     .contenedor-productos {
@@ -438,4 +427,4 @@ body{
 }
 
 @media (min-width: 1024px) {}
->>>>>>> 39c1eeae13d45b3c09421640edcd1aa939041191
+
