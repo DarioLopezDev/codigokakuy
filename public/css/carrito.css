@@ -125,6 +125,7 @@ main {
     flex-wrap: wrap;
     align-content: stretch;
     justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .producto-libro {
@@ -155,6 +156,7 @@ main {
     border: 1px solid var(--color4);
     width: 50%;
     height: 100%;
+    color: var(--color2);
 }
 
 .precio {
@@ -180,7 +182,7 @@ main {
     align-items: center;
     justify-content: space-around;
     overflow-y: scroll;
-
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .texto-box {
@@ -192,15 +194,29 @@ main {
     font-size: 16px;
     font-weight: 500;
     margin: 0 10px 0 10px;
+    color: var(--color2);
 }
 
 .fa-bookmark {
     color: brown;
 }
 
-.precio-libro {
+.comprar-libro {
     font-size: 16px;
     display: none;
+}
+
+.comprar-texto {
+    font-size: 16px;
+    border-radius: 5px;
+    border-style: 1px;
+    border-color: var(--color2);
+    background-color: black;
+}
+
+.comprar-libro ::placeholder {
+    
+    color: var(--color2);
 }
 
 
@@ -221,7 +237,7 @@ main {
         display: block;
     }
 
-    .precio-libro {
+    .comprar-libro {
         display: block;
     }
 
