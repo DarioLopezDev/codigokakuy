@@ -14,6 +14,7 @@
 }
 
 body {
+    font-family: Aladin;
     background-color: var(--color5);
     display: flex;
     flex-direction: column;

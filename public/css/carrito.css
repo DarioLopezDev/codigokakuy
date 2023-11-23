@@ -1,169 +1,235 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-.barra{
-    width: 400px;
+:root {
+    --color1: rgb(165, 91, 64);
+    --color2: rgb(255, 182, 53);
+    --color3: rgb(196, 120, 62);
+    --color4: rgb(122, 89, 72);
+    --color5: rgb(142, 86, 73);
+    --color6: rgb(179, 133, 109);
+}
+
+main {
+    font-family: Aladin;
+    background-color: var(--color5);
+    background-image: url("/images/carrito-Fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.barras-busqueda {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.busqueda-top {
+    display: flex;
+    justify-content: flex-end;
     height: 30px;
-    text-align: center;
-    position: relative;
-    left: 50px;
-    top: 50px;
 }
 
-.barra2{
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    position: relative;
-    left: 500px;
-    top: 50px;
+.busqueda-top ::placeholder {
+    color: var(--color2);
 }
 
-.barra3{
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    position: relative;
-    left: 650px;
-    top: 20px;
+.boton-busqueda {
+    border-radius: 5px;
+    border-style: 1px;
+    border-color: var(--color2);
+    background-color: black;
+    color: var(--color2);
 }
 
-.barra4{
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    position: relative;
-    left: 800px;
-    top: -10px;
+.barra-busqueda {
+    border-radius: 5px;
+    border-style: 1px;
+    border-color: var(--color2);
+    background-color: black;
+    color: var(--color2);
 }
 
-.barra5{
-    width: 100px;
-    height: 30px;
-    text-align: center;
-    position: relative;
-    left: 950px;
-    top: -40px;
+#busqueda-carrito {
+    font-size: 14px;
+}
+
+.busqueda-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#busqueda-genero-texto {
+    font-size: 14px;
+    border-radius: 5px;
+    border-style: 1px;
+    border-color: var(--color2);
+    background-color: black;
+    color: var(--color2);
+}
+
+.busqueda-bottom ::placeholder {
+    color: var(--color2);
+}
+
+#busqueda-autor-texto {
+    font-size: 14px;
+    border-radius: 5px;
+    border-style: 1px;
+    border-color: var(--color2);
+    background-color: black;
+    color: var(--color2);
+}
+
+#busqueda-anio-texto {
+    font-size: 14px;
+    border-radius: 5px;
+    border-style: 1px;
+    border-color: var(--color2);
+    background-color: black;
+    color: var(--color2);
+}
+
+#busqueda-calificacion-texto {
+    font-size: 14px;
+    border-radius: 5px;
+    border-style: 1px;
+    border-color: var(--color2);
+    background-color: black;
+    color: var(--color2);
+}
+
+.contenedor-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.contenedor-productos {
+    height: 50vh;
+    width: 50vw;
+    border: 2px solid var(--color4);
+    background: var(--color6);
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+}
+
+.producto-libro {
+    display: flex;
+    border: 1px solid var(--color4);
+    width: 20vw;
+    height: 30vh;
+    margin: 10px;
+}
+
+.box-izquierda {
+    display: flex;
+    background-image: url("/images/cien años de soledad tapa frontal.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid var(--color4);
+    width: 50%;
+    height: 100%;
+}
+
+.box-derecha {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid var(--color4);
+    width: 50%;
+    height: 100%;
+}
+
+.precio {
+    font-size: 14px;
+}
+
+.stock {
+    font-size: 14px;
+}
+
+.descripcion {
+    font-size: 14px;
+}
+
+.descripcion-box {
+    max-width: 30vw;
+    max-height: 50vh;
+    background-color: var(--color6);
+    border: 2px solid var(--color4);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: scroll;
+
+}
+
+.texto-box {
+    display: flex;
+    display: none;
+}
+
+.descripcion-texto {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px 0 10px;
+}
+
+.fa-bookmark {
+    color: brown;
+}
+
+.precio-libro {
+    font-size: 16px;
+    display: none;
 }
 
 
-.conteiner{
-    overflow: scroll;
-    width: 900px;
-    height: 500px;
-    position: relative;
-    left: 40px;
-    border: solid 1px #ebebeb;;
+@media (min-width: 395px) {
+    .contenedor-productos {
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .producto-libro {
+        width: 70vw;
+        height: 50vh;
+    }
 }
 
-.Costo{
-    width: 170px;
-    height: 50px;
-    text-align: center;
-    position: relative;
-    left: 1050px;
-    top: 450px;
+@media (min-width: 790px) {
+    .texto-box {
+        display: block;
+    }
+
+    .precio-libro {
+        display: block;
+    }
+
+    .producto-libro {
+        width: 22vw;
+        height: 30vh;
+        margin: 10px;
+    }
 }
 
-.Descripcion{
-    text-align: justify;
-    position: relative;
-    width: 300px;
-    left: 990px;
-    bottom: 500px;
-}
-
-@media(min-width: 295px){
-    
-}
-
-.portada{
-    text-align: center;
-    border: solid 1px grey;
-    width: 150px;
-    height: 200px;
-    position: relative;
-    top: 30px;
-    left: 25px;
-}
-
-.portada1{
-    text-align: center;
-    border: solid 1px grey;
-    width: 150px;
-    height: 200px;
-    position: relative;
-    bottom: 170px;
-    left: 175px;
-}
-
-.portada2{
-    text-align: center;
-    border: solid 1px grey;
-    width: 150px;
-    height: 200px;
-    position: relative;
-    top: 40px;
-    left: 25px;
-}
-
-.portada20{
-    text-align: center;
-    border: solid 1px grey;
-    width: 150px;
-    height: 200px;
-    position: relative;
-    bottom: 160px;
-    left: 175px;
-}
-
-.portada3{
-    text-align: center;
-    border: solid 1px grey;
-    width: 150px;
-    height: 200px;
-    position: relative;
-    bottom: 770px;
-    left: 450px;
-}
-
-.portada30{
-    text-align: center;
-    border: solid 1px grey;
-    width: 150px;
-    height: 200px;
-    position: relative;
-    bottom: 970px;
-    left: 600px;
-}
-
-.portada4{
-    text-align: center;
-    border: solid 1px grey;
-    width: 150px;
-    height: 200px;
-    position: relative;
-    bottom: 760px;
-    left: 450px;
-}
-
-.portada40{
-    text-align: center;
-    border: solid 1px grey;
-    width: 150px;
-    height: 200px;
-    position: relative;
-    bottom: 960px;
-    left: 600px;
-}
-
-.fa-heart{
-    width: 100px;
-}
-
-body{
-    background-color: var(--color1);
-}
+@media (min-width: 1024px) {}
