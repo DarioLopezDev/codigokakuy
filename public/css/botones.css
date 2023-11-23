@@ -1,0 +1,43 @@
+#main-arrow {
+    position: fixed;
+    left: 0;
+    bottom: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: all 0.5s;
+    font-size: 1em;
+    opacity: 0.7;
+    z-index: 9999;
+}
+
+#main-arrow i {
+    font-size: 2em;
+    color: var(--color2);
+}
+
+#main-arrow:hover {
+    font-size: 2em;
+    opacity: 1;
+}
+
+#main-basket {
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: all 0.5s;
+    font-size: 1em;
+    opacity: 0.7;
+    z-index: 9999;
+}
+
+#main-basket i {
+    font-size: 2em;
+    color: var(--color2);
+}
+
+#main-basket:hover {
+    font-size: 2em;
+    opacity: 1;
+}

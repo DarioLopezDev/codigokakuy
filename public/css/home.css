@@ -2,6 +2,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    /* SACAR EL BACKGROUND COLOR BLACK SI SE QUIERE QUE EN EL HOME LOS BOTONES SEAN TRASLUCIDOS, PERO AL SACARLO CUANDO UNO VARIA LA MEDIDA DEL DISPOSITIVO SE VE ABAJO EN EL FOOTER BLANCO */
+    background-color: black; 
 }
 
 :root {
@@ -12,12 +14,16 @@
     --color5: rgb(142,86,73);
     --color6: rgb(179,133,109);
 }
-
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
 #imagen-fondo {
     display: flex;
-    width: 100%;
     background-color:black;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center center;
     background-size: cover;
     width: 100%;
@@ -30,17 +36,40 @@
 #imagen-fondo img {
     display: flex;
     width: 100%;
+    background-color: black;
+    overflow: hidden;
 }
 
 #cuadro-textual {
     display: flex;
-    position:absolute;
+    position: absolute;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 70%;
-    height: 70%;
+    flex-wrap: nowrap;
+    max-width: 70vw;
+    max-height: 30vh;
     background-color: rgba(0, 0, 0, 0.708);
-    align-items: center;
+    align-content: center;
     justify-content: center;
-    color: var(--color2);;
+    overflow: scroll;
+    color: var(--color2);
+}
+
+#cuadro-textual::-webkit-scrollbar {
+    display: none
+} 
+
+#footer-home {
+    padding-top: 210px;
+}
+
+@media (min-width: 450px ) {
+    #footer-home {
+        padding-top: 131px;
+    }
+}
+
+@media (min-width: 608px) {
+    #footer-home {
+        padding-top: 2px;
+    }
 }

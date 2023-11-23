@@ -25,49 +25,50 @@ header {
     flex-wrap: nowrap;
     justify-content: flex-start;
     color: var(--color2);
+    width: 100%;
+}
+header a {
+    display: flex;
+    width: 30%;
 }
 #logo-principal{
     display: flex;
-    width: 12.5%;
-    height: auto;
-    
+    width: 100%;
+    align-items: center;
 }
 #logo-principal img {
     width: 100%;
-    height: auto;
     border-radius: 100%;
     background-size:contain;
     padding: 10px
 }
 
 #area-lateral-logo {
-    width: 87.5%;
-    height: auto;
+    width: 70%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: flex-start;
-    justify-content: flex-start;
     align-items: flex-end;
 }
 
 #area-busqueda {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    justify-content: center;
+    width: 60%;
     height: 100%;
     flex-wrap: wrap;
 }
 
 #area-busqueda p {
     display: flex;
+    flex-wrap: nowrap;
     width: 100%;
     height: auto;
     justify-content: center;
     margin-bottom: 1em;
-
     }
-    
+
 #area-busqueda div {
     display: flex;
     flex-direction: row;
@@ -96,21 +97,36 @@ header {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            width: 10%;
+            width: 22%;
             height: 3em;
             border-radius: 5px 0 0 5px;
             border-style: 1px;
             border-color: var(--color2);
-            background-color: black;
+            background-color: rgba(0, 0, 0, 0.774);
             color: var(--color2);
             border-right: 0;
+            justify-content: center;
             }
 
+#select-div div i {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    align-items: center;
+    text-align: center;
+    font-size:medium;
+    z-index: 10;
+    margin-top: 10px;
+    margin-left: 0.5%;
+}
 #entrada-busqueda-header{
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                width: 90%;
+                width: 80%;
                 height: 3em;
                 border-radius: 0 5px 5px 0;
                 border-style: 1px;
@@ -154,40 +170,75 @@ color: var(--color2);
 }
 
 #darkmode {
-    width: 10%;
-    height: 100%;
+    
     display: flex;
-    align-items: flex-end;
-    text-align: center;
-}
-#darkmode i {
-    font-size: 4em;
-    height: 60%;
-    padding-left: 20px;
-}
-#carrusell{
-    width: 35%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: center;
-    align-items: stretch;
-    height: 100%;
-    width: auto;
-}
-#login-carrito{
-    display: flex;
-    position: relative;
     flex-direction: row;
     flex-wrap: nowrap;
     width: 15%;
-    align-items: flex-start;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
 }
+#darkmode i {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+    height: 100%;
+}
+#carrusell{
+    width: 35%;
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+
+}
+
+#carrusell li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 15px;
+}
+
+#carrusell li a {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+#login-carrito{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 25%;
+    justify-content: center;
+    height: 100%;
+}
+
 #area-lateral-logo ul {
     display:flex
 }
+#login-carrito ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 80%;
+    align-items: stretch;
+    height: auto;
+}
 
+#login-carrito ul li {
+    text-align: center;
+}
+#estonodebeverse {
+    display: none;
+}
 #area-lateral-logo ul li{
     border-radius: 5px;
     border-style:groove ;
@@ -295,4 +346,19 @@ footer {
         margin-left: 15px;
     }
 
+}
+
+@media (min-width: 1024px) {
+#carrusell{
+    display: flex;
+}
+
+header  {
+    max-height: 30vh;
+}
+
+#logo-principal img {
+    max-width: 16vw;
+    max-height: 30vh;
+}
 }
