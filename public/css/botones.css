@@ -13,6 +13,7 @@
 #main-arrow i {
     font-size: 2em;
     color: var(--color2);
+    border-radius: 50%;
 }
 
 #main-arrow:hover {
