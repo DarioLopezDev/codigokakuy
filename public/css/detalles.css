@@ -5,12 +5,12 @@
 }
 
 :root {
-    --color1: rgb(165,91,64);
-    --color2: rgb(255,182,53);
-    --color3: rgb(196,120,62);
-    --color4: rgb(122,89,72);
-    --color5: rgb(142,86,73);
-    --color6: rgb(179,133,109);
+    --color1: rgb(165, 91, 64);
+    --color2: rgb(255, 182, 53);
+    --color3: rgb(196, 120, 62);
+    --color4: rgb(122, 89, 72);
+    --color5: rgb(142, 86, 73);
+    --color6: rgb(179, 133, 109);
 }
 
 button {
@@ -23,23 +23,31 @@ button {
     overflow: visible;
     padding: 0;
     display: contents;
+    cursor: pointer;
 }
 
 body {
-    background-color: var(--color5);
+    background-color: black;
 }
 
 /***********************************************************MAIN***********************************************************/
 
 
 main {
-    background-color: var(--color5);
+    background-image: url(/images/detallesFondo3.jpg);
+    background-size: cover;
+    background-position: center;
     color: #ffffff;
     margin: 10px;
+    text-align: center;
 }
 
 main h2 {
-    text-align: center;
+    display: inline-block;
+    color: var(--color2);
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .only-images {
@@ -47,7 +55,7 @@ main h2 {
     margin: auto;
 }
 
-.big-image{
+.big-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,9 +76,10 @@ main h2 {
     margin-bottom: 10px;
 }
 
-.main-info  {
-    background-color: var(--color6);
+.main-info {
+    background-color: rgba(179, 133, 109, 0.7);
     border: solid 1px black;
+    border-radius: 5px;
     margin: 5px 10px;
 }
 
@@ -85,7 +94,7 @@ main article p {
 
 .small-images {
     width: 18%
-}   
+}
 
 .main-first {
     border: solid 3px black;
@@ -105,6 +114,7 @@ main article p {
 
 .main-buyit h2 {
     background-color: var(--color2);
+    background: linear-gradient(rgb(255, 182, 53), rgb(165, 91, 64));
     color: black;
     font-size: 16px;
     max-width: 200px;
@@ -112,27 +122,41 @@ main article p {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);    
+    transition-property: all;
+    transition-duration: 0.9s;
+}
+
+.main-buyit h2:hover {
+    scale: 1.5;
 }
 
 .main-review {
-    background-color: var(--color6);
+    background-color: rgba(179, 133, 109, 0.7);
     margin: 10px;
     padding: 10px;
     border: solid 2px black;
+    border-radius: 5px;
 }
 
-.main-review h3 {
-    text-align: center;
+.main-review p {
+    text-align: justify;
+    text-wrap: pretty;
 }
 
 /***********************************************************ASIDE***********************************************************/
 
 aside {
-    background-color: var(--color3);
+    background-color: rgba(196, 120, 62, 0.7);
     margin: 10px;
     border-radius: 8px;
     padding-bottom: 5px;
+    transition-property: all;
+    transition-duration: 0.9s;
+}
+
+aside:hover {
+    background-color: rgba(196, 120, 62, 1);
 }
 
 aside h2 {
@@ -163,16 +187,25 @@ aside p {
     display: flex;
     flex-direction: column;
     width: 25%;
+    transition-property: all;
+    transition-duration: 0.8s;
 }
 
-.aside-element-tablet, .aside-element-pc {
+.aside-element:hover {
+    scale: 1.1;
+}
+
+.aside-element-tablet,
+.aside-element-pc {
     display: none;
 }
 
 /***********************************************************MEDIA***********************************************************/
 
 @media (min-width: 395px) {
-    .only-images, .main-info {
+
+    .only-images,
+    .main-info {
         width: 70vw;
         margin: auto;
     }
@@ -197,6 +230,12 @@ aside p {
         display: flex;
         flex-direction: column;
         width: 21%;
+        transition-property: all;
+        transition-duration: 0.8s;
+    }
+
+    .aside-element-tablet:hover {
+        scale: 1.1;
     }
 }
 
@@ -206,19 +245,19 @@ aside p {
         flex-direction: row;
     }
 
-     .only-images {
+    .only-images {
         width: 50%;
         margin: auto;
-    }      
+    }
 
-    .main-info-container  {
+    .main-info-container {
         display: block;
         margin-top: 0px;
         width: 50%;
         height: 50%;
     }
 
-    .main-info  {
+    .main-info {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -227,7 +266,12 @@ aside p {
         border: none;
     }
 
-    .main-first, .main-second {
+    main h2 {
+        font-size: 40px;
+    }
+
+    .main-first,
+    .main-second {
         width: 90%;
     }
 
@@ -239,7 +283,8 @@ aside p {
         font-size: 20px;
     }
 
-    .aside-element, .aside-element-tablet {
+    .aside-element,
+    .aside-element-tablet {
         width: 18%;
     }
 
@@ -247,5 +292,11 @@ aside p {
         display: flex;
         flex-direction: column;
         width: 18%;
+        transition-property: all;
+        transition-duration: 0.8s;
+    }
+
+    .aside-element-pc:hover {
+        scale: 1.1;
     }
 }
