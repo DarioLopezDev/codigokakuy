@@ -15,7 +15,7 @@
 
 body {
     font-family: Aladin;
-    background-color: var(--color5);
+    background-color: black;
     display: flex;
     flex-direction: column;
 }
@@ -48,7 +48,6 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 
 #datosLoginTitulo {
     margin: 2px;
