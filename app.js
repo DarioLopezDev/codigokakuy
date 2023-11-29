@@ -1,37 +1,39 @@
 const express = require('express');
 const app = express();
 const port = 4000;
-
 const path = require('path');
-const { CLIENT_RENEG_LIMIT } = require('tls');
+const rutas = require('./src/routes/mainRouter');
+// const { CLIENT_RENEG_LIMIT } = require('tls');
 
-const publicPath = path.join(__dirname, 'public');
-app.use(express.static(publicPath));
+// Configuración
+app.use(express.static('public'));
+// Acá falta el template engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'src/views'));
 
-const carritoPath = path.join(__dirname, '/src/views/carrito.ejs');
-app.get('/carrito', (req, res) => {
-    res.sendFile(carritoPath);
-});
+app.use('/', rutas)
 
-const detallesPath = path.join(__dirname, '/src/views/detalles.ejs');
-app.get('/detalles', (req, res) => {
-    res.sendFile(detallesPath);
-});
+// const carritoPath = path.join(__dirname, './src/views/carrito.ejs');
+// app.get('/carrito', (req, res) => {
+//     res.sendFile(carritoPath);
+// });
 
-const homePath = path.join(__dirname, '/src/views/home.ejs');
-app.get('/', (req, res) => {
-    res.sendFile(homePath);
-});
+// const detallesPath = path.join(__dirname, './src/views/detalles.ejs');
+// app.get('/detalles', (req, res) => {
+//     res.sendFile(detallesPath);
+// });
 
-const loginPath = path.join(__dirname, '/src/views/login.ejs');
-app.get('/login', (req, res) => {
-    res.sendFile(loginPath);
-});
 
-const registerPath = path.join(__dirname, '/src/views/register.ejs');
-app.get('/register', (req, res) => {
-    res.sendFile(registerPath);
-});
+
+// const loginPath = path.join(__dirname, './src/views/login.ejs');
+// app.get('/login', (req, res) => {
+//     res.sendFile(loginPath);
+// });
+
+// const registerPath = path.join(__dirname, './src/views/register.ejs');
+// app.get('/register', (req, res) => {
+//     res.sendFile(registerPath);
+// });
 
 app.get('*', (req, res) => {
     res.send(`
