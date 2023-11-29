@@ -13,28 +13,6 @@ app.set('views', path.join(__dirname, 'src/views'));
 
 app.use('/', rutas)
 
-// const carritoPath = path.join(__dirname, './src/views/carrito.ejs');
-// app.get('/carrito', (req, res) => {
-//     res.sendFile(carritoPath);
-// });
-
-// const detallesPath = path.join(__dirname, './src/views/detalles.ejs');
-// app.get('/detalles', (req, res) => {
-//     res.sendFile(detallesPath);
-// });
-
-
-
-// const loginPath = path.join(__dirname, './src/views/login.ejs');
-// app.get('/login', (req, res) => {
-//     res.sendFile(loginPath);
-// });
-
-// const registerPath = path.join(__dirname, './src/views/register.ejs');
-// app.get('/register', (req, res) => {
-//     res.sendFile(registerPath);
-// });
-
 app.get('*', (req, res) => {
     res.send(`
     <h1>No existe esa página</h1>
