@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     /* SACAR EL BACKGROUND COLOR BLACK SI SE QUIERE QUE EN EL HOME LOS BOTONES SEAN TRASLUCIDOS, PERO AL SACARLO CUANDO UNO VARIA LA MEDIDA DEL DISPOSITIVO SE VE ABAJO EN EL FOOTER BLANCO */
-    background-color: black; 
 }
 
 :root {
@@ -14,13 +13,22 @@
     --color5: rgb(142,86,73);
     --color6: rgb(179,133,109);
 }
+
+body main {
+    width: 100%;
+}
 main {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 100%;
+    min-width: auto;
+    min-height: 100vh;
+    background-image: url(/images/libreria-register.webp);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
 }
-#imagen-fondo {
+/* #imagen-fondo {
     display: flex;
     background-color:black;
     background-repeat: repeat;
@@ -31,18 +39,17 @@ main {
     z-index: 999;
     align-items: center;
     justify-content: center;
-}
+} */
 
-#imagen-fondo img {
+/* #imagen-fondo img {
     display: flex;
     width: 100%;
     background-color: black;
     overflow: hidden;
-}
+} */
 
 #cuadro-textual {
     display: flex;
-    position: absolute;
     flex-direction: row;
     flex-wrap: nowrap;
     max-width: 70vw;
