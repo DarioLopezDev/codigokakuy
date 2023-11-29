@@ -1,67 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!---------------- Fuentes ---------------->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
-    <!---------------- Iconos ---------------->
-    <script src="https://kit.fontawesome.com/93d15c86bc.js" crossorigin="anonymous"></script>
-    <!---------------- Estilos ---------------->
-    <link rel="stylesheet" href="/css/header-footer.css">
+    <%- include('./partials/head') %>
     <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="css/botones.css">
-    <title>CODIGO KAKUY TIENDA DE LIBROS</title>
-</head>
+
 <body>
-    <header>
-        <a href="/">
-            <div  id="logo-principal">
-                <img src="/images/Logo3.png" alt="imagenBiblioteca">
-            </div>
-        </a>
-        <div id="area-lateral-logo">
-            <div id="area-busqueda">
-                <p>CODIGO KAKUY</p>
-                <div id = "select-div" >
-                    <select name="" id="select1"></select>
-                    <div>
-                        <input id= "boton-busqueda-header" type="button" value="">
-                        <i id="lupaBusqueda" class="fa-solid fa-magnifying-glass"></i>
-                        <input id= "entrada-busqueda-header"type="text">
-                    </div>
-                </div>
-                <div id="select-select">
-                    <select name="" id="select2"></select>
-                    <select name="" id="select3"></select>
-                </div>
-            </div>
-            <div id="darkmode">
-                <i class="fa-solid fa-lightbulb"></i>
-            </div>
-            <div id="carrusell">
-                <ul>
-                    <li id="flechaIzq"><a href=""><i class="fa-solid fa-caret-left"></i></a></li>
-                    <li><a href="">M<br>A<br>S<br><br>B<br>U<br>S<br>C<br>A<br>D<br>O<br>S</a></li>
-                    <li><a href="">M<br>A<br>S<br><br>V<br>E<br>N<br>D<br>I<br>D<br>O<br>S</a></li>
-                    <li><a href="">A<br>U<br>D<br>I<br>O<br>L<br>I<br>B<br>R<br>O<br>S</a></li>
-                    <li><a href="">M<br>A<br>N<br>G<br>A</a></li>
-                    <li id="flechaDer"><a href=""><i class="fa-solid fa-caret-right"></i></a></li>
-                </ul>
-            </div>
-            <div id="login-carrito">
-                <ul>
-                    <li id="estonodebeverse"><a href="/detalles">Detalles</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <br>
-                    <li><a href="/register">Register</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <%- include('./partials/header') %>
     <main>
         <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
         <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
@@ -70,42 +14,6 @@
             <div id="cuadro-textual">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, suscipit ipsam ullam rem, quasi velit minima libero magni earum, eum unde impedit iste molestias veniam quisquam? Quae, corrupti. Porro quibusdam tempore consequuntur eligendi unde illum necessitatibus dignissimos modi, sed rerum magni quae vel non id, facilis debitis. Dolorum minima laudantium nesciunt soluta illum corporis expedita delectus dolor error voluptate ex nisi quo, sed asperiores. Amet rem maxime facilis nulla delectus magnam non harum optio. Veritatis dolorem consequatur eveniet corrupti! Incidunt fuga aliquid sed nam laudantium aliquam recusandae aut rem officia debitis corrupti placeat molestiae, quasi voluptas neque exercitationem ut eveniet illum quos laborum qui, iusto natus! Voluptate repellendus cumque hic, dolorem nulla rerum excepturi reiciendis cupiditate corporis temporibus aut fuga, soluta modi sint quisquam, odio nam labore dicta adipisci fugiat tempora voluptatem dolorum suscipit totam! Cumque ad ullam fuga atque quo ipsum earum tempora quia, impedit repellat necessitatibus beatae praesentium, perferendis, amet blanditiis esse vitae illo distinctio? Harum mollitia non aperiam eum accusantium asperiores labore assumenda. Adipisci tempore enim tenetur nesciunt in, illo dolore sed voluptate cupiditate totam? Repudiandae provident eius nostrum facere voluptatum, vitae voluptas nemo dolorem, esse possimus rem. Nobis reiciendis iste consequatur velit nulla rerum rem recusandae!</div>
         </div>
     </main>
-    <footer id="footer-home">
-        <section class="footer-contact-section">
-            <div class="footer-contact-container">
-                <h3>Contáctanos</h3>
-                <ul class="footer-contact">
-                    <li>Teléfono: +54 9 385 5 123-4567</li>
-                    <li>Email: tiendakakuy@mail.com</li>
-                    <li>Dirección: Calle Falsa 123</li>
-                </ul>
-            </div>
-
-            <br>
-
-            <div id="contenedor-social-networks">
-                <h3>Nuestras Redes Sociales:</h3>
-                <ul class="footer-social-networks">
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                </ul>
-            </div>
-        </section>
-        <br>
-        <section class="footer-payments-container">
-            <h3>Medios de pago</h3>
-            <ul class="footer-payments">
-                <li><i class="fa-brands fa-cc-visa"></i></li>
-                <li><i class="fa-brands fa-cc-mastercard"></i></li>
-                <li><i class="fa-brands fa-cc-paypal"></i></li>
-                <li><i class="fa-brands fa-cc-stripe"></i></li>
-                <li><i class="fa-brands fa-cc-jcb"></i></li>
-                <li><i class="fa-brands fa-cc-discover"></i></li>
-                <li><i class="fa-brands fa-cc-apple-pay"></i></li>
-                <li><i class="fa-brands fa-cc-amazon-pay"></i></li>
-            </ul>
-        </section>
-    </footer>
+    <%- include('./partials/footer') %>
 </body>
 </html>
