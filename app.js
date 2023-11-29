@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 4000;
+const port = 4050;
 const path = require('path');
 const rutas = require('./src/routes/mainRouter');
 
@@ -21,6 +21,6 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
     console.log(`
     Servidor levantado correctamente en el puerto ${port}
-    http://localhost:4000/
+    http://localhost:4050/
     `);
 });
