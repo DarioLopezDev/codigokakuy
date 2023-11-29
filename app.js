@@ -3,11 +3,9 @@ const app = express();
 const port = 4000;
 const path = require('path');
 const rutas = require('./src/routes/mainRouter');
-// const { CLIENT_RENEG_LIMIT } = require('tls');
 
-// Configuración
 app.use(express.static('public'));
-// Acá falta el template engine
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 
