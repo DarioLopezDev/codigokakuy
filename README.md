@@ -56,3 +56,9 @@ Pagina para venta de libros electrónicos, tantos libros fisicos como e-books, c
 4. (https://tiendamia.com/ar/Libros)
 5. (https://www.planetadelibros.com.ar/libros/comics/00021)
 6. (https://mangadex.org/)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Tablero Trello 
+
+1. https://trello.com/b/Yzc9yuZE/g1codigokakuy
