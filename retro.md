@@ -23,7 +23,11 @@ SPRINT 2
 -Realizamos cambios a nivel general grupalmente.
 
 SPRINT 3
+-Instalamos la dependencia EJS.
+-Aplicamos lo aprendido con ejs para modularizar las paginas.
+-Creamos archivos js para controllers y routers.
+-Creamos formularios para crear producto y editar producto.
+-Separamos vistas en distintas carpetas.
+-Creamos archivos parciales para los componentes que se repiten.
 
-
-
-
+SPRINT 4
