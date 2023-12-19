@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "firstName": "Pablo",
+        "lastName": "Hernández",
+        "email": "mgould0@soundcloud.com",
+        "password": "qQ6/tp2K",
+        "category": "User",
+        "image": "/images/avatars/pletzale.jpg"
+    },
+    {
+        "id": 2,
+        "firstName": "Mauricio",
+        "lastName": "García",
+        "email": "edorber1@netvibes.com",
+        "password": "wV0+t(85wdu&",
+        "category": "User",
+        "image": "/images/avatars/kipa.jpg"
+    },
+    {
+        "id": 3,
+        "firstName": "Leonardo",
+        "lastName": "Martínez",
+        "email": "dtreuge2@hexun.com",
+        "password": "qK9|@vP>V3",
+        "category": "User",
+        "image": "https://img.freepik.com/vector-premium/diseno-ilustracion-vector-personaje-avatar-hombre-joven_24877-18514.jpg"
+    },
+    {
+        "id": 4,
+        "firstName": "Esteban",
+        "lastName": "López",
+        "email": "cvaneeden3@hexun.com",
+        "password": "hG9<2W",
+        "category": "User",
+        "image": "/images/avatars/pletzale.jpg"
+    },
+    {
+        "id": 5,
+        "firstName": "Ricardo",
+        "lastName": "González",
+        "email": "sroman4@nature.com",
+        "password": "tK9/z?s/uF~G",
+        "category": "User",
+        "image": "/images/avatars/kipa.jpg"
+    },
+    {
+        "id": 6,
+        "firstName": "Soledad",
+        "lastName": "Pérez",
+        "email": "bmckellen5@cocolog-nifty.com",
+        "password": "xV1|f8mH",
+        "category": "User",
+        "image": "/images/avatars/kipa.jpg"
+    },
+    {
+        "id": 7,
+        "firstName": "Estefania",
+        "lastName": "Rodríguez",
+        "email": "lkienzle6@livejournal.com",
+        "password": "zW6*_?hU",
+        "category": "User",
+        "image": "/images/avatars/pretzel.jpg"
+    },
+    {
+        "id": 8,
+        "firstName": "Myriam",
+        "lastName": "Sánchez",
+        "email": "mwoffenden7@nih.gov",
+        "password": "kO3\\\"OM",
+        "category": "User",
+        "image": "/images/avatars/tostada.jpg"
+    },
+    {
+        "id": 9,
+        "firstName": "Patricia",
+        "lastName": "Cortez",
+        "email": "rfissenden8@netvibes.com",
+        "password": "nT9=AX<",
+        "category": "User",
+        "image": "/images/avatars/polloCorazon.jpg"
+    },
+    {
+        "id": 10,
+        "firstName": "Ingrid",
+        "lastName": "Pereyra",
+        "email": "ngreensted9@state.gov",
+        "password": "dY6$V_9m,Ax(",
+        "category": "User",
+        "image": "/images/avatars/pretzel.jpg"
+    }
+]
