@@ -23,7 +23,7 @@ const productsController = {
         const newProduct = {
             id: Date.now(),
             ...req.body,
-            image: 'default-image.jpg'
+            image: `http://localhost:3000/images/books/${req.file?.filename || 'default-image.jpg'}`
         }
         products.push(newProduct)
 
