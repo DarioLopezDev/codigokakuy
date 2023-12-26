@@ -2,58 +2,62 @@
 <html lang="en">
 
 <%- include('../partials/head') %>
-<link rel="stylesheet" href="/css/admin-editProducts.css">
+    <link rel="stylesheet" href="/css/admin-editProducts.css">
 
-<body>
+    <body>
 
-    <%- include('../partials/header') %>
+        <%- include('../partials/header') %>
 
-    <main class="mainEdit">
+            <main class="mainEdit">
 
-        <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
-        <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
+                <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
+                <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
 
-        <div class="formularioEditarProductoShadow">
+                <div class="formularioEditarProductoShadow">
 
-            <form id="formularioEditarProductoBox" action="/" method="post">
+                    <form id="formularioEditarProductoBox" action="/" method="post">
 
-                <label for="Datos" id="editarTitulo">Edite los productos:</label>
-
-
-                <input type="text" id="nombreproducto" name="nombreproducto" placeholder="Nombre del producto" required>
+                        <label for="Datos" id="editarTitulo">Edite los productos:</label>
 
 
-                <input type="text" id="descripcion" name="descripcion" placeholder="Descripción" required>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+
+                        <input type="text" id="año" name="año" placeholder="Año" required>
+
+                        <input type="text" id="autor" name="autor" placeholder="Autor" required>
+
+                        <input type="text" id="description" name="description" placeholder="Descripción" required>
+
+                        <input type="number" id="cantidad_de_paginas" name="cantidad_de_paginas"
+                            placeholder="Cantidad De Páginas" required>
+
+                        <input type="text" id="genero" name="genero" placeholder="Genero" required>
+
+                        <input type="number" id="precio" name="precio" placeholder="Precio" required>
+
+                        <input type="text" id="editorial" name="editorial" placeholder="Editorial" required>
+
+                        <input type="number" id="ISBN" name="ISBN" placeholder="ISBN" required>
 
 
-                <input type="text" id="categoria" name="categoria" placeholder="Categoría" required>
+                        <label for="imagenProducto" id="imagenProductoTitulo">Imagen:</label>
+                        <input type="file" id="imagenProducto" name="imagenProducto">
 
+                        <div class="botonesBox">
 
-                <input type="text" id="colores" name="colores" placeholder="Colores" required>
+                            <input id="botonBorrarEdit" type="reset" value="Borrar">
+                            <input id="botonEnviarEdit" type="submit" value="Enviar">
 
+                        </div>
 
-                <input type="number" id="precio" name="precio" placeholder="Precio" required>
-
-
-                <label for="imagenProducto" id="imagenProducto">Imagen:</label>
-                <input type="file" id="imagenProducto" name="imagenProducto">
-
-
-                <div class="botonesBox">
-
-                    <input id="botonBorrarEdit" type="reset" value="Borrar">
-                    <input id="botonEnviarEdit" type="submit" value="Enviar">
+                    </form>
 
                 </div>
 
-            </form>
+            </main>
 
-        </div>
+            <%- include('../partials/footer') %>
 
-    </main>
-
-    <%- include('../partials/footer') %>
-
-</body>
+    </body>
 
 </html>

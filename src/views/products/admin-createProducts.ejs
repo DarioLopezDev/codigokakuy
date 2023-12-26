@@ -2,62 +2,62 @@
 <html lang="en">
 
 <%- include('../partials/head') %>
-<link rel="stylesheet" href="/css/admin-createProducts.css">
+    <link rel="stylesheet" href="/css/admin-createProducts.css">
 
-<body>
+    <body>
 
-    <%- include('../partials/header') %>
+        <%- include('../partials/header') %>
 
-    <main class="mainCreate">
+            <main class="mainCreate">
 
-        <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
-        <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
+                <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
+                <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
 
-        <div class="formularioCrearProductoShadow">
+                <div class="formularioCrearProductoShadow">
 
-            <form id="formularioCrearProductoBox" action="/" method="post">
+                    <form id="formularioCrearProductoBox" action="/" method="post">
 
-                <label for="Datos" id="crearTitulo">Cree los productos:</label>
-
-
-                <input type="text" id="name" name="name" placeholder="Name" required>
-
-                <input type="text" id="año" name="año" placeholder="Año" required>
-
-                <input type="text" id="autor" name="autor" placeholder="Autor" required>
-
-                <input type="text" id="description" name="description" placeholder="Descripción" required>
-
-                <input type="number" id="cantidad_de_paginas" name="cantidad_de_paginas" placeholder="Cantidad De Páginas" required>
-
-                <input type="text" id="genero" name="genero" placeholder="Genero" required>
-
-                <input type="number" id="precio" name="precio" placeholder="Precio" required>
-
-                <input type="text" id="editorial" name="editorial" placeholder="Editorial" required>
-
-                <input type="number" id="ISBN" name="ISBN" placeholder="ISBN" required>
+                        <label for="Datos" id="crearTitulo">Cree los productos:</label>
 
 
-                <label for="imagenProducto" id="imagenProductoTitulo">Imagen:</label>
-                <input type="file" id="imagenProducto" name="imagenProducto">
-                
+                        <input type="text" id="name" name="name" placeholder="Name" required>
 
-                <div class="botonesBox">
+                        <input type="text" id="año" name="año" placeholder="Año" required>
 
-                    <input id="botonBorrarCreate" type="reset" value="Borrar">
-                    <input id="botonEnviarCreate" type="submit" value="Enviar">
+                        <input type="text" id="autor" name="autor" placeholder="Autor" required>
+
+                        <input type="text" id="description" name="description" placeholder="Descripción" required>
+
+                        <input type="number" id="cantidad_de_paginas" name="cantidad_de_paginas"
+                            placeholder="Cantidad De Páginas" required>
+
+                        <input type="text" id="genero" name="genero" placeholder="Genero" required>
+
+                        <input type="number" id="precio" name="precio" placeholder="Precio" required>
+
+                        <input type="text" id="editorial" name="editorial" placeholder="Editorial" required>
+
+                        <input type="number" id="ISBN" name="ISBN" placeholder="ISBN" required>
+
+
+                        <label for="imagenProducto" id="imagenProductoTitulo">Imagen:</label>
+                        <input type="file" id="imagenProducto" name="imagenProducto">
+
+                        <div class="botonesBox">
+
+                            <input id="botonBorrarCreate" type="reset" value="Borrar">
+                            <input id="botonEnviarCreate" type="submit" value="Enviar">
+
+                        </div>
+
+                    </form>
 
                 </div>
 
-            </form>
+            </main>
 
-        </div>
+            <%- include('../partials/footer') %>
 
-    </main>
-
-    <%- include('../partials/footer') %>
-
-</body>
+    </body>
 
 </html>
