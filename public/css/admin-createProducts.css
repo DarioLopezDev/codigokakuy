@@ -54,31 +54,55 @@ body {
     color: var(--color2);
 }
 
-#nombreproducto {
+#name {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
-#descripcion {
+#año {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
-#categoria {
+#autor {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
-#colores {
+#description {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#cantidad_de_paginas {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#genero {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
 }
 
 #precio {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#editorial {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#ISBN {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
