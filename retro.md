@@ -31,3 +31,8 @@ SPRINT 3
 -Creamos archivos parciales para los componentes que se repiten.
 
 SPRINT 4
+-Creamos los ejs para crear y editar productos.
+-Creamos un archivo router y un controller para los productos.
+-Agregamos dos archivos json uno para productos y otro para usuarios.
+-Agregamos productos al archivo json.
+-Instalamos la dependencia Multer.
