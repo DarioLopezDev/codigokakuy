@@ -1,0 +1,58 @@
+.producto-libro {
+    display: flex;
+    border: 1px solid var(--color4);
+    width: 20vw;
+    height: 30vh;
+    margin: 10px;
+}
+
+.box-izquierda {
+    display: flex;
+    background-image: url("/images/cien años de soledad tapa frontal.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid var(--color4);
+    width: 50%;
+    height: 100%;
+}
+
+.box-derecha {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid var(--color4);
+    width: 50%;
+    height: 100%;
+    color: var(--color2);
+}
+
+.name {
+    font-size: 14px;
+}
+
+.autor {
+    font-size: 14px;
+}
+
+.price {
+    font-size: 14px;
+}
+
+
+@media (min-width: 395px) {
+    .producto-libro {
+        width: 70vw;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 790px) {
+    .producto-libro {
+        width: 22vw;
+        height: 30vh;
+        margin: 10px;
+    }
+}

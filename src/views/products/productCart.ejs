@@ -3,6 +3,7 @@
 
 <%- include('../partials/head') %>
 <link rel="stylesheet" href="css/carrito.css">
+<link rel="stylesheet" href="css/product.css">
 
     <body>
 
@@ -44,19 +45,7 @@
 
                     <section class="contenedor-productos">
 
-                        <article class="producto-libro">
-
-                            <div class="box-izquierda">
-                                <img src="" alt="">
-                            </div>
-
-                            <div class="box-derecha">
-                                <p class="descripcion">Descripcion</p>
-                                <p class="precio">Precio</p>
-                                <p class="stock">Si hay stock</p>
-                            </div>
-
-                        </article>
+                        <%- include('../partials/product.ejs') %>
 
                     </section>
 
