@@ -7,11 +7,7 @@
 }
 
 .box-izquierda {
-    display: flex;
-    background-image: url("/images/cien años de soledad tapa frontal.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    display: contents;
     border: 1px solid var(--color4);
     width: 50%;
     height: 100%;
@@ -23,7 +19,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid var(--color4);
     width: 50%;
     height: 100%;
     color: var(--color2);

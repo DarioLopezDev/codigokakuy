@@ -3,13 +3,15 @@ const app = express();
 const port = 4050;
 const path = require('path');
 const rutas = require('./src/routes/mainRouter');
+const rutasProductos = require('./src/routes/productsRouter');
 
 app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 
-app.use('/', rutas)
+app.use('/', rutas);
+app.use('/products', rutasProductos);
 
 app.get('*', (req, res) => {
     res.send(`

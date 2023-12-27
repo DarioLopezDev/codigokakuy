@@ -1,12 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-
 const books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
-    index: (req, res) => {
-        res.render('product.ejs', { products: products })
+    products: (req, res) => {
+        res.render('./partials/product.ejs', { books });
     },
     detail: (req, res) => {
         let id = req.params.id
