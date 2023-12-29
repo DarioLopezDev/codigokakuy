@@ -4,7 +4,7 @@ const books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos
 
 const productsController = {
     products: (req, res) => {
-        res.render('./partials/product.ejs', { books });
+        res.render('./products/products.ejs', { books });
     },
     detail: (req, res) => {
         let id = req.params.id

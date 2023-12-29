@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* SACAR EL BACKGROUND COLOR BLACK SI SE QUIERE QUE EN EL HOME LOS BOTONES SEAN TRASLUCIDOS, PERO AL SACARLO CUANDO UNO VARIA LA MEDIDA DEL DISPOSITIVO SE VE ABAJO EN EL FOOTER BLANCO */
+}
+
+:root {
+    --color1: rgb(165,91,64);
+    --color2: rgb(255,182,53);
+    --color3: rgb(196,120,62);
+    --color4: rgb(122,89,72);
+    --color5: rgb(142,86,73);
+    --color6: rgb(179,133,109);
+}
+
+body main {
+    width: 100%;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: auto;
+    min-height: 100vh;
+    background-image: url(/images/libreria-register.webp);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+/* #imagen-fondo {
+    display: flex;
+    background-color:black;
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* #imagen-fondo img {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+} */
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px;
+}
+
+#cuadro-textual {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 70vw;
+    max-height: 30vh;
+    background-color: rgba(0, 0, 0, 0.708);
+    align-content: center;
+    justify-content: center;
+    overflow: scroll;
+    color: var(--color2);
+}
+
+#cuadro-textual::-webkit-scrollbar {
+    display: none
+} 
+
+#footer-home {
+    padding-top: 210px;
+}
+
+@media (min-width: 450px ) {
+    #footer-home {
+        padding-top: 131px;
+    }
+}
+
+@media (min-width: 608px) {
+    #footer-home {
+        padding-top: 2px;
+    }
+}
