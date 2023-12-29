@@ -2,80 +2,84 @@
 <html lang="en">
 
 <%- include('../partials/head') %>
-<link rel="stylesheet" href="/css/register.css">
 
-<body>
+    <link rel="stylesheet" href="/css/register.css">
 
-    <%- include('../partials/header') %>
+    <body>
 
-    <main class="mainRegistro">
+        <%- include('../partials/header') %>
 
-        <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
-        <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
+            <main class="mainRegistro">
 
-        <div class="formularioRegistroShadow">
+                <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
+                <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
 
-            <form id="formularioRegistroBox" action="/" method="post">
+                <div class="formularioRegistroShadow">
 
-                <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
+                    <form id="formularioRegistroBox" action="/" method="post">
 
-
-                <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required>
+                        <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
 
 
-                <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required>
+                        <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido"
+                            required>
 
 
-                <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario"
+                            required>
 
 
-                <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
-                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
 
 
-                <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
-                <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+                        <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
 
 
-                <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
-                <input type="file" id="foto" name="foto" single>
+                        <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
+                        <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
 
 
-                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                        <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
+                        <input type="file" id="foto" name="foto" single>
 
-                <input type="password" id="confirmarContrasena" name="confirmarContrasena"
-                    placeholder="Confirmar Contraseña" required>
 
-                <div class="terminosServiciosBox">
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
 
-                    <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y Servicios</label>
-                    <input type="checkbox" id="terminosServicios" name="terminosServicios" value="Terminos y Servicios"
-                        required>
+                        <input type="password" id="confirmarContrasena" name="confirmarContrasena"
+                            placeholder="Confirmar Contraseña" required>
+
+                        <div class="terminosServiciosBox">
+
+                            <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y
+                                Servicios</label>
+                            <input type="checkbox" id="terminosServicios" name="terminosServicios"
+                                value="Terminos y Servicios" required>
+
+                        </div>
+
+                        <div class="botonesBox">
+
+                            <input id="botonBorrarRegister" type="reset" value="Borrar">
+                            <input id="botonEnviarRegister" type="submit" value="Enviar">
+
+                        </div>
+
+                    </form>
+
+                    <ul class="linksRegistro">
+
+                        <li><a href="/login">Ya tengo una cuenta</a></li>
+                        <li><a href="/">Pagina Principal</a></li>
+
+                    </ul>
 
                 </div>
 
-                <div class="botonesBox">
+            </main>
 
-                    <input id="botonBorrarRegister" type="reset" value="Borrar">
-                    <input id="botonEnviarRegister" type="submit" value="Enviar">
+            <%- include('../partials/footer') %>
 
-                </div>
-
-            </form>
-
-            <ul class="linksRegistro">
-
-                <li><a href="/login">Ya tengo una cuenta</a></li>
-                <li><a href="/">Pagina Principal</a></li>
-
-            </ul>
-
-        </div>
-
-    </main>
-
-    <%- include('../partials/footer') %>
-
-</body>
+    </body>
 
 </html>

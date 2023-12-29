@@ -2,58 +2,60 @@
 <html lang="en">
 
 <%- include('../partials/head') %>
-<link rel="stylesheet" href="/css/login.css">
-<body>
 
-    <%- include('../partials/header') %>
+    <link rel="stylesheet" href="/css/login.css">
 
-    <main class="mainLogin">
+    <body>
 
-        <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
-        <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
+        <%- include('../partials/header') %>
 
-        <div class="formularioLoginShadow">
+            <main class="mainLogin">
 
-            <form id="formularioLoginBox" action="/" method="post">
+                <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
+                <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
 
-                <label for="datosLogin" id="datosLoginTitulo">Datos de Usuario:</label>
-                <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+                <div class="formularioLoginShadow">
 
-                <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                    <form id="formularioLoginBox" action="/" method="post">
 
-                <div class="recordarmeBox">
+                        <label for="datosLogin" id="datosLoginTitulo">Datos de Usuario:</label>
+                        <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
 
-                    <label for="recordarme" id="recordarmeTitulo">Recordarme</label>
-                    <input type="checkbox" id="recordarme" name="recordarme" value="Recordarme">
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+
+                        <div class="recordarmeBox">
+
+                            <label for="recordarme" id="recordarmeTitulo">Recordarme</label>
+                            <input type="checkbox" id="recordarme" name="recordarme" value="Recordarme">
+
+                        </div>
+
+                        <ul class="politicaPrivacidadBox">
+
+                            <input type="checkbox" id="politicaPrivacidadTitulo" name="politicaPrivacidad"
+                                value="politicaPrivacidad" required>
+                            <li><a href="#">Politica de Privacidad</a></li>
+
+                        </ul>
+
+                        <input id="botonEnviarLogin" type="submit" value="Enviar">
+
+                    </form>
+
+                    <ul class="linksLogin">
+
+                        <li><a href="/register">Crear una cuenta</a></li>
+                        <li><a href="#">Perdiste tu contraseña?</a></li>
+                        <li><a href="/">Pagina Principal</a></li>
+
+                    </ul>
 
                 </div>
 
-                <ul class="politicaPrivacidadBox">
+            </main>
 
-                    <input type="checkbox" id="politicaPrivacidadTitulo" name="politicaPrivacidad"
-                        value="politicaPrivacidad" required>
-                    <li><a href="#">Politica de Privacidad</a></li>
+            <%- include('../partials/footer') %>
 
-                </ul>
-
-                <input id="botonEnviarLogin" type="submit" value="Enviar">
-
-            </form>
-
-            <ul class="linksLogin">
-
-                <li><a href="/register">Crear una cuenta</a></li>
-                <li><a href="#">Perdiste tu contraseña?</a></li>
-                <li><a href="/">Pagina Principal</a></li>
-
-            </ul>
-
-        </div>
-
-    </main>
-
-    <%- include('../partials/footer') %>
-
-</body>
+    </body>
 
 </html>

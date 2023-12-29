@@ -71,6 +71,12 @@ h1 {
     display: none
 } 
 
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 #footer-home {
     padding-top: 210px;
 }

@@ -69,6 +69,28 @@ main {
     padding-top: 210px;
 }
 
+.productos-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.productos-contenedor {
+    height: 50vh;
+    width: 50vw;
+    border: 2px solid var(--color4);
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
 @media (min-width: 450px ) {
     #footer-home {
         padding-top: 131px;

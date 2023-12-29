@@ -1,75 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/detalles.css">
-    <link rel="stylesheet" href="css/header-footer.css">
-    <link rel="stylesheet" href="css/botones.css">
-    <!---------------- Íconos ---------------->
-    <script src="https://kit.fontawesome.com/93d15c86bc.js" crossorigin="anonymous"></script>
-    <title>Detalles del Producto</title>
-</head>
+<%- include('../partials/head') %>
 
 <body>
-    <header>
-        <a href="/">
-            <div  id="logo-principal">
-                <img src="/images/Logo3.png" alt="imagenBiblioteca">
-            </div>
-        </a>
-        <div id="area-lateral-logo">
-            <div id="area-busqueda">
-                <p>CODIGO KAKUY</p>
-                <div id = "select-div" >
-                    <select name="" id="select1"></select>
-                    <div>
-                        <input id= "boton-busqueda-header" type="button" value="">
-                        <i id="lupaBusqueda" class="fa-solid fa-magnifying-glass"></i>
-                        <input id= "entrada-busqueda-header"type="text">
-                    </div>
-                </div>
-                <div id="select-select">
-                    <select name="" id="select2"></select>
-                    <select name="" id="select3"></select>
-                </div>
-            </div>
-            <div id="darkmode">
-                <i class="fa-solid fa-lightbulb"></i>
-            </div>
-            <div id="carrusell">
-                <ul>
-                    <li id="flechaIzq"><a href=""><i class="fa-solid fa-caret-left"></i></a></li>
-                    <li><a href="">M<br>A<br>S<br><br>B<br>U<br>S<br>C<br>A<br>D<br>O<br>S</a></li>
-                    <li><a href="">M<br>A<br>S<br><br>V<br>E<br>N<br>D<br>I<br>D<br>O<br>S</a></li>
-                    <li><a href="">A<br>U<br>D<br>I<br>O<br>L<br>I<br>B<br>R<br>O<br>S</a></li>
-                    <li><a href="">M<br>A<br>N<br>G<br>A</a></li>
-                    <li id="flechaDer"><a href=""><i class="fa-solid fa-caret-right"></i></a></li>
-                </ul>
-            </div>
-            <div id="login-carrito">
-                <ul>
-                    <li id="estonodebeverse"><a href="/detalles">Detalles</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <br>
-                    <li><a href="/register">Register</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+
+    <%- include('../partials/header') %>
+
+    <link rel="stylesheet" href="detalles.css">
 
     <main>
+
         <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
         <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
         
         <h2>Cien años de soledad</h2>
+
         <div class="main-container">
+
             <section class="only-images">
+
                 <div class="big-image">
                     <img src="images/cien años de soledad tapa frontal.png" alt="imagen-grande">
                 </div>
+
                 <div class="images-container">
+
                     <button><i class="fa-solid fa-chevron-left"></i></button>
                     <button><img src="images/cien años de soledad tapa frontal.png" alt="tapa-imagen-chica"
                             class="small-images"></button>
@@ -80,51 +36,71 @@
                     <button><img src="images/cien años de soledad tapa frontal dorso posterior.png"
                             alt="posterior-imagen-chica" class="small-images"></button>
                     <button><i class="fa-solid fa-chevron-right"></i></button>
+                    
                 </div>
+
             </section>
 
             <div class="main-info-container">
+
                 <section class="main-info">
+
                     <article class="main-first">
+
                         <div class="main-info-details"><p>Autor: </p><p>Gabriel García Márquez</p></div>
                         <div class="main-info-details"><p>Editorial: </p><p>Alfaguara</p></div>
                         <div class="main-info-details"><p>Idioma: </p><p>Español</p></div>
                         <div class="main-info-details"><p>Año: </p><p>2008</p></div>
                         <div class="main-info-details"><p>Colección: </p><p>R.a.e.</p></div>
+
                         <br>
+
                         <div class="main-info-details"><p>Dimensiones: </p><p>20.5 x 13.5 cm</p></div>
                         <div class="main-info-details"><p>Género: </p><p>Narración</p></div>
                         <div class="main-info-details"><p>Subgéneros: </p><p>Novela</p></div>
                         <div class="main-info-details"><p>Páginas: </p><p>752</p></div>
                         <div class="main-info-details"><p>Peso: </p><p>2kg</p></div>
+
                     </article>
+
                     <article class="main-second">
                         <div class="main-info-details"><h3>Valoración: </h3><h3>*****</h3></div>
                         <div class="main-info-details"><h3>Stock: </h3><h3>x/x</h3></div>
                         <div class="main-info-details"><h3>Precio: </h3><h3>$xxxx</h3></div>
                     </article>
+
                 </section>
+
                 <button class="main-buyit">
                     <h2>Agregar al Carrito</h2>
                 </button>
+
             </div>
 
         </div>
 
         <section class="main-review">
+
             <h3>Reseña:</h3>
+
             <p>Relata la historia de una aldea imaginaria, Macondo. La novela se encuentra dividida en veinte secuencias
                 narrativas que carecen de título e incluso de enumeración. Cien años de soledad cuenta una serie de
                 sucesos insólitos, insospechas, que ni el narrador ni los personajes se asombran de ello. En este libro
                 cabe aclarar que los nombres de los personajes se repiten de generación en generación, es por este
                 motivo que se vuelve confuso, ya que prácticamente son idénticos.</p>
+
         </section>
+
     </main>
 
     <aside>
+
         <h2>Productos Relacionados</h2>
+
         <div class="aside-container">
+
             <button><i class="fa-solid fa-chevron-left"></i></button>
+
             <div class="aside-element">
                 <a href="#">
                     <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
@@ -132,6 +108,7 @@
                 <p>Título</p>
                 <p>Precio</p>
             </div>
+
             <div class="aside-element">
                 <a href="#">
                     <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
@@ -139,6 +116,7 @@
                 <p>Título</p>
                 <p>Precio</p>
             </div>
+
             <div class="aside-element">
                 <a href="#">
                     <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
@@ -146,6 +124,7 @@
                 <p>Título</p>
                 <p>Precio</p>
             </div>
+
             <div class="aside-element-tablet">
                 <a href="#">
                     <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
@@ -153,6 +132,7 @@
                 <p>Título</p>
                 <p>Precio</p>
             </div>
+
             <div class="aside-element-pc">
                 <a href="#">
                     <img src="images/cien años de soledad tapa frontal.png" alt="imagen-chica">
@@ -160,48 +140,15 @@
                 <p>Título</p>
                 <p>Precio</p>
             </div>
+
             <button><i class="fa-solid fa-chevron-right"></i></button>
+
     </aside>
+
     </div>
 
+    <%- include('../partials/footer') %>
 
-    <footer>
-        <section class="footer-contact-section">
-            <div class="footer-contact-container">
-                <h3>Contáctanos</h3>
-                <ul class="footer-contact">
-                    <li>Teléfono: +54 9 385 5 123-4567</li>
-                    <li>Email: tiendakakuy@mail.com</li>
-                    <li>Dirección: Calle Falsa 123</li>
-                </ul>
-            </div>
-
-            <br>
-
-            <div>
-                <h3>Nuestras Redes Sociales:</h3>
-                <ul class="footer-social-networks">
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
-                </ul>
-            </div>
-        </section>
-        <br>
-        <section class="footer-payments-container">
-            <h3>Medios de pago</h3>
-            <ul class="footer-payments">
-                <li><i class="fa-brands fa-cc-visa"></i></li>
-                <li><i class="fa-brands fa-cc-mastercard"></i></li>
-                <li><i class="fa-brands fa-cc-paypal"></i></li>
-                <li><i class="fa-brands fa-cc-stripe"></i></li>
-                <li><i class="fa-brands fa-cc-jcb"></i></li>
-                <li><i class="fa-brands fa-cc-discover"></i></li>
-                <li><i class="fa-brands fa-cc-apple-pay"></i></li>
-                <li><i class="fa-brands fa-cc-amazon-pay"></i></li>
-            </ul>
-        </section>
-    </footer>
 </body>
 
 </html>
