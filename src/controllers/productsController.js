@@ -22,12 +22,12 @@ const productsController = {
             ...req.body,
             image: `http://localhost:4050/images/books/${req.file?.filename || 'default-image.jpg'}`
         }
-        products.push(newProduct);
+        books.push(newProduct);
 
-        let productsJSON = JSON.stringify(products, null, ' ');
+        let productsJSON = JSON.stringify(books, null, ' ');
         fs.writeFileSync(productsFilePath, productsJSON);
 
-        res.redirect('./products');
+        res.redirect('/products');
     },
 
     detail: (req, res) => {
@@ -36,7 +36,8 @@ const productsController = {
         if (book) {
             return res.render('./products/productDetail.ejs', { book, books });
         }
-        return res.send('El producto que buscas no existe');
+        return res.send(`<h1>El Libro que buscas no existe</h1>
+        <h3><a href="/">Volver al Home</a></h3>`);
     },
 
     edit: (req, res) => {

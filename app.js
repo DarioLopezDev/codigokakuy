@@ -1,18 +1,25 @@
+//Dependencias
 const express = require('express');
 const app = express();
 const port = 4050;
 const path = require('path');
-const rutas = require('./src/routes/mainRouter');
-const rutasProductos = require('./src/routes/productsRouter');
 const methodOverride = require('method-override');
 
+//Rutas requeridas
+const rutas = require('./src/routes/mainRouter');
+const rutasProductos = require('./src/routes/productsRouter');
+
+//Uso de imágenes y css
 app.use(express.static('public'));
 
+//Uso de PUT y DELETE
 app.use(methodOverride('_method'));
 
+//Uso de archivos EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));
 
+//Uso de Rutas
 app.use('/', rutas);
 app.use('/products', rutasProductos);
 

@@ -362,5 +362,18 @@
   "editorial": "Gestión 2000",
   "ISBN": "9788497355730",
   "image": "https://www.penguinlibros.com/ar/1597672-thickbox_default/piense-y-hagase-rico.webp"
+ },
+ {
+  "id": 1703887496156,
+  "name": "a",
+  "aÃ±o": "1",
+  "autor": "a",
+  "description": "a",
+  "cantidad_de_paginas": "1",
+  "genero": "a",
+  "price": "1",
+  "editorial": "a",
+  "ISBN": "1",
+  "image": "http://localhost:4050/images/books/default-image.jpg"
  }
 ]
