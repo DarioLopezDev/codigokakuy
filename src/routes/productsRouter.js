@@ -19,11 +19,15 @@ let upload = multer({ storage });
 
 router.get('/', productsController.products);
 
-router.get('/detail/:id', productsController.detail);
+
+router.get('/carrito', productsController.productCart);
 
 
 router.get('/create', productsController.create);
 router.post('/create', upload.single('imagenProducto'), productsController.store);
+
+
+router.get('/:id', productsController.detail);
 
 
 router.get('/edit/:id', productsController.edit);

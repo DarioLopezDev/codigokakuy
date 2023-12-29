@@ -6,17 +6,15 @@ const productsController = {
     products: (req, res) => {
         res.render('./products/products.ejs', { books });
     },
-    detail: (req, res) => {
-        let id = req.params.id
-        let product = products.find(product => product.id == id)
-        if (product) {
-            return res.render('productDetail.ejs', { product })
-        }
-        return res.send('El producto que buscas no existe')
+
+    productCart: (req, res) => {
+        res.render('./products/productCart.ejs', { books });
     },
+
     create: (req, res) => {
-        res.render('admin-createProducts.ejs')
+        res.render('./products/admin-createProducts.ejs')
     },
+
     store: (req, res) => {
         const newProduct = {
             id: Date.now(),
@@ -28,13 +26,24 @@ const productsController = {
         let productsJSON = JSON.stringify(products, null, ' ')
         fs.writeFileSync(productsFilePath, productsJSON)
 
-        res.redirect('/productCart')
+        res.redirect('/products')
     },
+
+    detail: (req, res) => {
+        let idP = req.params.id
+        let book = books.libros.find(book => book.id == idP)
+        if (book) {
+            return res.render('./products/productDetail.ejs', { book, books });
+        }
+        return res.send('El producto que buscas no existe')
+    },
+
     edit: (req, res) => {
         let id = req.params.id
         let product = products.find(product => product.id == id)
         res.render('admin-editProducts.ejs', { product })
     },
+
     update: (req, res) => {
         const id = req.params.id
         const product = products.find(product => product.id == id)
@@ -56,6 +65,7 @@ const productsController = {
             res.redirect('/productCart')
         }
     },
+
     destroy: (req, res) => {
         const id = req.params.id
         products = products.filter(product => product.id != id)
