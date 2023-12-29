@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));
+let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));
 
 const productsController = {
     products: (req, res) => {
@@ -26,12 +26,12 @@ const productsController = {
         let productsJSON = JSON.stringify(products, null, ' ')
         fs.writeFileSync(productsFilePath, productsJSON)
 
-        res.redirect('/products')
+        res.redirect('./products')
     },
 
     detail: (req, res) => {
         let idP = req.params.id
-        let book = books.libros.find(book => book.id == idP)
+        let book = books.find(book => book.id == idP)
         if (book) {
             return res.render('./products/productDetail.ejs', { book, books });
         }
@@ -39,9 +39,9 @@ const productsController = {
     },
 
     edit: (req, res) => {
-        let id = req.params.id
-        let product = products.find(product => product.id == id)
-        res.render('admin-editProducts.ejs', { product })
+        let id = req.params.id;
+        let book = books.find(book => book.id == id)
+        res.render('./products/admin-editProducts.ejs', { book })
     },
 
     update: (req, res) => {
@@ -62,15 +62,15 @@ const productsController = {
             product.discount = req.body.discount || product.discount
 
             fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
-            res.redirect('/productCart')
+            res.redirect('./products/id')
         }
     },
 
     destroy: (req, res) => {
         const id = req.params.id
-        products = products.filter(product => product.id != id)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
-        res.redirect('/productCart')
+        books = books.filter(book => book.id != id)
+        fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(books, null, ' '))
+        res.redirect('/products')
     }
 }
 

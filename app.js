@@ -4,8 +4,11 @@ const port = 4050;
 const path = require('path');
 const rutas = require('./src/routes/mainRouter');
 const rutasProductos = require('./src/routes/productsRouter');
+const methodOverride = require('method-override');
 
 app.use(express.static('public'));
+
+app.use(methodOverride('_method'));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src/views'));

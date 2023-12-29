@@ -13,10 +13,6 @@ const controlador = {
 
     register: (req, res) => {
         res.render('./users/register');
-    },
-
-    productEdit: (req, res) => {
-        res.render('./products/admin-editProducts');
     }
 }
 

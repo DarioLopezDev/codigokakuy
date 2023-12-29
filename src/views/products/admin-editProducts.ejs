@@ -12,7 +12,7 @@
             <main class="mainEdit">
 
                 <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
-                <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
+                <a href="/products/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
 
                 <div class="formularioEditarProductoShadow">
 
@@ -21,24 +21,24 @@
                         <label for="Datos" id="editarTitulo">Edite los productos:</label>
 
 
-                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="text" id="name" name="name" placeholder="<%= book.name %>">
 
-                        <input type="text" id="año" name="año" placeholder="Año" required>
+                        <input type="text" id="año" name="año" placeholder="<%= book.año %>">
 
-                        <input type="text" id="autor" name="autor" placeholder="Autor" required>
+                        <input type="text" id="autor" name="autor" placeholder="<%= book.autor %>">
 
-                        <input type="text" id="description" name="description" placeholder="Descripción" required>
+                        <input type="text" id="description" name="description" placeholder="<%= book.description %>">
 
                         <input type="number" id="cantidad_de_paginas" name="cantidad_de_paginas"
-                            placeholder="Cantidad De Páginas" required>
+                            placeholder="<%= book.cantidad_de_paginas %>">
 
-                        <input type="text" id="genero" name="genero" placeholder="Genero" required>
+                        <input type="text" id="genero" name="genero" placeholder="<%= book.genero %>">
 
-                        <input type="number" id="price" name="price" placeholder="Precio" required>
+                        <input type="number" id="price" name="price" placeholder="<%= book.price %>">
 
-                        <input type="text" id="editorial" name="editorial" placeholder="Editorial" required>
+                        <input type="text" id="editorial" name="editorial" placeholder="<%= book.editorial %>">
 
-                        <input type="number" id="ISBN" name="ISBN" placeholder="ISBN" required>
+                        <input type="number" id="ISBN" name="ISBN" placeholder="<%= book.ISBN %>">
 
 
                         <label for="imagenProducto" id="imagenProductoTitulo">Imagen:</label>
@@ -47,7 +47,14 @@
                         <div class="botonesBox">
 
                             <input id="botonBorrarEdit" type="reset" value="Borrar">
-                            <input id="botonEnviarEdit" type="submit" value="Enviar">
+
+                            <form action="/products" method="post">
+                                <button id="botonEnviarEdit" type="submit" value="Enviar"></button>
+                            </form>
+                            
+                            <form action="/products/delete/<%= book.id %>?_method=DELETE" method="post">
+                                <button id="botonBorrarEdit" type="submit" value="Eliminar Libro"></button>
+                            </form>
 
                         </div>
 

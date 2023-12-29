@@ -1,8 +1,10 @@
-<% books.libros.forEach(book=> { %>
+<% books.forEach(book => { %>
     <article class="producto-libro">
 
         <div class="box-izquierda">
-            <img src="<%= book.image %>" alt="<%= book.name %>">
+            <a href="/products/<%= book.id %>">
+                <img src="<%= book.image %>" alt="<%= book.name %>">
+            </a>
         </div>
 
         <div class="box-derecha">
@@ -17,4 +19,4 @@
         </div>
 
     </article>
-<% }) %>
+    <% }) %>

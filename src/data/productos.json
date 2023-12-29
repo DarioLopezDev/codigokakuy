@@ -1,5 +1,4 @@
-{
-    "libros": [
+[
         {
             "id": "1",
             "name": "Código Da Vinci",
@@ -378,4 +377,3 @@
             "image": "https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/9786073108072.jpg"
         }
     ]
-}
