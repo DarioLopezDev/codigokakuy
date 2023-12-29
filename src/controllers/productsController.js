@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+let productsFilePath = path.join(__dirname, '../data/productos.json');
 let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));
 
 const productsController = {
@@ -12,7 +13,7 @@ const productsController = {
     },
 
     create: (req, res) => {
-        res.render('./products/admin-createProducts.ejs')
+        res.render('./products/admin-createProducts.ejs');
     },
 
     store: (req, res) => {
@@ -21,56 +22,56 @@ const productsController = {
             ...req.body,
             image: `http://localhost:4050/images/books/${req.file?.filename || 'default-image.jpg'}`
         }
-        products.push(newProduct)
+        products.push(newProduct);
 
-        let productsJSON = JSON.stringify(products, null, ' ')
-        fs.writeFileSync(productsFilePath, productsJSON)
+        let productsJSON = JSON.stringify(products, null, ' ');
+        fs.writeFileSync(productsFilePath, productsJSON);
 
-        res.redirect('./products')
+        res.redirect('./products');
     },
 
     detail: (req, res) => {
-        let idP = req.params.id
-        let book = books.find(book => book.id == idP)
+        let idP = req.params.id;
+        let book = books.find(book => book.id == idP);
         if (book) {
             return res.render('./products/productDetail.ejs', { book, books });
         }
-        return res.send('El producto que buscas no existe')
+        return res.send('El producto que buscas no existe');
     },
 
     edit: (req, res) => {
         let id = req.params.id;
-        let book = books.find(book => book.id == id)
-        res.render('./products/admin-editProducts.ejs', { book })
+        let book = books.find(book => book.id == id);
+        res.render('./products/admin-editProducts.ejs', { book });
     },
 
     update: (req, res) => {
-        const id = req.params.id
-        const product = products.find(product => product.id == id)
-        if (product) {
-            product.name = req.body.name || product.name
-            product.año = req.body.año || product.año
-            product.titulo = req.body.titulo || product.titulo
-            product.autor = req.body.autor || product.autor
-            product.description = req.body.description || product.description
-            product.cantidad_de_paginas = req.body.cantidad_de_paginas || product.cantidad_de_paginas
-            product.genero = req.body.genero || product.genero
-            product.price = req.body.price || product.price
-            product.editorial = req.body.editorial || product.editorial
-            product.ISBN = req.body.ISBN || product.ISBN
-            product.image = req.body.image || product.image
-            product.discount = req.body.discount || product.discount
+        const id = req.params.id;
+        const book = books.find(book => book.id == id);
+        if (book) {
+            book.name = req.body.name || book.name
+            book.año = req.body.año || book.año
+            book.titulo = req.body.titulo || book.titulo
+            book.autor = req.body.autor || book.autor
+            book.description = req.body.description || book.description
+            book.cantidad_de_paginas = req.body.cantidad_de_paginas || book.cantidad_de_paginas
+            book.genero = req.body.genero || book.genero
+            book.price = req.body.price || book.price
+            book.editorial = req.body.editorial || book.editorial
+            book.ISBN = req.body.ISBN || book.ISBN
+            book.image = req.body.image || book.image
+            book.discount = req.body.discount || book.discount
 
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
-            res.redirect('./products/id')
+            fs.writeFileSync(productsFilePath, JSON.stringify(books, null, ' '));
+            res.redirect(`/products/${id}`);
         }
     },
 
     destroy: (req, res) => {
         const id = req.params.id
-        books = books.filter(book => book.id != id)
-        fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(books, null, ' '))
-        res.redirect('/products')
+        books = books.filter(book => book.id != id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(books, null, ' '));
+        res.redirect('/products');
     }
 }
 
