@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 let productsFilePath = path.join(__dirname, '../data/productos.json');
 let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));
-
 const productsController = {
     products: (req, res) => {
         res.render('./products/products.ejs', { books });
@@ -51,7 +50,7 @@ const productsController = {
         const book = books.find(book => book.id == id);
         if (book) {
             book.name = req.body.name || book.name
-            book.año = req.body.año || book.año
+            book.anio = req.body.anio || book.anio
             book.titulo = req.body.titulo || book.titulo
             book.autor = req.body.autor || book.autor
             book.description = req.body.description || book.description
@@ -60,7 +59,7 @@ const productsController = {
             book.price = req.body.price || book.price
             book.editorial = req.body.editorial || book.editorial
             book.ISBN = req.body.ISBN || book.ISBN
-            book.image = req.body.image || book.image
+            book.image = `http://localhost:4050/images/books/${req.file?.filename}` || book.image
             book.discount = req.body.discount || book.discount
 
             fs.writeFileSync(productsFilePath, JSON.stringify(books, null, ' '));

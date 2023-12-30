@@ -2,7 +2,7 @@
  {
   "id": "1",
   "name": "Código Da Vinci",
-  "año": 2003,
+  "anio": 2003,
   "autor": "Dan Brown",
   "description": "Un thriller de acción y misterio.",
   "cantidad_de_paginas": 592,
@@ -15,7 +15,7 @@
  {
   "id": "2",
   "name": "El nombre del viento",
-  "año": 2007,
+  "anio": 2007,
   "autor": "Patrick Rothfuss",
   "description": "Una épica de acción y fantasía.",
   "cantidad_de_paginas": 662,
@@ -28,7 +28,7 @@
  {
   "id": "3",
   "name": "Misery",
-  "año": 1987,
+  "anio": 1987,
   "autor": "Stephen King",
   "description": "Un thriller psicológico lleno de acción.",
   "cantidad_de_paginas": 368,
@@ -41,7 +41,7 @@
  {
   "id": "4",
   "name": "El juego de Ender",
-  "año": 1985,
+  "anio": 1985,
   "autor": "Orson Scott Card",
   "description": "Ciencia ficción y estrategia militar.",
   "cantidad_de_paginas": 384,
@@ -54,7 +54,7 @@
  {
   "id": "5",
   "name": "Jurassic Park",
-  "año": 1990,
+  "anio": 1990,
   "autor": "Michael Crichton",
   "description": "Acción y aventura en un parque temático de dinosaurios.",
   "cantidad_de_paginas": 448,
@@ -67,7 +67,7 @@
  {
   "id": "6",
   "name": "Orgullo y prejuicio",
-  "año": 1813,
+  "anio": 1813,
   "autor": "Jane Austen",
   "description": "Una historia de amor y clases sociales.",
   "cantidad_de_paginas": 416,
@@ -80,7 +80,7 @@
  {
   "id": "7",
   "name": "Cumbres Borrascosas",
-  "año": 1847,
+  "anio": 1847,
   "autor": "Emily Brontë",
   "description": "Un clásico romance trágico.",
   "cantidad_de_paginas": 464,
@@ -93,7 +93,7 @@
  {
   "id": "8",
   "name": "Bajo el sol de la toscana",
-  "año": 1996,
+  "anio": 1996,
   "autor": "Frances Mayes",
   "description": "Romance en la pintoresca Toscana.",
   "cantidad_de_paginas": 320,
@@ -106,7 +106,7 @@
  {
   "id": "9",
   "name": "Eleanor Oliphant está perfectamente",
-  "año": 2017,
+  "anio": 2017,
   "autor": "Gail Honeyman",
   "description": "Una historia conmovedora de romance.",
   "cantidad_de_paginas": 336,
@@ -119,7 +119,7 @@
  {
   "id": "10",
   "name": "El diario de Ana Frank",
-  "año": 1947,
+  "anio": 1947,
   "autor": "Anne Frank",
   "description": "Un relato dramático de la Segunda Guerra Mundial.",
   "cantidad_de_paginas": 352,
@@ -132,7 +132,7 @@
  {
   "id": "11",
   "name": "Las uvas de la ira",
-  "año": 1939,
+  "anio": 1939,
   "autor": "John Steinbeck",
   "description": "Drama sobre la Gran Depresión.",
   "cantidad_de_paginas": 544,
@@ -145,7 +145,7 @@
  {
   "id": "12",
   "name": "Mil soles espléndidos",
-  "año": 2007,
+  "anio": 2007,
   "autor": "Khaled Hosseini",
   "description": "Drama y amistad en Afganistán.",
   "cantidad_de_paginas": 432,
@@ -158,7 +158,7 @@
  {
   "id": "13",
   "name": "El cuaderno de Noah",
-  "año": 1996,
+  "anio": 1996,
   "autor": "Nicholas Sparks",
   "description": "Una historia de amor dramática.",
   "cantidad_de_paginas": 224,
@@ -171,7 +171,7 @@
  {
   "id": "14",
   "name": "El señor de las moscas",
-  "año": 1954,
+  "anio": 1954,
   "autor": "William Golding",
   "description": "Drama psicológico en una isla desierta.",
   "cantidad_de_paginas": 224,
@@ -184,7 +184,7 @@
  {
   "id": "15",
   "name": "Dune",
-  "año": 1965,
+  "anio": 1965,
   "autor": "Frank Herbert",
   "description": "Una épica de ciencia ficción en un desértico planeta.",
   "cantidad_de_paginas": 694,
@@ -197,7 +197,7 @@
  {
   "id": "16",
   "name": "Neuromante",
-  "año": 1984,
+  "anio": 1984,
   "autor": "William Gibson",
   "description": "Un clásico cyberpunk lleno de acción.",
   "cantidad_de_paginas": 271,
@@ -210,7 +210,7 @@
  {
   "id": "17",
   "name": "Fundación",
-  "año": 1951,
+  "anio": 1951,
   "autor": "Isaac Asimov",
   "description": "Una saga de ciencia ficción que abarca milenios.",
   "cantidad_de_paginas": 255,
@@ -223,7 +223,7 @@
  {
   "id": "18",
   "name": "El fin de la eternidad",
-  "año": 1955,
+  "anio": 1955,
   "autor": "Isaac Asimov",
   "description": "Un viaje a través del tiempo y la historia.",
   "cantidad_de_paginas": 191,
@@ -236,7 +236,7 @@
  {
   "id": "19",
   "name": "Snow Crash",
-  "año": 1992,
+  "anio": 1992,
   "autor": "Neal Stephenson",
   "description": "Un thriller de realidad virtual y aventura.",
   "cantidad_de_paginas": 480,
@@ -249,7 +249,7 @@
  {
   "id": "20",
   "name": "El inversor inteligente",
-  "año": 1949,
+  "anio": 1949,
   "autor": "Benjamin Graham",
   "description": "El clásico sobre inversión en valor.",
   "cantidad_de_paginas": 640,
@@ -262,7 +262,7 @@
  {
   "id": "21",
   "name": "Padre rico, padre pobre",
-  "año": 1997,
+  "anio": 1997,
   "autor": "Robert T. Kiyosaki",
   "description": "Aprende a pensar como los ricos.",
   "cantidad_de_paginas": 336,
@@ -275,7 +275,7 @@
  {
   "id": "22",
   "name": "El código del dinero",
-  "año": 2006,
+  "anio": 2006,
   "autor": "Raimon Samsó",
   "description": "Descubre las leyes del dinero.",
   "cantidad_de_paginas": 224,
@@ -288,7 +288,7 @@
  {
   "id": "23",
   "name": "Economía para el 99%",
-  "año": 2019,
+  "anio": 2019,
   "autor": "Ha-Joon Chang",
   "description": "Desafía las creencias sobre la economía moderna.",
   "cantidad_de_paginas": 320,
@@ -301,7 +301,7 @@
  {
   "id": "24",
   "name": "El hombre más rico de Babilonia",
-  "año": 1926,
+  "anio": 1926,
   "autor": "George S. Clason",
   "description": "Consejos financieros basados en antiguos principios babilónicos.",
   "cantidad_de_paginas": 144,
@@ -314,7 +314,7 @@
  {
   "id": "25",
   "name": "El poder del ahora",
-  "año": 1997,
+  "anio": 1997,
   "autor": "Eckhart Tolle",
   "description": "Una guía espiritual para el bienestar.",
   "cantidad_de_paginas": 224,
@@ -327,7 +327,7 @@
  {
   "id": "26",
   "name": "Mujeres que corren con los lobos",
-  "año": 1992,
+  "anio": 1992,
   "autor": "Clarissa Pinkola Estés",
   "description": "Explora la naturaleza femenina salvaje.",
   "cantidad_de_paginas": 736,
@@ -340,7 +340,7 @@
  {
   "id": "27",
   "name": "La magia del orden",
-  "año": 2014,
+  "anio": 2014,
   "autor": "Marie Kondo",
   "description": "Transforma tu hogar y tu vida.",
   "cantidad_de_paginas": 224,
@@ -353,7 +353,7 @@
  {
   "id": "28",
   "name": "Piense y hágase rico",
-  "año": 1937,
+  "anio": 1937,
   "autor": "Napoleón Hill",
   "description": "Un clásico del desarrollo personal y la riqueza.",
   "cantidad_de_paginas": 320,
@@ -366,7 +366,7 @@
  {
   "id": 1703887496156,
   "name": "a",
-  "aÃ±o": "1",
+  "anio": "1",
   "autor": "a",
   "description": "a",
   "cantidad_de_paginas": "1",
@@ -375,5 +375,31 @@
   "editorial": "a",
   "ISBN": "1",
   "image": "http://localhost:4050/images/books/default-image.jpg"
+ },
+ {
+  "id": 1703888537857,
+  "name": "asdf",
+  "anio": "3",
+  "autor": "gfhjfghj",
+  "description": "q",
+  "cantidad_de_paginas": "2",
+  "genero": "q",
+  "price": "2",
+  "editorial": "q",
+  "ISBN": "2",
+  "image": "http://localhost:4050/images/books/1703894518075_img.jpg"
+ },
+ {
+  "id": 1703894314980,
+  "name": "g",
+  "anio": "5",
+  "autor": "g",
+  "description": "g",
+  "cantidad_de_paginas": "6",
+  "genero": "g",
+  "price": "6",
+  "editorial": "g",
+  "ISBN": "9",
+  "image": "http://localhost:4050/images/books/1703894314971_img.png"
  }
 ]
