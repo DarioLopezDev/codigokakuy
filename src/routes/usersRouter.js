@@ -23,6 +23,6 @@ router.get('/login', usersController.login);
 
 //Register
 router.get('/register', usersController.register);
-router.post('/register/create', usersController.create);
+router.post('/register', upload.single('foto'), usersController.create);
 
 module.exports = router;

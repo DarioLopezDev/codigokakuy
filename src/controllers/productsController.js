@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 let productsFilePath = path.join(__dirname, '../data/productos.json');
 let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));
+
 const productsController = {
     products: (req, res) => {
         res.render('./products/products.ejs', { books });
