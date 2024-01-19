@@ -1,10 +1,12 @@
 [
     {
         "id": 1,
-        "firstName": "Pablo",
-        "lastName": "Hernández",
+        "Name": "Pablo Hernández",
+        "userName": "PabloHernández",
         "email": "mgould0@soundcloud.com",
         "password": "qQ6/tp2K",
+        "adress": "callefalsa123",
+        "birthdate": "11/06/1997",
         "category": "User",
         "image": "/images/avatars/pletzale.jpg"
     },

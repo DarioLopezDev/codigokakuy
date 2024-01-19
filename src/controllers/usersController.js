@@ -8,8 +8,16 @@ const usersController = {
         res.render('./users/login.ejs');
     },
 
+    validate: (req, res) => {},
+
     register: (req, res) => {
         res.render('./users/register.ejs');
+    },
+
+    create: (req, res) => {
+        const newUser = {
+            
+        }
     }
 };
 
