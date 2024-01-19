@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 //Rutas requeridas
 const rutas = require('./src/routes/mainRouter');
 const rutasProductos = require('./src/routes/productsRouter');
+const rutasUsuarios = require('./src/routes/usersRouter');
 
 //Uso de imágenes y css
 app.use(express.static('public'));
@@ -22,6 +23,7 @@ app.set('views', path.join(__dirname, 'src/views'));
 //Uso de Rutas
 app.use('/', rutas);
 app.use('/products', rutasProductos);
+//app.use('/users', rutasUsuarios);
 
 app.get('*', (req, res) => {
     res.send(`
