@@ -5,14 +5,6 @@ const books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos
 const controlador = {
     index: (req, res) => {
         res.render('index', {books});
-    },
-
-    login: (req, res) => {
-        res.render('./users/login');
-    },
-
-    register: (req, res) => {
-        res.render('./users/register');
     }
 }
 
