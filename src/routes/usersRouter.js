@@ -17,7 +17,7 @@ let storage = multer.diskStorage({
 
 let upload = multer({ storage });
 
-router.get('/login', controlador.login);
-router.get('/register', controlador.register);
+router.get('/login', usersController.login);
+router.get('/register', usersController.register);
 
 module.exports = router;

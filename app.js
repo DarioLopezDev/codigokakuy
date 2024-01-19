@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'src/views'));
 //Uso de Rutas
 app.use('/', rutas);
 app.use('/products', rutasProductos);
-//app.use('/users', rutasUsuarios);
+app.use('/users', rutasUsuarios);
 
 app.get('*', (req, res) => {
     res.send(`
