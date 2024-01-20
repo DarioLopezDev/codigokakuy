@@ -113,5 +113,31 @@
   "id": 1705705354642,
   "category": "User",
   "foto": "http://localhost:4050/images/users/default-image.jpg"
+ },
+ {
+  "id": 1705788798910,
+  "nombreApellido": "adolfo",
+  "nombreUsuario": "antuz",
+  "email": "antuz@mail.com",
+  "fechaNacimiento": "1990-05-18",
+  "domicilio": "republica del libano 2117",
+  "contrasena": "ieiaieia",
+  "confirmarContrasena": "ieiaieia",
+  "terminosServicios": "Terminos y Servicios",
+  "category": "User",
+  "foto": "http://localhost:4050/images/users/default-image.jpg"
+ },
+ {
+  "id": 1705789174433,
+  "nombreApellido": "Gerardo Zamora",
+  "nombreUsuario": "Zamorita",
+  "email": "gzamora@mail.com",
+  "fechaNacimiento": "1970-12-06",
+  "domicilio": "callevereda123",
+  "contrasena": "sgopasion",
+  "confirmarContrasena": "sgopasion",
+  "terminosServicios": "Terminos y Servicios",
+  "category": "User",
+  "foto": "http://localhost:4050/images/users/1705789174429_img.jpg"
  }
 ]
