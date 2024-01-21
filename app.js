@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 4050;
 const path = require('path');
+const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 
 //Rutas requeridas
@@ -12,6 +13,11 @@ const rutasUsuarios = require('./src/routes/usersRouter');
 
 //Uso de imágenes y css
 app.use(express.static('public'));
+
+//Necesario para los archivos estáticos en el folder /public
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+app.use(cookieParser());
 
 //Uso de PUT y DELETE
 app.use(methodOverride('_method'));
