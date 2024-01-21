@@ -15,9 +15,17 @@ const usersController = {
     },
 
     create: (req, res) => {
+        const {nombreApellido, nombreUsuario, email, fechaNacimiento, domicilio, contrasena}  = req.body
         const newUser = {
+    //Por seguridad no usar el sread operator "...req.body"
+    //Porque pueden agregar inputs indeseados al JSON
             id: Date.now(),
-            ...req.body,
+            nombreApellido,
+            nombreUsuario,
+            email,
+            fechaNacimiento,
+            domicilio,
+            contrasena,
             category: 'User',
             foto: `http://localhost:4050/images/users/${req.file?.filename || 
             'default-image.jpg'}`
