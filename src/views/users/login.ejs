@@ -16,10 +16,10 @@
 
                 <div class="formularioLoginShadow">
 
-                    <form id="formularioLoginBox" action="/" method="post">
+                    <form id="formularioLoginBox" action="/users/login" method="post">
 
                         <label for="datosLogin" id="datosLoginTitulo">Datos de Usuario:</label>
-                        <input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+                        <input type="text" id="usuario" name="nombreUsuario" placeholder="Nombre de usuario" required>
 
                         <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
 
@@ -33,7 +33,7 @@
                         <ul class="politicaPrivacidadBox">
 
                             <input type="checkbox" id="politicaPrivacidadTitulo" name="politicaPrivacidad"
-                                value="politicaPrivacidad" required>
+                                value="politicaPrivacidad">
                             <li><a href="#">Politica de Privacidad</a></li>
 
                         </ul>
@@ -44,7 +44,7 @@
 
                     <ul class="linksLogin">
 
-                        <li><a href="/register">Crear una cuenta</a></li>
+                        <li><a href="/users/register">Crear una cuenta</a></li>
                         <li><a href="#">Perdiste tu contraseña?</a></li>
                         <li><a href="/">Pagina Principal</a></li>
 

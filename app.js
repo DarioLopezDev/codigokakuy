@@ -5,6 +5,7 @@ const port = 4050;
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 //Rutas requeridas
 const rutas = require('./src/routes/mainRouter');
@@ -15,9 +16,10 @@ const rutasUsuarios = require('./src/routes/usersRouter');
 app.use(express.static('public'));
 
 //Necesario para los archivos estáticos en el folder /public
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(session({ secret: "No hay plata", resave: true, saveUninitialized: false }));
 
 //Uso de PUT y DELETE
 app.use(methodOverride('_method'));

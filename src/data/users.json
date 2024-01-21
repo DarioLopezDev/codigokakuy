@@ -139,5 +139,16 @@
   "terminosServicios": "Terminos y Servicios",
   "category": "User",
   "foto": "http://localhost:4050/images/users/1705789174429_img.jpg"
+ },
+ {
+  "id": 1705874974479,
+  "nombreApellido": "Aquiles Bailoyo",
+  "nombreUsuario": "Brapit",
+  "email": "talon@mail.com",
+  "fechaNacimiento": "1950-05-05",
+  "domicilio": "Troya123",
+  "contrasena": "$2a$10$8uz1oni8rjDDA7MP7mDvseSpXbbErDAew8M5aw20Vg69qd4tKmgzq",
+  "category": "User",
+  "foto": "http://localhost:4050/images/users/1705874974475_img.jpg"
  }
 ]
