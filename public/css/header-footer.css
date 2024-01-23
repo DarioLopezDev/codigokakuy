@@ -227,7 +227,7 @@ color: var(--color2);
 #login-carrito ul {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 80%;
     align-items: stretch;
     height: auto;
