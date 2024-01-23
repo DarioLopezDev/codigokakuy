@@ -35,6 +35,12 @@ SPRINT 4
 -Creamos un archivo router y un controller para los productos.
 -Agregamos dos archivos json uno para productos y otro para usuarios.
 -Agregamos productos al archivo json.
--Instalamos la dependencia Multer.
+-Instalamos la dependencia Multer y method-override.
 
 SPRINT 5
+-Instalamos las dependencias bcryptjs, cookie-parser, express-session.
+-Creamos la carpeta middlewares para organizar los mismos.
+-Creamos un nuevo archivo ejs para la vista del profile.
+-Creamos un nuevo controlador y enrutador de usuarios.
+-Asociamos la nueva base de datos simulada para pruebas.
+-Agregamos al gobernador y bradpit como usuarios (adolfo tambien se agrego solo).
