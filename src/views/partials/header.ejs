@@ -55,12 +55,18 @@
         <div id="login-carrito">
 
             <ul>
-                <li id="estonodebeverse"><a href="/detalles">Detalles</a></li>
-                <li><a href="/users/login">Login</a></li>
-                <br>
-                <li><a href="/users/register">Register</a></li>
-                <br>
-                <li><a href="/users/profile">Tu Perfil</a></li>
+                <% if (locals.isLogged) { %>
+                    <li><a href="/users/profile">Tu Perfil</a></li>
+                    <br>
+                    <li><a href="/users/logout">Cerrar Sesión</a></li>
+                    <br>
+                    <h3>Hola <%= locals.userLogged.nombreUsuario %>, gracias por elegirnos</h3>
+                    <% } else {%>
+                        <li><a href="/users/login">Login</a></li>
+                        <br>
+                        <li><a href="/users/register">Register</a></li>
+                        <br>
+                        <% } %>
             </ul>
 
         </div>
