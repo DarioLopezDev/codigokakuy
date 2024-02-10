@@ -44,3 +44,24 @@ SPRINT 5
 -Creamos un nuevo controlador y enrutador de usuarios.
 -Asociamos la nueva base de datos simulada para pruebas.
 -Agregamos al gobernador y bradpit como usuarios (adolfo tambien se agrego solo).
+
+SPRINT 6
+
+Conclusiones del Sprint5:
+
+- Lo que hicimos bien en el sprint anterior fue: 
+    *Pudimos lograr entregar a tiempo el sprint y realizarlo de forma correcta.
+- Lo que hicimos mal en el sprint anterior fue: 
+    *entre las cosas a mejorar, nos organizamos mal y tarde para desarrollar el sprint5, al ser diciembre es un mes complicado para todos los integrantes, finales de materias de otros cursos y carreras, trabajo y familia. 
+- Lo que deberiamos empezar a hacer: 
+    *organizarnos antes para no llegar los ultimos dias sin tiempo para terminar las tareas asignadas, ni tiempo para consultar cualquier problema que hayamos tenido con el codigo. 
+    *darle mayor importancia al retro.md y al css que quedo pendiente del sprint2, mejorar esteticamente la pagina.
+- lo que deberiamos dejar de hacer: 
+    *es dejar todo a ultimo momento y no dedicarle las horas correspondientes al curso. No prestarle atencion a las consignas del PDF, hacemos el codigo sin prestar atencion en detalle a la forma de resolver las actividades, las cuales estan detalladas en los PDF. 
+
+Con el actual Sprint6 
+- se realizan las tareas a asignar a cada integrante del grupo en trello
+- hacemos una charla y reunion para que aquellos que no estan al dia con las clases, tambien se actualicen y sea mas facil de aprender y ponerse al dia. 
+
+
+
