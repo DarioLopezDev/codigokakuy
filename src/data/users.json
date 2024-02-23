@@ -150,5 +150,16 @@
   "contrasena": "$2a$10$8uz1oni8rjDDA7MP7mDvseSpXbbErDAew8M5aw20Vg69qd4tKmgzq",
   "category": "User",
   "foto": "http://localhost:4050/images/users/1705874974475_img.jpg"
+ },
+ {
+  "id": 1707934642139,
+  "nombreApellido": "jose profe",
+  "nombreUsuario": "joseprofe",
+  "email": "mail@mail.com",
+  "fechaNacimiento": "1995-01-01",
+  "domicilio": "calle falsa 123",
+  "contrasena": "$2a$10$TdN11CF6RGZNnf5o6SAhQ.hB5l9pxEo56OaGOCHiU3CVCXqxmpOHa",
+  "category": "User",
+  "foto": "http://localhost:4050/images/users/default-image.jpg"
  }
 ]
