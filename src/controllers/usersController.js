@@ -1,11 +1,13 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../database/models');
 const bcrypt = require('bcryptjs');
+
+/*const fs = require('fs');
+const path = require('path');
 
 let usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')));
 
-let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));
+let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));*/
 
 const usersController = {
     login: (req, res) => {
@@ -14,10 +16,16 @@ const usersController = {
 
     session: (req, res) => {
         let { nombreUsuario, contrasena } = req.body;
-        let userFound = users.find(user => user.nombreUsuario == nombreUsuario);
+        //let userFound = users.find(user => user.nombreUsuario == nombreUsuario);
+        let userFound = db.User.findOne({
+            where: {
+                username: nombreUsuario,
+                password: contrasena
+            }
+        });
 
         if (userFound) {
-            if (bcrypt.compareSync(contrasena, userFound.contrasena)) {
+            if (bcrypt.compareSync(contrasena, userFound.password)) {
                 //proteger la contraseña
                 userFound.contrasena = null;
 
