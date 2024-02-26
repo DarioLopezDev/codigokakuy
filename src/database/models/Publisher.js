@@ -18,5 +18,12 @@ module.exports = (sequelize, DataTypes) => {
     
     const Publisher = sequelize.define(alias, cols, config);
 
+    Publisher.associate = function(models) {
+        Publisher.hasMany(models.Book, {
+            as: 'book',
+            foreignKey: 'publisher_id'
+        });
+    };
+
     return Publisher;
 };

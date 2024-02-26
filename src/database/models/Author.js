@@ -18,5 +18,12 @@ module.exports = (sequelize, DataTypes) => {
     
     const Author = sequelize.define(alias, cols, config);
 
+    Author.associate = function(models) {
+        Author.hasMany(models.Book, {
+            as: 'book',
+            foreignKey: 'author_id'
+        });
+    };
+
     return Author;
 };

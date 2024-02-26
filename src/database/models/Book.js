@@ -58,5 +58,20 @@ module.exports = (sequelize, DataTypes) => {
     
     const Book = sequelize.define(alias, cols, config);
 
+    Book.associate = function(models) {
+        Book.belongsTo(models.Author, {
+            as: 'author',
+            foreignKey: 'author_id'
+        });
+        Book.belongsTo(models.Genre, {
+            as: 'genre',
+            foreignKey: 'genre_id'
+        });
+        Book.belongsTo(models.Publisher, {
+            as: 'publisher',
+            foreignKey: 'publisher_id'
+        });
+    };
+
     return Book;
 };
