@@ -71,6 +71,10 @@ module.exports = (sequelize, DataTypes) => {
             as: 'publisher',
             foreignKey: 'publisher_id'
         });
+        Book.belongsTo(models.Cart_Book, {
+            as: 'cart_book',
+            foreignKey: 'book_id'
+        });
     };
 
     return Book;

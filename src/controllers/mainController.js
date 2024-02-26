@@ -1,12 +1,17 @@
-const fs = require('fs');
+const db = require('../database/models');
+
+/*const fs = require('fs');
 const path = require('path');
 const books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));
+*/
 
 const controlador = {
     index: (req, res) => {
-        //console.log('Llega por body: ', req.body);
-        //console.log('Llega por query: ', req.query);
-        res.render('index', {books});
+        db.Book.findAll()
+        .then((books) => {
+            res.render('index', {books});
+        })
+        .catch(error => console.log(error));
     }
 }
 

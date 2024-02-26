@@ -1,15 +1,27 @@
-const fs = require('fs');
+const db = require('../database/models');
+
+/*const fs = require('fs');
 const path = require('path');
 let productsFilePath = path.join(__dirname, '../data/productos.json');
 let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));
+*/
 
 const productsController = {
     products: (req, res) => {
-        res.render('./products/products.ejs', { books });
+        db.Book.findAll()
+        .then((books) => {
+            res.render('./products/products.ejs', {books});
+        })
+        .catch(error => console.log(error));
     },
 
     productCart: (req, res) => {
-        res.render('./products/productCart.ejs', { books });
+        db.Book.findAll()
+        .then((books) => {
+            res.render('./products/productCart.ejs', { books });
+        })
+        .catch(error => console.log(error.message));
+        
     },
 
     create: (req, res) => {
@@ -32,12 +44,20 @@ const productsController = {
 
     detail: (req, res) => {
         let idP = req.params.id;
-        let book = books.find(book => book.id == idP);
+        let books = db.Book.findAll().then((allBooks) => {
+            return allBooks;
+        }).catch(error => console.log(error));
+        /*let book = books.find(book => book.id == idP);
         if (book) {
             return res.render('./products/productDetail.ejs', { book, books });
         }
         return res.send(`<h1>El Libro que buscas no existe</h1>
-        <h3><a href="/">Volver al Home</a></h3>`);
+        <h3><a href="/">Volver al Home</a></h3>`);*/
+        db.Book.findByPk(idP)
+        .then((book) => {
+            return res.render('./products/productDetail.ejs', { book, books });
+        })
+        .catch(error => console.log(error.message));
     },
 
     edit: (req, res) => {
