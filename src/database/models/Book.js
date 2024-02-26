@@ -56,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
     
-    const Book = sequelize.define(alias, cols, config)
+    const Book = sequelize.define(alias, cols, config);
 
-    return Book
+    return Book;
 };

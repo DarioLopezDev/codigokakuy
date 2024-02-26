@@ -1,12 +1,20 @@
 module.exports = (sequelize, DataTypes) => {
-    const alias = 'Cart';
+    const alias = 'Cart_Book';
     const cols = {
-        cart_id: {
+        cartBooks_id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        user_id: {
+        cart_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        book_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        quantity: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
@@ -16,11 +24,11 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     const config = {
-        tableName: 'carts',
+        tableName: 'carts_books',
         timestamps: false
     };
     
-    const Cart = sequelize.define(alias, cols, config);
+    const Cart_Book = sequelize.define(alias, cols, config);
 
-    return Cart;
+    return Cart_Book;
 };
