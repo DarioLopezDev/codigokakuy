@@ -18,4 +18,8 @@ router.post('/login', usersController.session);
 router.get('/profile', userMiddleware, usersController.profile);
 router.get('/logout', usersController.logout);
 
+//Edit
+router.get('/edit', userMiddleware, usersController.edit);
+router.post('/edit', userMiddleware, upload.single('foto'), usersController.edit);
+
 module.exports = router;
