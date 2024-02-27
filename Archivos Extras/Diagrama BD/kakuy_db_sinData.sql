@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-02-2024 a las 23:13:40
+-- Tiempo de generación: 26-02-2024 a las 17:31:00
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -31,39 +31,6 @@ CREATE TABLE `authors` (
   `author_id` int(11) NOT NULL,
   `fullname` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `authors`
---
-
-INSERT INTO `authors` (`author_id`, `fullname`) VALUES
-(10, 'Anne Frank'),
-(19, 'Benjamin Graham'),
-(25, 'Clarissa Pinkola Estés'),
-(1, 'Dan Brown'),
-(24, 'Eckhart Tolle'),
-(7, 'Emily Brontë'),
-(8, 'Frances Mayes'),
-(15, 'Frank Herbert'),
-(9, 'Gail Honeyman'),
-(23, 'George S. Clason'),
-(22, 'Ha-Joon Chang'),
-(17, 'Isaac Asimov'),
-(6, 'Jane Austen'),
-(11, 'John Steinbeck'),
-(12, 'Khaled Hosseini'),
-(26, 'Marie Kondo'),
-(5, 'Michael Crichton'),
-(27, 'Napoleón Hill'),
-(18, 'Neal Stephenson'),
-(13, 'Nicholas Sparks'),
-(4, 'Orson Scott Card'),
-(2, 'Patrick Rothfuss'),
-(21, 'Raimon Samsó'),
-(20, 'Robert T. Kiyosaki'),
-(3, 'Stephen King'),
-(16, 'William Gibson'),
-(14, 'William Golding');
 
 -- --------------------------------------------------------
 
@@ -133,32 +100,6 @@ CREATE TABLE `publishers` (
   `publisher_id` int(11) NOT NULL,
   `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `publishers`
---
-
-INSERT INTO `publishers` (`publisher_id`, `name`) VALUES
-(11, 'Ace Books'),
-(15, 'Aguilar'),
-(6, 'Alba Editorial'),
-(13, 'Bantam Books'),
-(5, 'Corgi'),
-(3, 'Debolsillo'),
-(18, 'Deusto'),
-(4, 'Ediciones B'),
-(16, 'Editorial Sirio'),
-(9, 'Fondo de Cultura Económica'),
-(20, 'Gestión 2000'),
-(19, 'Grijalbo'),
-(14, 'HarperCollins'),
-(7, 'Penguin Classics'),
-(2, 'Plaza & Janés'),
-(10, 'Roca Editorial'),
-(8, 'Salamandra'),
-(12, 'Spectra'),
-(17, 'Taurus'),
-(1, 'Vintage');
 
 -- --------------------------------------------------------
 
