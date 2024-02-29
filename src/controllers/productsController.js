@@ -50,32 +50,21 @@ const productsController = {
             publisher_id: req.body.editorial,
             isbn: req.body.ISBN,
             stock: req.body.stock,
-            image: `http://localhost:4050/images/books/${req.file?.filename || 'default-image.jpg'}`
+            image: `${req.file?.filename || 'default-image.jpg'}`
         };
         db.Book.create(newBook);
         res.redirect('/products');
     },
 
-    detail: (req, res) => {
-        let idP = req.params.id;
-        let books = db.Book.findAll();
-        /*let book = books.find(book => book.id == idP);
-        if (book) {
-            return res.render('./products/productDetail.ejs', { book, books });
+    detail: async (req, res) => {
+        try {
+            let idP = req.params.id;
+            const book = await db.Book.findByPk(idP);
+            const books = await db.Book.findAll();
+            res.render('./products/productDetail.ejs', { book, books });
+        } catch (error) {
+            console.log(error.message)
         }
-        return res.send(`<h1>El Libro que buscas no existe</h1>
-        <h3><a href="/">Volver al Home</a></h3>`);*/
-        let book = db.Book.findByPk(idP);
-
-        Promise.all([books, book])
-            .then((books, book) => {
-                if (!book) return res.send(`
-            <h1>El Libro que buscas no existe</h1>
-            <h3><a href="/">Volver al Home</a></h3>`
-                );
-                return res.render('./products/productDetail.ejs', { books, book });
-            })
-            .catch(error => console.log(error.message));
     },
 
     edit: (req, res) => {
@@ -92,29 +81,37 @@ const productsController = {
             .catch(error => console.log(error.message));
     },
 
-    update: (req, res) => {
-        const idP = req.params.id;
-        //const book = books.find(book => book.id == id);
-        db.Book.update({
-            year: req.body.anio,
-            title: req.body.titulo,
-            author_id: req.body.autor,
-            description: req.body.description,
-            pages: req.body.cantidad_de_paginas,
-            genre_id: req.body.genero,
-            price: req.body.price,
-            publisher_id: req.body.editorial,
-            isbn: req.body.ISBN,
-            stock: req.body.stock,
-            image: `http://localhost:4050/images/books/${req.file?.filename || 'default-image.jpg'}`
+    update: async (req, res) => {
+        try {
+            const idP = req.params.id;
+            //const book = books.find(book => book.id == id);
+            const book = await db.Book.findByPk(idP);
 
-            //fs.writeFileSync(productsFilePath, JSON.stringify(books, null, ' '));
-        }, {
-            where: {
-                id: idP
-            }
-        })
-        res.redirect(`/products/${idP}`);
+            db.Book.update({
+                year: req.body.anio || book.year,
+                title: req.body.titulo || book.title,
+                author_id: req.body.autor || book.author_id,
+                description: req.body.description || book.description,
+                pages: req.body.cantidad_de_paginas || book.pages,
+                genre_id: req.body.genero || book.genre_id,
+                price: req.body.price || book.price,
+                publisher_id: req.body.editorial || book.publisher_id,
+                isbn: req.body.ISBN || book.isbn,
+                stock: req.body.stock || book.stock,
+                image: `${req.file?.filename || book.image}`
+
+                //fs.writeFileSync(productsFilePath, JSON.stringify(books, null, ' '));
+            }, {
+                where: {
+                    book_id: idP
+                }
+            })
+
+            res.redirect(`/products/${idP}`);
+
+        } catch (error) {
+            console.log(error.message);
+        }
 
     },
 
@@ -124,7 +121,7 @@ const productsController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(books, null, ' '));*/
         db.Book.destroy({
             where: {
-                id: idP
+                book_id: idP
             }
         });
         res.redirect('/products');

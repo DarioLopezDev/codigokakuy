@@ -31,15 +31,16 @@ module.exports = (sequelize, DataTypes) => {
     const Cart_Book = sequelize.define(alias, cols, config);
 
     Cart_Book.associate = function(models) {
-        Cart_Book.hasMany(models.Book, {
+        Cart_Book.belongsTo(models.Book, {
             as: 'book',
             foreignKey: 'book_id'
         });
-        Cart_Book.belongsToMany(models.Cart, {
+
+        Cart_Book.belongsTo(models.Cart, {
             as: 'cart',
-            through: '',
             foreignKey: 'cart_id'
         });
+
     };
 
     return Cart_Book;

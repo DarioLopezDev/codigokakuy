@@ -1,8 +1,8 @@
-module.expots = {
+module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "kakuy_db",
+    "database": "codigokakuy",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

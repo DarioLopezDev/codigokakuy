@@ -19,7 +19,7 @@ router.get('/profile', userMiddleware, usersController.profile);
 router.get('/logout', usersController.logout);
 
 //Edit
-router.get('/edit', userMiddleware, usersController.edit);
-router.post('/edit', userMiddleware, upload.single('foto'), usersController.edit);
+router.get('/profile/edit', userMiddleware, usersController.edit);
+router.post('/profile/edit', userMiddleware, upload.single('foto'), usersController.update);
 
 module.exports = router;

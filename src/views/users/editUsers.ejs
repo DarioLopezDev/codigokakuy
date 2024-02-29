@@ -16,28 +16,28 @@
 
                 <div class="formularioRegistroShadow">
 
-                    <form id="formularioRegistroBox" action="/users/register" method="post" enctype="multipart/form-data">
+                    <form id="formularioRegistroBox" action="/users/profile/edit" method="post" enctype="multipart/form-data">
 
                         <label for="Datos" id="datosTitulo">Edite sus datos:</label>
 
 
-                        <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido"
+                        <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" value="<%= userFound.fullname %>"
                             required>
 
 
-                        <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario"
+                        <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" value="<%= userFound.username %>"
                             required>
 
 
-                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="email" id="email" name="email" placeholder="Email" value="<%= userFound.email %>" required>
 
 
                         <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
-                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="<%= userFound.birthday %>" required>
 
 
                         <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
-                        <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+                        <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" value="<%= userFound.adress %>" required>
 
 
                         <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
@@ -47,7 +47,7 @@
                         <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
 
                         <input type="password" id="confirmarContrasena" name="confirmarContrasena"
-                            placeholder="Confirmar Contraseña" required>
+                            placeholder="Confirmar Contraseña">
 
                         <div class="botonesBox">
 

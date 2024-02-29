@@ -14,26 +14,26 @@
         <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
         <a href="/products/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
         
-        <h2><%= book.name %></h2>
+        <h2><%= book.title %></h2>
 
         <div class="main-container">
 
             <section class="only-images">
 
                 <div class="big-image">
-                    <img src="<%= book.image %>" alt="<%= book.name %>">
+                    <img src="/images/books/<%= book.image %>" alt="<%= book.title %>">
                 </div>
 
                 <div class="images-container">
 
                     <button><i class="fa-solid fa-chevron-left"></i></button>
-                    <button><img src="<%= book.image %>" alt="tapa-imagen-chica"
+                    <button><img src="/images/books/<%= book.image %>" alt="tapa-imagen-chica"
                             class="small-images"></button>
-                    <button><img src="<%= book.image %>" alt="diagonal-imagen-chica"
+                    <button><img src="/images/books/<%= book.image %>" alt="diagonal-imagen-chica"
                             class="small-images"></button>
-                    <button><img src="<%= book.image %>" alt="hojas-imagen-chica"
+                    <button><img src="/images/books/<%= book.image %>" alt="hojas-imagen-chica"
                             class="small-images"></button>
-                    <button><img src="<%= book.image %>"
+                    <button><img src="/images/books/<%= book.image %>"
                             alt="posterior-imagen-chica" class="small-images"></button>
                     <button><i class="fa-solid fa-chevron-right"></i></button>
                     
@@ -47,24 +47,24 @@
 
                     <article class="main-first">
 
-                        <div class="main-info-details"><p>Autor: </p><p><%= book.autor %></p></div>
-                        <div class="main-info-details"><p>Editorial: </p><p><%= book.editorial %></p></div>
+                        <div class="main-info-details"><p>Autor: </p><p><%= book.author_id %></p></div>
+                        <div class="main-info-details"><p>Editorial: </p><p><%= book.publisher_id %></p></div>
                         <div class="main-info-details"><p>Idioma: </p><p>Español</p></div>
-                        <div class="main-info-details"><p>Año: </p><p><%= book.anio %></p></div>
-                        <div class="main-info-details"><p>ISBN: </p><p><%= book.ISBN %></p></div>
+                        <div class="main-info-details"><p>Año: </p><p><%= book.year %></p></div>
+                        <div class="main-info-details"><p>ISBN: </p><p><%= book.isbn %></p></div>
 
                         <br>
 
                         <div class="main-info-details"><p>Dimensiones: </p><p>----- cm</p></div>
-                        <div class="main-info-details"><p>Género: </p><p><%= book.genero %></p></div>
+                        <div class="main-info-details"><p>Género: </p><p><%= book.genre_id %></p></div>
                         <div class="main-info-details"><p>Descripción: </p><p><%= book.description %></p></div>
-                        <div class="main-info-details"><p>Páginas: </p><p><%= book.cantidad_de_paginas %></p></div>
+                        <div class="main-info-details"><p>Páginas: </p><p><%= book.pages %></p></div>
 
                     </article>
 
                     <article class="main-second">
                         <div class="main-info-details"><h3>Valoración: </h3><h3>*****</h3></div>
-                        <div class="main-info-details"><h3>Stock: </h3><h3>x/x</h3></div>
+                        <div class="main-info-details"><h3>Stock: </h3><h3><%= book.stock %></h3></div>
                         <div class="main-info-details"><h3>Precio: </h3><h3>$<%= book.price %></h3></div>
                     </article>
 
@@ -75,7 +75,7 @@
                 </button>
                 <br>
                 <button class="main-buyit">
-                    <a href="/products/<%= book.id %>/edit"><h2>Editar Libro</h2></a>
+                    <a href="/products/<%= book.book_id %>/edit"><h2>Editar Libro</h2></a>
                 </button>
 
             </div>
@@ -102,41 +102,41 @@
 
             <div class="aside-element">
                 <a href="#">
-                    <img src="<%= books[0].image %>" alt="<%= books[0].name %>">
+                    <img src="/images/books/<%= books[0].image %>" alt="<%= books[0].title %>">
                 </a>
-                <p><%= books[0].name %></p>
+                <p><%= books[0].title %></p>
                 <p>$<%= books[0].price %></p>
             </div>
 
             <div class="aside-element">
                 <a href="#">
-                    <img src="<%= books[1].image %>" alt="<%= books[1].name %>">
+                    <img src="/images/books/<%= books[1].image %>" alt="<%= books[1].title %>">
                 </a>
-                <p><%= books[1].name %></p>
+                <p><%= books[1].title %></p>
                 <p>$<%= books[1].price %></p>
             </div>
 
             <div class="aside-element">
                 <a href="#">
-                    <img src="<%= books[2].image %>" alt="<%= books[2].name %>">
+                    <img src="/images/books/<%= books[2].image %>" alt="<%= books[2].title %>">
                 </a>
-                <p><%= books[2].name %></p>
+                <p><%= books[2].title %></p>
                 <p>$<%= books[2].price %></p>
             </div>
 
             <div class="aside-element-tablet">
                 <a href="#">
-                    <img src="<%= books[3].image %>" alt="<%= books[3].name %>">
+                    <img src="/images/books/<%= books[3].image %>" alt="<%= books[3].title %>">
                 </a>
-                <p><%= books[3].name %></p>
+                <p><%= books[3].title %></p>
                 <p>$<%= books[3].price %></p>
             </div>
 
             <div class="aside-element-pc">
                 <a href="#">
-                    <img src="<%= books[4].image %>" alt="<%= books[4].name %>">
+                    <img src="/images/books/<%= books[4].image %>" alt="<%= books[4].title %>">
                 </a>
-                <p><%= books[4].name %></p>
+                <p><%= books[4].title %></p>
                 <p>$<%= books[4].price %></p>
             </div>
 

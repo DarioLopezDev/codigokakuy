@@ -9,6 +9,7 @@ const controlador = {
     index: (req, res) => {
         db.Book.findAll()
         .then((books) => {
+            //console.log(books[0].dataValues);
             res.render('index', {books});
         })
         .catch(error => console.log(error));

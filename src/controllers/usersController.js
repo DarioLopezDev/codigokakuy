@@ -14,29 +14,34 @@ const usersController = {
         res.render('./users/login.ejs');
     },
 
-    session: (req, res) => {
-        let { nombreUsuario, contrasena } = req.body;
-        //let userFound = users.find(user => user.nombreUsuario == nombreUsuario);
-        let userFound = db.User.findOne({
-            where: {
-                username: nombreUsuario,
-                password: contrasena
+    session: async (req, res) => {
+        try {
+            let { nombreUsuario, contrasena } = req.body;
+            //let userFound = users.find(user => user.nombreUsuario == nombreUsuario);
+            console.log(nombreUsuario, contrasena);
+            let userFound = await db.User.findOne({
+                where: {
+                    username: nombreUsuario,
+                }
+            });
+
+            if (userFound) {
+                if (bcrypt.compareSync(contrasena, userFound.password)) {
+                    //proteger la contraseña
+                    userFound.contrasena = null;
+
+                    //Crear la sesión
+                    req.session.userLogged = userFound;
+
+                    return res.redirect('/');
+                }
+
             }
-        });
-
-        if (userFound) {
-            if (bcrypt.compareSync(contrasena, userFound.password)) {
-                //proteger la contraseña
-                userFound.contrasena = null;
-
-                //Crear la sesión
-                req.session.userLogged = userFound;
-
-                return res.redirect('/');
-            }
+            res.send('<h1>El usuario y/o contraseña son incorrectos</h1><button><a href="/users/login">Volver a logearse</a></button>');
+        } catch (error) {
 
         }
-        res.send('<h1>El usuario y/o contraseña son incorrectos</h1><button><a href="/users/login">Volver a logearse</a></button>');
+
     },
 
     register: (req, res) => {
@@ -50,7 +55,7 @@ const usersController = {
         const newUser = {
             //Por seguridad no usar el spread operator "...req.body"
             //Porque se pueden agregar inputs indeseados al JSON
-            
+
             fullname: nombreApellido,
             username: nombreUsuario,
             email: email,
@@ -59,7 +64,7 @@ const usersController = {
             //encriptar contraseña
             password: bcrypt.hashSync(contrasena, 10),
             admin: 0,
-            image: `http://localhost:4050/images/users/${req.file?.filename ||
+            image: `${req.file?.filename ||
                 'default-image.jpg'}`
         }
         /*users.push(newUser);
@@ -73,15 +78,46 @@ const usersController = {
 
     profile: (req, res) => {
         db.Book.findAll()
-        .then(books => {
-            res.render('./users/profile.ejs', { user: req.session.userLogged, books });
-        })
-        .catch(error => console.log(error.message));
+            .then(books => {
+                res.render('./users/profile.ejs', { user: req.session.userLogged, books });
+            })
+            .catch(error => console.log(error.message));
     },
 
     logout: (req, res) => {
         req.session.destroy();
         return res.redirect('/');
+    },
+
+    edit: async (req, res) => {
+        let loggedUser = req.session.userLogged.username;
+        let userFound = await db.User.findOne({
+            where: {
+                username: loggedUser,
+            }
+        });
+        res.render('./users/editUsers.ejs', {userFound});
+    },
+
+    update: (req, res) => {
+        const { nombreApellido, nombreUsuario, email, fechaNacimiento, domicilio, contrasena } = req.body
+        let loggedUser = req.session.userLogged.username;
+        db.User.update({
+            fullname: nombreApellido,
+            username: nombreUsuario,
+            email: email,
+            birthday: fechaNacimiento,
+            adress: domicilio,
+            //encriptar contraseña
+            password: bcrypt.hashSync(contrasena, 10),
+            admin: 0,
+            image: `${req.file?.filename ||
+                'default-image.jpg'}`
+        }, {
+            where: { username: loggedUser }
+        });
+
+        res.redirect('/users/profile');
     }
 };
 
