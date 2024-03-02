@@ -47,8 +47,8 @@
 
                     <article class="main-first">
 
-                        <div class="main-info-details"><p>Autor: </p><p><%= book.author_id %></p></div>
-                        <div class="main-info-details"><p>Editorial: </p><p><%= book.publisher_id %></p></div>
+                        <div class="main-info-details"><p>Autor: </p><p><%= book.author.fullname %></p></div>
+                        <div class="main-info-details"><p>Editorial: </p><p><%= book.publisher.name %></p></div>
                         <div class="main-info-details"><p>Idioma: </p><p>Español</p></div>
                         <div class="main-info-details"><p>Año: </p><p><%= book.year %></p></div>
                         <div class="main-info-details"><p>ISBN: </p><p><%= book.isbn %></p></div>
@@ -56,7 +56,7 @@
                         <br>
 
                         <div class="main-info-details"><p>Dimensiones: </p><p>----- cm</p></div>
-                        <div class="main-info-details"><p>Género: </p><p><%= book.genre_id %></p></div>
+                        <div class="main-info-details"><p>Género: </p><p><%= book.genre.name %></p></div>
                         <div class="main-info-details"><p>Descripción: </p><p><%= book.description %></p></div>
                         <div class="main-info-details"><p>Páginas: </p><p><%= book.pages %></p></div>
 

@@ -77,7 +77,13 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        db.Book.findAll()
+        db.Book.findAll({
+            include: [
+                { association: 'author' },
+                { association: 'genre' },
+                { association: 'publisher' }
+            ]
+        })
             .then(books => {
                 res.render('./users/profile.ejs', { user: req.session.userLogged, books });
             })

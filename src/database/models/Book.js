@@ -40,7 +40,8 @@ module.exports = (sequelize, DataTypes) => {
         },
         author_id: {
             type: DataTypes.INTEGER(11),
-            allowNull: false
+            //allowNull: false,
+            foreignKey: true
         },
         publisher_id: {
             type: DataTypes.INTEGER(11),

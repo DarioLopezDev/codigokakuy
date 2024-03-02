@@ -7,7 +7,13 @@ const books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos
 
 const controlador = {
     index: (req, res) => {
-        db.Book.findAll()
+        db.Book.findAll({
+            include: [
+                { association: 'author' },
+                { association: 'genre' },
+                { association: 'publisher' }
+            ]
+        })
         .then((books) => {
             //console.log(books[0].dataValues);
             res.render('index', {books});

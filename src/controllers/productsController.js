@@ -8,7 +8,13 @@ let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.j
 
 const productsController = {
     products: (req, res) => {
-        db.Book.findAll()
+        db.Book.findAll({
+            include: [
+                { association: 'author' },
+                { association: 'genre' },
+                { association: 'publisher' }
+            ]
+        })
             .then((books) => {
                 res.render('./products/products.ejs', { books });
             })
@@ -16,7 +22,13 @@ const productsController = {
     },
 
     productCart: (req, res) => {
-        db.Book.findAll()
+        db.Book.findAll({
+            include: [
+                { association: 'author' },
+                { association: 'genre' },
+                { association: 'publisher' }
+            ]
+        })
             .then((books) => {
                 res.render('./products/productCart.ejs', { books });
             })
@@ -52,15 +64,30 @@ const productsController = {
             stock: req.body.stock,
             image: `${req.file?.filename || 'default-image.jpg'}`
         };
-        db.Book.create(newBook);
-        res.redirect('/products');
+
+        db.Book.create(newBook)
+            
+        res.redirect('/products')
+
     },
 
     detail: async (req, res) => {
         try {
             let idP = req.params.id;
-            const book = await db.Book.findByPk(idP);
-            const books = await db.Book.findAll();
+            const book = await db.Book.findByPk(idP, {
+                include: [
+                    { association: 'author' },
+                    { association: 'genre' },
+                    { association: 'publisher' }
+                ]
+            });
+            const books = await db.Book.findAll({
+                include: [
+                    { association: 'author' },
+                    { association: 'genre' },
+                    { association: 'publisher' }
+                ]
+            });
             res.render('./products/productDetail.ejs', { book, books });
         } catch (error) {
             console.log(error.message)
