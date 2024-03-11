@@ -5,6 +5,8 @@
 
     <link rel="stylesheet" href="/css/admin-createProducts.css">
 
+    <script src="../../../js/genre.js"></script>
+
     <body>
 
         <%- include('../partials/header') %>
@@ -25,14 +27,19 @@
 
                         <input type="text" id="anio" name="anio" placeholder="Año" required>
 
-                        <input type="text" id="autor" name="autor" placeholder="Autor" required>
+                        <input type="search" id="autor" name="autor" placeholder="Autor" required>
+                        <ul id="sugerencias"></ul>
 
                         <input type="text" id="description" name="description" placeholder="Descripción" required>
 
-                        <input type="number" id="cantidad_de_paginas" name="cantidad_de_paginas"
-                            placeholder="Cantidad De Páginas" required>
+                        <select id="genero" name="genero" required>
+                            <% genres.forEach(genre => { %>
+                                <option value="<%= genre.genre_id %>"><%= genre.name %></option>
+                                <% }) %>                                                   
+                        </select> 
 
-                        <input type="text" id="genero" name="genero" placeholder="Genero" required>
+                        <input type="text" id="cantidad_de_paginas" name="cantidad_de_paginas" 
+                        placeholder="Cantidad de páginas" required>
 
                         <input type="number" id="price" name="price" placeholder="Precio" required>
 

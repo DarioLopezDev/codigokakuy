@@ -36,8 +36,15 @@ const productsController = {
 
     },
 
-    create: (req, res) => {
-        res.render('./products/admin-createProducts.ejs');
+    create: async (req, res) => {
+        try {
+            const genres = await db.Genre.findAll();
+            const publishers = await db.Publisher.findAll();
+            const authors = await db.Author.findAll();
+            res.render('./products/admin-createProducts.ejs', {genres, publishers, authors});
+        } catch (error) {
+            console.log(error.message);
+        }
     },
 
     store: (req, res) => {
@@ -66,7 +73,7 @@ const productsController = {
         };
 
         db.Book.create(newBook)
-            
+
         res.redirect('/products')
 
     },
