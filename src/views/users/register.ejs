@@ -16,7 +16,21 @@
 
                 <div class="formularioRegistroShadow">
 
-                    <form id="formularioRegistroBox" action="/users/register" method="post" enctype="multipart/form-data">
+
+                    <% if(locals.errors) { %>
+                        <div id="errors">
+                            <% for (let oneError in errors) { %>
+                               <p>
+                                  <%= errors[oneError].msg %>
+                               </p>
+                            <% } %>
+                        </div>
+                    <% } %>
+
+
+
+                    <form id="formularioRegistroBox" action="/users/register" method="post"
+                        enctype="multipart/form-data">
 
                         <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
 
@@ -33,7 +47,7 @@
 
 
                         <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
-                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                        <input type="date" id="fechaNacimiento" name="date" required>
 
 
                         <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
@@ -74,7 +88,7 @@
 
                     </ul>
 
-                </div>
+                    </div>
 
             </main>
 
