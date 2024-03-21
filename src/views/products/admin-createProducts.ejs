@@ -3,46 +3,58 @@
 
 <%- include('../partials/head') %>
 
-    <link rel="stylesheet" href="/css/admin-createProducts.css">
+<link rel="stylesheet" href="/css/admin-createProducts.css">
 
-    <script src="../../../js/genre.js"></script>
+<script src="../../../js/genre.js"></script>
 
-    <body>
+<body>
 
-        <%- include('../partials/header') %>
+    <%- include('../partials/header') %>
+            
+    <main class="mainCreate">
 
-            <main class="mainCreate">
+        <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
+        <a href="/products/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
 
-                <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
-                <a href="/products/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
+        <div class="formularioCrearProductoShadow">
 
-                <div class="formularioCrearProductoShadow">
-
-                    <% if(locals.errors) { %>
-                        <div id="errors">
-                            <% for (let oneError in errors) { %>
-                                <p>
-                                    <%= errors[oneError].msg %>
-                                </p>
-                            <% } %>
-                        </div>
-                    <% } %>
-
-                <form id="formularioCrearProductoBox" action="/products/create" method="post"
+            <form id="formularioCrearProductoBox" action="/products/create" method="post"
                     enctype="multipart/form-data">
 
                 <label for="Datos" id="crearTitulo">Cargue el libro:</label>
 
 
                 <input type="text" id="name" name="titulo" placeholder="Título" required>
+                <% if (locals.errors && errors.titulo) { %>
+                    <div id="errors">
+                        <%= errors.titulo.msg %>
+                    </div>
+                <% } %>
+
 
                 <input type="text" id="anio" name="anio" placeholder="Año" required>
+                <% if (locals.errors && errors.anio) { %>
+                    <div id="errors">
+                        <%= errors.anio.msg %>
+                    </div>
+                <% } %>
+
 
                 <input type="search" id="autor" name="autor" placeholder="Autor" required>
                 <ul id="sugerencias"></ul>
+                <% if (locals.errors && errors.autor) { %>
+                    <div id="errors">
+                        <%= errors.autor.msg %>
+                    </div>
+                <% } %>
 
-                <input type="text" id="description" name="description" placeholder="Descripción"
-                    required>
+
+                <input type="text" id="description" name="description" placeholder="Descripción" required>
+                <% if (locals.errors && errors.description) { %>
+                    <div id="errors">
+                        <%= errors.description.msg %>
+                    </div>
+                <% } %>
 
 
                 <% if(genres === undefined) { %>
@@ -50,28 +62,69 @@
                 <% } else { %>
                     <select id="genero" name="genero" required>
                         <% genres.forEach(genre=> { %>
-                                            <option value="<%= genre.genre_id %>">
-                                <%= genre.name %>
-                                            </option>
+                            <option value="<%= genre.genre_id %>">
+                            <%= genre.name %>
+                            </option>
                         <% }) %>
                     </select>
                 <% } %>
+                <% if (locals.errors && errors.genero) { %>
+                    <div id="errors">
+                        <%= errors.genero.msg %>
+                    </div>
+                <% } %>
+
 
                 <input type="text" id="cantidad_de_paginas" name="cantidad_de_paginas"
                             placeholder="Cantidad de páginas" required>
+                <% if (locals.errors && errors.cantidad_de_paginas) { %>
+                    <div id="errors">
+                        <%= errors.cantidad_de_paginas.msg %>
+                    </div>
+                <% } %>
+
 
                 <input type="number" id="price" name="price" placeholder="Precio" required>
+                <% if (locals.errors && errors.price) { %>
+                    <div id="errors">
+                        <%= errors.price.msg %>
+                    </div>
+                <% } %>
+
 
                 <input type="text" id="editorial" name="editorial" placeholder="Editorial"
                             required>
+                <% if (locals.errors && errors.editorial) { %>
+                    <div id="errors">
+                        <%= errors.editorial.msg %>
+                    </div>
+                <% } %>
+
 
                 <input type="number" id="ISBN" name="ISBN" placeholder="ISBN" required>
+                <% if (locals.errors && errors.ISBN) { %>
+                    <div id="errors">
+                        <%= errors.ISBN.msg %>
+                    </div>
+                <% } %>
+
 
                 <input type="number" id="stock" name="stock" placeholder="Stock" required>
+                <% if (locals.errors && errors.stock) { %>
+                    <div id="errors">
+                        <%= errors.stock.msg %>
+                    </div>
+                <% } %>
 
 
                 <label for="imagenProducto" id="imagenProductoTitulo">Imagen:</label>
-                                        <input type="file" id="imagenProducto" name="imagenProducto" multiple>
+                <input type="file" id="imagenProducto" name="imagenProducto" multiple>
+                <% if (locals.errors && errors.imagenProducto) { %>
+                    <div id="errors">
+                        <%= errors.imagenProducto.msg %>
+                    </div>
+                <% } %>
+
 
                 <div class="botonesBox">
 
@@ -80,14 +133,14 @@
 
                 </div>
 
-                </form>
+            </form>
 
-                </div>
+        </div>
 
-            </main>
+    </main>
 
-            <%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
 
-    </body>
+</body>
 
 </html>

@@ -60,7 +60,7 @@ let validations = [
     body('stock')
     .notEmpty().withMessage('Tienes que escribir un número de Stock'),
 
-    //Imagen
+    //imagenProducto
     body('foto').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtension = ['.jpg', '.jpeg', '.png', '.gif'];

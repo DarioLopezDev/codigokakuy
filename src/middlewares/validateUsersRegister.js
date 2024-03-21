@@ -69,8 +69,7 @@ let validations = [
     body('contrasena')
     .notEmpty().withMessage('Tienes que escribir una Contraseña').bail()
     .isLength({min: 8}).withMessage('Tu Contraseña es demasiado corta, debería tener al menos 8 caracteres').bail()
-    .isStrongPassword(
-        {
+    .isStrongPassword({
             minLowercase: 1,
             minUppercase: 1,
             minNumbers: 1,
