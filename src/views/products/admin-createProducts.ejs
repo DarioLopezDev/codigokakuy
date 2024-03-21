@@ -18,49 +18,69 @@
 
                 <div class="formularioCrearProductoShadow">
 
-                    <form id="formularioCrearProductoBox" action="/products/create" method="post" enctype="multipart/form-data">
+                    <% if(locals.errors) { %>
+                        <div id="errors">
+                            <% for (let oneError in errors) { %>
+                                <p>
+                                    <%= errors[oneError].msg %>
+                                </p>
+                            <% } %>
+                        </div>
+                    <% } %>
 
-                        <label for="Datos" id="crearTitulo">Cree los productos:</label>
+                <form id="formularioCrearProductoBox" action="/products/create" method="post"
+                    enctype="multipart/form-data">
 
-
-                        <input type="text" id="name" name="titulo" placeholder="Título" required>
-
-                        <input type="text" id="anio" name="anio" placeholder="Año" required>
-
-                        <input type="search" id="autor" name="autor" placeholder="Autor" required>
-                        <ul id="sugerencias"></ul>
-
-                        <input type="text" id="description" name="description" placeholder="Descripción" required>
-
-                        <select id="genero" name="genero" required>
-                            <% genres.forEach(genre => { %>
-                                <option value="<%= genre.genre_id %>"><%= genre.name %></option>
-                                <% }) %>                                                   
-                        </select> 
-
-                        <input type="text" id="cantidad_de_paginas" name="cantidad_de_paginas" 
-                        placeholder="Cantidad de páginas" required>
-
-                        <input type="number" id="price" name="price" placeholder="Precio" required>
-
-                        <input type="text" id="editorial" name="editorial" placeholder="Editorial" required>
-
-                        <input type="number" id="ISBN" name="ISBN" placeholder="ISBN" required>
-
-                        <input type="number" id="stock" name="stock" placeholder="Stock" required>
+                <label for="Datos" id="crearTitulo">Cargue el libro:</label>
 
 
-                        <label for="imagenProducto" id="imagenProductoTitulo">Imagen:</label>
-                        <input type="file" id="imagenProducto" name="imagenProducto" multiple>
+                <input type="text" id="name" name="titulo" placeholder="Título" required>
 
-                        <div class="botonesBox">
+                <input type="text" id="anio" name="anio" placeholder="Año" required>
+
+                <input type="search" id="autor" name="autor" placeholder="Autor" required>
+                <ul id="sugerencias"></ul>
+
+                <input type="text" id="description" name="description" placeholder="Descripción"
+                    required>
+
+
+                <% if(genres === undefined) { %>
+                    <input type="number" name="genero" placeholder="Género" required>                                    
+                <% } else { %>
+                    <select id="genero" name="genero" required>
+                        <% genres.forEach(genre=> { %>
+                                            <option value="<%= genre.genre_id %>">
+                                <%= genre.name %>
+                                            </option>
+                        <% }) %>
+                    </select>
+                <% } %>
+
+                <input type="text" id="cantidad_de_paginas" name="cantidad_de_paginas"
+                            placeholder="Cantidad de páginas" required>
+
+                <input type="number" id="price" name="price" placeholder="Precio" required>
+
+                <input type="text" id="editorial" name="editorial" placeholder="Editorial"
+                            required>
+
+                <input type="number" id="ISBN" name="ISBN" placeholder="ISBN" required>
+
+                <input type="number" id="stock" name="stock" placeholder="Stock" required>
+
+
+                <label for="imagenProducto" id="imagenProductoTitulo">Imagen:</label>
+                                        <input type="file" id="imagenProducto" name="imagenProducto" multiple>
+
+                <div class="botonesBox">
 
                             <input id="botonBorrarCreate" type="reset" value="Borrar">
                             <input id="botonEnviarCreate" type="submit" value="Enviar">
 
-                        </div>
+                </div>
 
-                    </form>
+                </form>
 
                 </div>
 

@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const { validationResult } = require('express-validator');
 
 /*const fs = require('fs');
 const path = require('path');
@@ -47,16 +48,14 @@ const productsController = {
         }
     },
 
-    store: (req, res) => {
-        /*const newProduct = {
-            id: Date.now(),
-            ...req.body,
-            image: `http://localhost:4050/images/books/${req.file?.filename || 'default-image.jpg'}`
-        }
-        books.push(newProduct);
-
-        let productsJSON = JSON.stringify(books, null, ' ');
-        fs.writeFileSync(productsFilePath, productsJSON);*/
+    store: async (req, res) => {
+        const resultValidation = validationResult(req);
+        if(resultValidation.errors.length > 0) {
+            return res.render('./products/admin-createProducts.ejs', {
+                errors: resultValidation.mapped()
+                //Convierte el array en un objeto literal
+            });
+        };
 
         const newBook = {
             year: req.body.anio,

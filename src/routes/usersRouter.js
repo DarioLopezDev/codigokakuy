@@ -6,7 +6,7 @@ const usersController = require('../controllers/usersController');
 const upload = require('../middlewares/userMulterMiddleware');
 const guestMiddleware = require('../middlewares/guestMidleware');
 const userMiddleware = require('../middlewares/userMiddleware');
-const validations = require('../middlewares/validateUsers');
+const validations = require('../middlewares/validateUsersRegister');
 
 //Register
 router.get('/register', guestMiddleware, usersController.register);

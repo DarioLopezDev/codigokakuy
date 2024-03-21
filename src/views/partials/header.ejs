@@ -62,6 +62,8 @@
                     <br>
                     <h3>Hola <%= locals.userLogged.username %>, gracias por elegirnos</h3>
                     <% } else {%>
+                        <li><a href="/products/create">Crear</a></li>
+                        <br>
                         <li><a href="/users/login">Login</a></li>
                         <br>
                         <li><a href="/users/register">Register</a></li>

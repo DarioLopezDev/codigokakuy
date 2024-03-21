@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const productsController = require('../controllers/productsController');
 const upload = require('../middlewares/productMulterMiddleware');
+const validations = require('../middlewares/validateProducts')
+
 
 router.get('/', productsController.products);
 
@@ -10,7 +12,7 @@ router.get('/carrito', productsController.productCart);
 
 
 router.get('/create', productsController.create);
-router.post('/create', upload.single('imagenProducto'), productsController.store);
+router.post('/create', upload.single('imagenProducto'), validations, productsController.store);
 
 
 router.get('/:id', productsController.detail);

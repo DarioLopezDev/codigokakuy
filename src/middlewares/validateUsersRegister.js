@@ -33,7 +33,7 @@ let validations = [
 
     //Fecha de Nacimiento
     body('date')
-    .notEmpty().bail().withMessage('Tienes que elegir una Fecha de Nacimiento'),
+    .notEmpty().withMessage('Tienes que elegir una Fecha de Nacimiento'),
 
     //Domicilio
     body('domicilio')
