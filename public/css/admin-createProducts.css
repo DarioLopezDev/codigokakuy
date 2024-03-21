@@ -39,13 +39,13 @@ body {
 }
 
 #errors {
-    background: azure;
-    color: tomato;
+    background: tomato;
+    color: azure;
     text-align: center;
     padding: 5px;
     margin-top: 5px;
     border-radius: 15%;
-    border: red 3px solid;
+    border: azure 3px solid;
 }
 
 #errors p {

@@ -59,7 +59,14 @@ const usersController = {
             
         };
         
-        const { nombreApellido, nombreUsuario, email, fechaNacimiento, domicilio, contrasena } = req.body;
+        const { 
+            nombreApellido, 
+            nombreUsuario, 
+            email, 
+            fechaNacimiento, 
+            domicilio, 
+            contrasena } = req.body;
+
         const newUser = {
             //Por seguridad no usar el spread operator "...req.body"
             //Porque se pueden agregar inputs indeseados al JSON
@@ -75,10 +82,7 @@ const usersController = {
             image: `${req.file?.filename ||
                 'default-image.jpg'}`
         }
-        /*users.push(newUser);
 
-        let usersJSON = JSON.stringify(users, null, ' ');
-        fs.writeFileSync(usersFilePath, usersJSON);*/
         db.User.create(newUser);
 
         res.redirect('/');

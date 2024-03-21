@@ -9,90 +9,117 @@
 
         <%- include('../partials/header') %>
 
-            <main class="mainRegistro">
+        <main class="mainRegistro">
 
-                <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
-                <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
+            <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
+            <a href="/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
 
-                <div class="formularioRegistroShadow">
+            <div class="formularioRegistroShadow">
+
+                <form id="formularioRegistroBox" action="/users/register" method="post"
+                        enctype="multipart/form-data">
+
+                    <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
 
 
-                    <% if(locals.errors) { %>
+                    <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required>
+                        <% if (locals.errors && errors.nombreApellido) { %>
+                            <div id="errors">
+                                <%= errors.nombreApellido.msg %>
+                            </div>
+                        <% } %>
+
+
+                    <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required>
+                        <% if (locals.errors && errors.nombreUsuario) { %>
+                            <div id="errors">
+                                <%= errors.nombreUsuario.msg %>
+                            </div>
+                        <% } %>
+
+
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <% if (locals.errors && errors.email) { %>
                         <div id="errors">
-                            <% for (let oneError in errors) { %>
-                               <p>
-                                  <%= errors[oneError].msg %>
-                               </p>
-                            <% } %>
+                            <%= errors.email.msg %>
                         </div>
                     <% } %>
 
 
-
-                    <form id="formularioRegistroBox" action="/users/register" method="post"
-                        enctype="multipart/form-data">
-
-                        <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
-
-
-                        <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido"
-                            required>
-
-
-                        <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario"
-                            required>
-
-
-                        <input type="email" id="email" name="email" placeholder="Email" required>
-
-
-                        <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
-                        <input type="date" id="fechaNacimiento" name="date" required>
-
-
-                        <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
-                        <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
-
-
-                        <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
-                        <input type="file" id="foto" name="foto" single>
-
-
-                        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
-
-                        <input type="password" id="confirmarContrasena" name="confirmarContrasena"
-                            placeholder="Confirmar Contraseña" required>
-
-                        <div class="terminosServiciosBox">
-
-                            <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y
-                                Servicios</label>
-                            <input type="checkbox" id="terminosServicios" name="terminosServicios"
-                                value="Terminos y Servicios" required>
-
+                    <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="date" required>
+                    <% if (locals.errors && errors.date) { %>
+                        <div id="errors">
+                            <%= errors.date.msg %>
                         </div>
+                    <% } %>
 
-                        <div class="botonesBox">
 
-                            <input id="botonBorrarRegister" type="reset" value="Borrar">
-                            <input id="botonEnviarRegister" type="submit" value="Enviar">
-
+                    <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
+                    <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+                    <% if (locals.errors && errors.domicilio) { %>
+                        <div id="errors">
+                            <%= errors.domicilio.msg %>
                         </div>
+                    <% } %>
 
-                    </form>
 
-                    <ul class="linksRegistro">
+                    <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
+                    <input type="file" id="foto" name="foto" single>
+                    <% if (locals.errors && errors.foto) { %>
+                        <div id="errors">
+                            <%= errors.foto.msg %>
+                        </div>
+                    <% } %>
 
-                        <li><a href="/login">Ya tengo una cuenta</a></li>
-                        <li><a href="/">Pagina Principal</a></li>
 
-                    </ul>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                    <% if (locals.errors && errors.contrasena) { %>
+                        <div id="errors">
+                            <%= errors.contrasena.msg %>
+                        </div>
+                    <% } %>
+
+
+                    <input type="password" id="confirmarContrasena" name="confirmarContrasena"
+                        placeholder="Confirmar Contraseña" required>
+                    <% if (locals.errors && errors.confirmarContrasena) { %>
+                        <div id="errors">
+                            <%= errors.confirmarContrasena.msg %>
+                        </div>
+                    <% } %>
+
+                            
+                    <div class="terminosServiciosBox">
+
+                        <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y
+                            Servicios</label>
+                        <input type="checkbox" id="terminosServicios" name="terminosServicios"
+                            value="Terminos y Servicios" required>
 
                     </div>
 
-            </main>
+                    <div class="botonesBox">
 
-            <%- include('../partials/footer') %>
+                        <input id="botonBorrarRegister" type="reset" value="Borrar">
+                        <input id="botonEnviarRegister" type="submit" value="Enviar">
+
+                    </div>
+
+                </form>
+
+                <ul class="linksRegistro">
+
+                    <li><a href="/login">Ya tengo una cuenta</a></li>
+                    <li><a href="/">Pagina Principal</a></li>
+
+                </ul>
+
+            </div>
+
+        </main>
+
+        <%- include('../partials/footer') %>
 
     </body>
 

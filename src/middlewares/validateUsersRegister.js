@@ -13,7 +13,18 @@ let validations = [
     //Nombre de usuario
     body('nombreUsuario')
     .notEmpty().withMessage('Tienes que escribir un Nombre de usuario').bail()
-    .isLength({min: 2}).withMessage('Tu Nombre de usuario es demasiado corto'),
+    .isLength({min: 2}).withMessage('Tu Nombre de usuario es demasiado corto').bail()
+    .custom(async (value, { req }) => {
+        const existingUser = await db.User.findOne({
+            where: {
+                username: req.body.nombreUsuario
+            }
+        });
+         if (existingUser) {
+           // Will use the below as the error message
+           throw new Error('Ya existe un usuario con este Nombre de usuario');
+         }
+      }),
 
     //Email
     body('email')
@@ -38,7 +49,7 @@ let validations = [
     //Domicilio
     body('domicilio')
     .notEmpty().withMessage('Tienes que escribir un Domicilio').bail()
-    .isLength({min: 2}).withMessage('Tu Domicilio es demasiado corto'),
+    .isLength({min: 6}).withMessage('Tu Domicilio es demasiado corto'),
 
     //Foto de perfil
     body('foto').custom((value, { req }) => {
@@ -70,6 +81,7 @@ let validations = [
     //Confirmar contraseña
     body('confirmarContrasena')
     .notEmpty().withMessage('Tu confirmación debe ser igual a la Contraseña')
+  //agregar validacion de que sea igual a la contraseña
 ];
 
 module.exports = validations;
