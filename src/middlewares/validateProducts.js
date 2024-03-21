@@ -71,7 +71,7 @@ let validations = [
                 'Extensión de archivo no soportado, use archivos JPG, JPEG, PNG o GIF'
                 );
         };
-
+        return true;
     }),
 ];
 

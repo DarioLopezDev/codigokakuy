@@ -53,8 +53,8 @@ const usersController = {
         const resultValidation = validationResult(req);
         if(resultValidation.errors.length > 0) {
             return res.render('./users/register.ejs', {
-                errors: resultValidation.mapped()
-                //Convierte el array en un objeto literal
+                errors: resultValidation.mapped(), //Convierte el array en un objeto literal
+                oldData: req.body //Conserva lo ingresado por el usuario en el formulario                
             });
             
         };

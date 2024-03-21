@@ -22,7 +22,8 @@
                     <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
 
 
-                    <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required>
+                    <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required 
+                      value="<%= locals.oldData ? oldData.nombreApellido : null %>">
                         <% if (locals.errors && errors.nombreApellido) { %>
                             <div id="errors">
                                 <%= errors.nombreApellido.msg %>
@@ -30,7 +31,8 @@
                         <% } %>
 
 
-                    <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required>
+                    <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required 
+                    value="<%= locals.oldData ? oldData.nombreUsuario : null %>">
                         <% if (locals.errors && errors.nombreUsuario) { %>
                             <div id="errors">
                                 <%= errors.nombreUsuario.msg %>
@@ -38,7 +40,8 @@
                         <% } %>
 
 
-                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required 
+                    value="<%= locals.oldData ? oldData.email : null %>">
                     <% if (locals.errors && errors.email) { %>
                         <div id="errors">
                             <%= errors.email.msg %>
@@ -47,7 +50,8 @@
 
 
                     <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
-                    <input type="date" id="fechaNacimiento" name="date" required>
+                    <input type="date" id="fechaNacimiento" name="date" required 
+                    value="<%= locals.oldData ? oldData.date : null %>">
                     <% if (locals.errors && errors.date) { %>
                         <div id="errors">
                             <%= errors.date.msg %>
@@ -56,7 +60,8 @@
 
 
                     <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
-                    <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+                    <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required 
+                    value="<%= locals.oldData ? oldData.domicilio : null %>">
                     <% if (locals.errors && errors.domicilio) { %>
                         <div id="errors">
                             <%= errors.domicilio.msg %>
@@ -65,7 +70,8 @@
 
 
                     <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
-                    <input type="file" id="foto" name="foto" single>
+                    <input type="file" id="foto" name="foto" single 
+                    value="<%= locals.oldData ? oldData.foto : null %>">
                     <% if (locals.errors && errors.foto) { %>
                         <div id="errors">
                             <%= errors.foto.msg %>
@@ -73,7 +79,8 @@
                     <% } %>
 
 
-                    <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required 
+                    value="<%= locals.oldData ? oldData.contrasena : null %>">
                     <% if (locals.errors && errors.contrasena) { %>
                         <div id="errors">
                             <%= errors.contrasena.msg %>
@@ -82,7 +89,8 @@
 
 
                     <input type="password" id="confirmarContrasena" name="confirmarContrasena"
-                        placeholder="Confirmar Contraseña" required>
+                        placeholder="Confirmar Contraseña" required 
+                        value="<%= locals.oldData ? oldData.confirmarContrasena : null %>">
                     <% if (locals.errors && errors.confirmarContrasena) { %>
                         <div id="errors">
                             <%= errors.confirmarContrasena.msg %>

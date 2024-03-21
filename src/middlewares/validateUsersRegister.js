@@ -55,14 +55,15 @@ let validations = [
     body('foto').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtension = ['.jpg', '.jpeg', '.png', '.gif'];
-        let fileExtension = path.extname(file.originalname);
+        //let fileExtension = path.extname(file.originalname); 
+        //Al usar esta variable, luego tira un error de que originalname es indefined
 
-        if(file && !acceptedExtension.includes(fileExtension)) {
+        if(file && !acceptedExtension.includes(path.extname(file.originalname))) {
             throw new Error(
                 'Extensión de archivo no soportado, use archivos JPG, JPEG, PNG o GIF'
                 );
         };
-
+        return true;
     }),
 
     //Contraseña
