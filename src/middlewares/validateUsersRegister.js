@@ -8,7 +8,7 @@ let validations = [
     //Nombre y Apellido
     body('nombreApellido')
     .notEmpty().withMessage('Tienes que escribir un Nombre y Apellido').bail()
-    .isLength({min: 2}).withMessage('Tu Nombre y Apellido es demasiado corto'),
+    .isLength({min: 2}).withMessage('Tu Nombre y Apellido son demasiado cortos'),
 
     //Nombre de usuario
     body('nombreUsuario')
@@ -38,7 +38,7 @@ let validations = [
         });
          if (existingUser) {
            // Will use the below as the error message
-           throw new Error('Ya existe un usuario con este email');
+           throw new Error('Ya existe un usuario con este Email');
          }
       }),
 
@@ -51,7 +51,7 @@ let validations = [
     .notEmpty().withMessage('Tienes que escribir un Domicilio').bail()
     .isLength({min: 6}).withMessage('Tu Domicilio es demasiado corto'),
 
-    //Foto de perfil
+    //Foto de Usuario
     body('foto').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtension = ['.jpg', '.jpeg', '.png', '.gif'];
@@ -80,8 +80,14 @@ let validations = [
 
     //Confirmar contraseña
     body('confirmarContrasena')
-    .notEmpty().withMessage('Tu confirmación debe ser igual a la Contraseña')
+    .notEmpty().withMessage('Tienes que Confirmar tu Contraseña'),
   //agregar validacion de que sea igual a la contraseña
+
+    /*//Aceptar los terminos y Servicios
+    if (!form.terminosServicios.checked) {
+        spans[8].innerHTML = "Tienes que Aceptar los terminos y Servicios";
+        spans[8].id = "errors";
+    };*/
 ];
 
 module.exports = validations;

@@ -65,7 +65,12 @@ body {
 #datosTitulo {
     margin: 2px;
     padding: 2px;
-    font-size: 18px;
+    color: var(--color2);
+}
+
+#nombreApellidoTitulo {
+    margin: 2px;
+    padding: 2px;
     color: var(--color2);
 }
 
@@ -75,10 +80,22 @@ body {
     border-radius: 5px;
 }
 
+#nombreUsuarioTitulo {
+    margin: 2px;
+    padding: 2px;
+    color: var(--color2);
+}
+
 #nombreUsuario {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
+}
+
+#emailTitulo {
+    margin: 2px;
+    padding: 2px;
+    color: var(--color2);
 }
 
 #email {
@@ -125,10 +142,22 @@ body {
     color: var(--color2);
 }
 
+#contrasenaTitulo {
+    margin: 2px;
+    padding: 2px;
+    color: var(--color2);
+}
+
 #contrasena {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
+}
+
+#confirmarContrasenaTitulo {
+    margin: 2px;
+    padding: 2px;
+    color: var(--color2);
 }
 
 #confirmarContrasena {

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <%- include('../partials/head') %>
-
+    <script src="../../../js/validationsRegisterFrontEnd.js"></script>
     <link rel="stylesheet" href="/css/register.css">
 
     <body>
@@ -19,11 +19,12 @@
                 <form id="formularioRegistroBox" action="/users/register" method="post"
                         enctype="multipart/form-data">
 
-                    <label for="Datos" id="datosTitulo">Ingrese sus datos:</label>
+                    <h1 id="datosTitulo">Ingrese sus datos:</h1>
 
 
+                    <label for="nombreApellido" id="nombreApellidoTitulo">Nombre y Apellido:</label>
                     <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apellido" required 
-                      value="<%= locals.oldData ? oldData.nombreApellido : null %>">
+                      value="<%= locals.oldData ? oldData.nombreApellido : null %>"><span></span>
                         <% if (locals.errors && errors.nombreApellido) { %>
                             <div id="errors">
                                 <%= errors.nombreApellido.msg %>
@@ -31,8 +32,9 @@
                         <% } %>
 
 
+                    <label for="nombreUsuario" id="nombreUsuarioTitulo">Nombre de Usuario:</label>
                     <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Nombre de Usuario" required 
-                    value="<%= locals.oldData ? oldData.nombreUsuario : null %>">
+                    value="<%= locals.oldData ? oldData.nombreUsuario : null %>"><span></span>
                         <% if (locals.errors && errors.nombreUsuario) { %>
                             <div id="errors">
                                 <%= errors.nombreUsuario.msg %>
@@ -40,8 +42,9 @@
                         <% } %>
 
 
+                    <label for="email" id="emailTitulo">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Email" required 
-                    value="<%= locals.oldData ? oldData.email : null %>">
+                    value="<%= locals.oldData ? oldData.email : null %>"><span></span>
                     <% if (locals.errors && errors.email) { %>
                         <div id="errors">
                             <%= errors.email.msg %>
@@ -49,9 +52,9 @@
                     <% } %>
 
 
-                    <label for="date" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
+                    <label for="fechaNacimiento" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
                     <input type="date" id="fechaNacimiento" name="date" required 
-                    value="<%= locals.oldData ? oldData.date : null %>">
+                    value="<%= locals.oldData ? oldData.date : null %>"><span></span>
                     <% if (locals.errors && errors.date) { %>
                         <div id="errors">
                             <%= errors.date.msg %>
@@ -61,7 +64,7 @@
 
                     <label for="domicilio" id="domicilioTitulo">Domicilio:</label>
                     <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required 
-                    value="<%= locals.oldData ? oldData.domicilio : null %>">
+                    value="<%= locals.oldData ? oldData.domicilio : null %>"><span></span>
                     <% if (locals.errors && errors.domicilio) { %>
                         <div id="errors">
                             <%= errors.domicilio.msg %>
@@ -71,7 +74,7 @@
 
                     <label for="foto" id="fotoUsuarioTitulo">Foto de usuario:</label>
                     <input type="file" id="foto" name="foto" single 
-                    value="<%= locals.oldData ? oldData.foto : null %>">
+                    value="<%= locals.oldData ? oldData.foto : null %>"><span></span>
                     <% if (locals.errors && errors.foto) { %>
                         <div id="errors">
                             <%= errors.foto.msg %>
@@ -79,8 +82,9 @@
                     <% } %>
 
 
+                    <label for="contrasena" id="contrasenaTitulo">Contraseña:</label>
                     <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required 
-                    value="<%= locals.oldData ? oldData.contrasena : null %>">
+                    value="<%= locals.oldData ? oldData.contrasena : null %>"><span></span>
                     <% if (locals.errors && errors.contrasena) { %>
                         <div id="errors">
                             <%= errors.contrasena.msg %>
@@ -88,9 +92,10 @@
                     <% } %>
 
 
+                    <label for="confirmarContrasena" id="confirmarContrasenaTitulo">Confirmar Contraseña:</label>
                     <input type="password" id="confirmarContrasena" name="confirmarContrasena"
                         placeholder="Confirmar Contraseña" required 
-                        value="<%= locals.oldData ? oldData.confirmarContrasena : null %>">
+                        value="<%= locals.oldData ? oldData.confirmarContrasena : null %>"><span></span>
                     <% if (locals.errors && errors.confirmarContrasena) { %>
                         <div id="errors">
                             <%= errors.confirmarContrasena.msg %>
@@ -102,8 +107,9 @@
 
                         <label for="terminosServicios" id="terminosServiciosTitulo">Acepto los terminos y
                             Servicios</label>
-                        <input type="checkbox" id="terminosServicios" name="terminosServicios"
-                            value="Terminos y Servicios" required>
+                        <input type="checkbox" id="terminosServicios" name="terminosServicios" >
+                        <br><br>
+                        <span></span>
 
                     </div>
 
