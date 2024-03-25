@@ -17,12 +17,21 @@ const usersController = {
 
     session: async (req, res) => {
         try {
-            let { nombreUsuario, contrasena } = req.body;
+            let { email, contrasena } = req.body;
+
+            const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0) {
+                return res.render('./users/login.ejs', {
+                    errors: resultValidation.mapped(), //Convierte el array en un objeto literal
+                    oldEmail: email //Conserva el correo electrónico ingresado por el usuario en el login
+                });
+
+            };
             //let userFound = users.find(user => user.nombreUsuario == nombreUsuario);
-            console.log(nombreUsuario, contrasena);
+
             let userFound = await db.User.findOne({
                 where: {
-                    username: nombreUsuario,
+                    email: email,
                 }
             });
 
@@ -149,7 +158,7 @@ const usersController = {
             });
 
             if (!findedEmail) {
-                return res.send(false);                
+                return res.send(false);
             } else {
                 return res.send(true);
             }
