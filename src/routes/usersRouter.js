@@ -24,4 +24,7 @@ router.get('/logout', usersController.logout);
 router.get('/profile/edit', userMiddleware, usersController.edit);
 router.post('/profile/edit', userMiddleware, upload.single('foto'), usersController.update);
 
+//Email Register Verificator
+router.get('/isEmailExist/:email', usersController.isEmailExist);
+
 module.exports = router;

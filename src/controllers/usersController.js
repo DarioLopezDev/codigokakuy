@@ -51,20 +51,20 @@ const usersController = {
 
     create: (req, res) => {
         const resultValidation = validationResult(req);
-        if(resultValidation.errors.length > 0) {
+        if (resultValidation.errors.length > 0) {
             return res.render('./users/register.ejs', {
                 errors: resultValidation.mapped(), //Convierte el array en un objeto literal
                 oldData: req.body //Conserva lo ingresado por el usuario en el formulario                
             });
-            
+
         };
-        
-        const { 
-            nombreApellido, 
-            nombreUsuario, 
-            email, 
-            fechaNacimiento, 
-            domicilio, 
+
+        const {
+            nombreApellido,
+            nombreUsuario,
+            email,
+            fechaNacimiento,
+            domicilio,
             contrasena } = req.body;
 
         const newUser = {
@@ -114,7 +114,7 @@ const usersController = {
                 username: loggedUser,
             }
         });
-        res.render('./users/editUsers.ejs', {userFound});
+        res.render('./users/editUsers.ejs', { userFound });
     },
 
     update: (req, res) => {
@@ -136,6 +136,28 @@ const usersController = {
         });
 
         res.redirect('/users/profile');
+    },
+
+    isEmailExist: async (req, res) => {
+        try {
+            const userEmail = req.params.email;
+
+            const findedEmail = await db.User.findOne({
+                where: {
+                    email: userEmail
+                }
+            });
+
+            if (!findedEmail) {
+                return res.send(false);                
+            } else {
+                return res.send(true);
+            }
+
+        } catch (error) {
+            console.log(error.message);
+        }
+
     }
 };
 

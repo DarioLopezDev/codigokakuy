@@ -3,15 +3,23 @@ window.addEventListener('load', () => {
     const form = document.querySelector('#formularioRegistroBox');
     const spans = document.querySelectorAll('span');
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();  
+    const formatImgChecker = (InputImg) => {
+        let checkFlag = false;
+        const supportedFormats = ["jpg", "jpeg", "png", "gif"];
+        let typeImg = InputImg.files[0].type.slice(6);
+        supportedFormats.forEach(el => { el === typeImg ? checkFlag = true : "" });
+        return checkFlag;
+    }
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
 
         //Nombre y Apellido
         if (form.nombreApellido.value.length <= 0) {
             spans[0].innerHTML = "Tienes que escribir un Nombre y Apellido";
             spans[0].id = "errors";
         };
-        
+
         //Nombre de Usuario
         if (form.nombreUsuario.value.length <= 0) {
             spans[1].innerHTML = "Tienes que escribir un Nombre de Usuario";
@@ -22,6 +30,17 @@ window.addEventListener('load', () => {
         if (form.email.value.length <= 0) {
             spans[2].innerHTML = "Tienes que escribir un Email";
             spans[2].id = "errors";
+        } else {
+            try {
+                const response = await fetch(`/users/isEmailExist/${form.email.value}`);
+                const data = await response.json();
+                if (data) {
+                    spans[2].innerHTML = "Ya existe un usuario con este Email";
+                    spans[2].id = "errors";
+                }
+            } catch (error) {
+                console.log(error);
+            }
         };
 
         //Fecha de nacimiento
@@ -53,7 +72,7 @@ window.addEventListener('load', () => {
             spans[8].innerHTML = "Tienes que Aceptar los terminos y Servicios";
             spans[8].id = "errors";
         };
-    });   
+    });
 
     //Nombre y Apellido
     form.nombreApellido.addEventListener('input', (event) => {
@@ -107,14 +126,15 @@ window.addEventListener('load', () => {
     });
 
     //Foto de Usuario
-    form.foto.addEventListener('input', (event) => {
-        if (event.target.value.length < 2) {
-            spans[5].innerHTML = "Extensión de archivo no soportado, use archivos JPG, JPEG, PNG o GIF";
-            spans[5].id = "errors";
-        } else {
-            spans[5].innerHTML = "";
-            spans[5].removeAttribute("id");
-        }
+    form.foto.addEventListener('change', () => {
+        spans[5].innerHTML = "";
+        spans[5].removeAttribute("id");
+        if (foto.files.length > 0) {
+            if (!formatImgChecker(foto)) {
+                spans[5].innerHTML = "Extensión de archivo no soportado, use archivos JPG, JPEG, PNG o GIF";
+                spans[5].id = "errors";
+            }
+        } 
     });
 
     //Contraseña
