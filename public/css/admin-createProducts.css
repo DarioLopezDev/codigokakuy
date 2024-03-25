@@ -69,7 +69,13 @@ body {
     color: var(--color2);
 }
 
-#name {
+#labelStyles {
+    margin: 2px;
+    padding: 2px;
+    color: var(--color2);
+}
+
+#titulo {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -118,6 +124,12 @@ body {
 }
 
 #ISBN {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#stock {
     margin: 10px;
     padding: 10px;
     border-radius: 5px;

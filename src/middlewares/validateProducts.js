@@ -1,8 +1,6 @@
 const { body } = require('express-validator'); 
 // o También const {check} = require('express-validator'); 
 const path = require('path');
-const db = require('../database/models');
-
 
 let validations = [
     //Título
@@ -18,17 +16,8 @@ let validations = [
     //Autor
     body('autor')
     .notEmpty().withMessage('Tienes que incluir un Autor').bail()
-    /*.custom(async (value, { req }) => {
-        const existingUser = await db.Book.findOne({
-            where: {
-                author_id: req.body.autor
-            }
-        });
-         if (existingUser) {
-           // Will use the below as the error message
-           throw new Error('Ya existe un usuario con este email');
-         }
-      })*/,
+    //Verificar que sea un autor válido
+    ,
 
     //Descripción
     body('description')

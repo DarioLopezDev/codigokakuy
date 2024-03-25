@@ -3,11 +3,11 @@ window.addEventListener('load', () => {
     const form = document.querySelector('#formularioRegistroBox');
     const spans = document.querySelectorAll('span');
 
-    const formatImgChecker = (InputImg) => {
+    const formatImgChecker = (inputImg) => {
         let checkFlag = false;
         const supportedFormats = ["jpg", "jpeg", "png", "gif"];
-        let typeImg = InputImg.files[0].type.slice(6);
-        supportedFormats.forEach(el => { el === typeImg ? checkFlag = true : "" });
+        let typeImg = inputImg.files[0].type.slice(6);
+        supportedFormats.forEach(supportedFormat => { supportedFormat === typeImg ? checkFlag = true : "" });
         return checkFlag;
     }
 
@@ -104,9 +104,6 @@ window.addEventListener('load', () => {
         let expReg = /^(?:[^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*|"[^\n"]+")@(?:[^<>()[\].,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,63}$/i;
         if (!expReg.test(event.target.value)) {
             spans[2].innerHTML = "Tu Email debe ser válido";
-            spans[2].id = "errors";
-        } else if (event.target.value.length < 2) {
-            spans[2].innerHTML = "Ya existe un usuario con este Email";
             spans[2].id = "errors";
         } else {
             spans[2].innerHTML = "";

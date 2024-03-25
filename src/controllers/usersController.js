@@ -153,11 +153,9 @@ const usersController = {
             } else {
                 return res.send(true);
             }
-
         } catch (error) {
             console.log(error.message);
         }
-
     }
 };
 

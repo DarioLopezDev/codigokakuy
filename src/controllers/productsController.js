@@ -50,10 +50,12 @@ const productsController = {
 
     store: async (req, res) => {
         const resultValidation = validationResult(req);
-        if(resultValidation.errors.length > 0) {
+        if(resultValidation.errors.length > 0) {   
+            const genres = await db.Genre.findAll();         
             return res.render('./products/admin-createProducts.ejs', {
                 errors: resultValidation.mapped(), //Convierte el array en un objeto literal
-                oldData: req.body //Conserva lo ingresado por el usuario en el formulario 
+                oldData: req.body, //Conserva lo ingresado por el usuario en el formulario 
+                genres: genres //Envío todos los géneros
             });
         };
 
