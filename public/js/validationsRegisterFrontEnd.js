@@ -76,10 +76,7 @@ window.addEventListener('load', () => {
 
     //Nombre y Apellido
     form.nombreApellido.addEventListener('input', (event) => {
-        /*if (event.target.value.length <= 0) {
-            spans[0].innerHTML = "Tienes que escribir un Nombre y Apellido";
-            spans[0].id = "errors";
-        } else*/ if (event.target.value.length < 2) {
+        if (event.target.value.length < 2) {
             spans[0].innerHTML = "Tu Nombre y Apellido son demasiado cortos";
             spans[0].id = "errors";
         } else {

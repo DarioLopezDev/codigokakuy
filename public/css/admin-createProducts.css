@@ -48,11 +48,6 @@ body {
     border: azure 3px solid;
 }
 
-#errors p {
-    margin: 5px;
-    border-bottom: black 2px solid;
-}
-
 #formularioCrearProductoBox {
     display: flex;
     align-items: center;

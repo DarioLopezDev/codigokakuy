@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="/css/admin-createProducts.css">
 
 <script src="../../../js/genre.js"></script>
+<script src="../../../js/validationsCreateFrontEnd.js"></script>
 
 <body>
 
@@ -26,7 +27,7 @@
 
                 <label for="titulo" id="labelStyles">Título</label>
                 <input type="text" id="titulo" name="titulo" placeholder="Título" required 
-                value="<%= locals.oldData ? oldData.titulo : null %>">
+                value="<%= locals.oldData ? oldData.titulo : null %>"><span></span>
                 
                 <% if (locals.errors && errors.titulo) { %>
                     <div id="errors">
@@ -36,8 +37,8 @@
 
 
                 <label for="anio" id="labelStyles">Año</label>
-                <input type="text" id="anio" name="anio" placeholder="Año" required 
-                value="<%= locals.oldData ? oldData.anio : null %>">
+                <input type="number" id="anio" name="anio" placeholder="Año" required 
+                value="<%= locals.oldData ? oldData.anio : null %>"><span></span>
 
                 <% if (locals.errors && errors.anio) { %>
                     <div id="errors">
@@ -48,7 +49,7 @@
 
                 <label for="autor" id="labelStyles">Autor</label>
                 <input type="search" id="autor" name="autor" placeholder="Autor" required 
-                value="<%= locals.oldData ? oldData.autor : null %>">
+                value="<%= locals.oldData ? oldData.autor : null %>"><span></span>
 
                 <ul id="sugerencias"></ul>
                 <% if (locals.errors && errors.autor) { %>
@@ -60,7 +61,7 @@
 
                 <label for="description" id="labelStyles">Descripción</label>
                 <input type="text" id="description" name="description" placeholder="Descripción" required 
-                value="<%= locals.oldData ? oldData.description : null %>">
+                value="<%= locals.oldData ? oldData.description : null %>"><span></span>
 
                 <% if (locals.errors && errors.description) { %>
                     <div id="errors">
@@ -81,7 +82,7 @@
 
                     <% }) %>
 
-                </select>
+                </select><span></span>
 
                 <% if (locals.errors && errors.genero) { %>
                     <div id="errors">
@@ -91,9 +92,9 @@
 
 
                 <label for="cantidad_de_paginas" id="labelStyles">Cantidad de páginas</label>
-                <input type="text" id="cantidad_de_paginas" name="cantidad_de_paginas"
+                <input type="number" id="cantidad_de_paginas" name="cantidad_de_paginas"
                         placeholder="Cantidad de páginas" required 
-                        value="<%= locals.oldData ? oldData.cantidad_de_paginas : null %>">
+                        value="<%= locals.oldData ? oldData.cantidad_de_paginas : null %>"><span></span>
 
                 <% if (locals.errors && errors.cantidad_de_paginas) { %>
                     <div id="errors">
@@ -104,7 +105,7 @@
 
                 <label for="price" id="labelStyles">Precio</label>
                 <input type="number" id="price" name="price" placeholder="Precio" required 
-                value="<%= locals.oldData ? oldData.price : null %>">
+                value="<%= locals.oldData ? oldData.price : null %>"><span></span>
 
                 <% if (locals.errors && errors.price) { %>
                     <div id="errors">
@@ -115,7 +116,7 @@
 
                 <label for="editorial" id="labelStyles">Editorial</label>
                 <input type="text" id="editorial" name="editorial" placeholder="Editorial"
-                            required value="<%= locals.oldData ? oldData.editorial : null %>">
+                            required value="<%= locals.oldData ? oldData.editorial : null %>"><span></span>
 
                 <% if (locals.errors && errors.editorial) { %>
                     <div id="errors">
@@ -126,7 +127,7 @@
 
                 <label for="ISBN" id="labelStyles">ISBN</label>
                 <input type="number" id="ISBN" name="ISBN" placeholder="ISBN" required 
-                value="<%= locals.oldData ? oldData.ISBN : null %>">
+                value="<%= locals.oldData ? oldData.ISBN : null %>"><span></span>
 
                 <% if (locals.errors && errors.ISBN) { %>
                     <div id="errors">
@@ -137,7 +138,7 @@
 
                 <label for="stock" id="labelStyles">Stock</label>
                 <input type="number" id="stock" name="stock" placeholder="Stock" required 
-                value="<%= locals.oldData ? oldData.stock : null %>">
+                value="<%= locals.oldData ? oldData.stock : null %>"><span></span>
 
                 <% if (locals.errors && errors.stock) { %>
                     <div id="errors">
@@ -148,7 +149,7 @@
 
                 <label for="imagenProducto" id="imagenProductoTitulo">Imagen:</label>
                 <input type="file" id="imagenProducto" name="imagenProducto" multiple 
-                value="<%= locals.oldData ? oldData.imagenProducto : null %>">
+                value="<%= locals.oldData ? oldData.imagenProducto : null %>"><span></span>
 
                 <% if (locals.errors && errors.imagenProducto) { %>
                     <div id="errors">
