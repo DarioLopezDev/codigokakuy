@@ -4,7 +4,7 @@ const path = require('path');
 const db = require('../database/models');
 
 
-let validations = [
+let validationsRegister = [
     //Nombre y Apellido
     body('nombreApellido')
     .notEmpty().withMessage('Tienes que escribir un Nombre y Apellido').bail()
@@ -90,4 +90,4 @@ let validations = [
     };*/
 ];
 
-module.exports = validations;
+module.exports = validationsRegister;
