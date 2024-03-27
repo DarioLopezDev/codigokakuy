@@ -13,66 +13,82 @@ window.addEventListener('load', () => {
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
+        let errorFlag = true;
 
         //Título
         if (form.titulo.value.length <= 0) {
             spans[0].innerHTML = "Tienes que escribir un Título";
             spans[0].id = "errors";
+            errorFlag = false;
         };
 
         //Año
         if (form.anio.value.length <= 0) {
             spans[1].innerHTML = "Tienes que escribir un Año";
             spans[1].id = "errors";
+            errorFlag = false;
         };
 
         //Autor
         if (form.autor.value.length <= 0) {
             spans[2].innerHTML = "Tienes que incluir un Autor";
             spans[2].id = "errors";
+            errorFlag = false;
         };
 
         //Descripción
         if (form.description.value.length <= 0) {
             spans[3].innerHTML = "Tienes que escribir una Descripción";
             spans[3].id = "errors";
+            errorFlag = false;
         };
 
         //Género
         if (form.genero.value.length <= 0) {
             spans[4].innerHTML = "Tienes que incluir un Género";
             spans[4].id = "errors";
+            errorFlag = false;
         };
 
         //Cantidad de páginas
         if (form.cantidad_de_paginas.value.length <= 0) {
             spans[5].innerHTML = "Tienes que escribir la Cantidad de páginas del libro";
             spans[5].id = "errors";
+            errorFlag = false;
         };
 
         //Precio
         if (form.price.value.length <= 0) {
             spans[6].innerHTML = "Tienes que escribir el Precio";
             spans[6].id = "errors";
+            errorFlag = false;
         };
 
         //Editorial
         if (form.editorial.value.length <= 0) {
             spans[7].innerHTML = "Tienes que incluir una Editorial";
             spans[7].id = "errors";
+            errorFlag = false;
         };
 
         //ISBN
-        if (form.ISBN.value.length) {
+        if (form.ISBN.value.length < 13) {
             spans[8].innerHTML = "Tienes que escribir un International Standard Book Number (ISBN)";
             spans[8].id = "errors";
+            errorFlag = false;
         };
 
         //Stock
         if (form.editorial.value.length <= 0) {
             spans[9].innerHTML = "Tienes que escribir un número de Stock";
             spans[9].id = "errors";
+            errorFlag = false;
         };
+
+        if (errorFlag) {
+            form.submit();            
+        }
+
     });
 
     //Título

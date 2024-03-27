@@ -12,24 +12,29 @@ window.addEventListener('load', () => {
     }
 
     form.addEventListener('submit', async (event) => {
+
         event.preventDefault();
+        let errorFlag = true;
 
         //Nombre y Apellido
         if (form.nombreApellido.value.length <= 0) {
             spans[0].innerHTML = "Tienes que escribir un Nombre y Apellido";
             spans[0].id = "errors";
+            errorFlag = false;
         };
 
         //Nombre de Usuario
         if (form.nombreUsuario.value.length <= 0) {
             spans[1].innerHTML = "Tienes que escribir un Nombre de Usuario";
             spans[1].id = "errors";
+            errorFlag = false;
         };
 
         //Email
         if (form.email.value.length <= 0) {
             spans[2].innerHTML = "Tienes que escribir un Email";
             spans[2].id = "errors";
+            errorFlag = false;
         } else {
             try {
                 const response = await fetch(`/users/isEmailExist/${form.email.value}`);
@@ -37,6 +42,7 @@ window.addEventListener('load', () => {
                 if (data) {
                     spans[2].innerHTML = "Ya existe un usuario con este Email";
                     spans[2].id = "errors";
+                    errorFlag = false;
                 }
             } catch (error) {
                 console.log(error);
@@ -47,33 +53,43 @@ window.addEventListener('load', () => {
         if (form.fechaNacimiento.value.length <= 0) {
             spans[3].innerHTML = "Tienes que elegir una Fecha de Nacimiento";
             spans[3].id = "errors";
+            errorFlag = false;
         };
 
         //Domicilio
         if (form.domicilio.value.length <= 0) {
             spans[4].innerHTML = "Tienes que escribir un Domicilio";
             spans[4].id = "errors";
+            errorFlag = false;
         };
 
         //Contraseña
         if (form.contrasena.value.length <= 0) {
             spans[6].innerHTML = "Tienes que escribir una Contraseña";
             spans[6].id = "errors";
+            errorFlag = false;
         };
 
         //Confirmar Contraseña
         if (form.confirmarContrasena.value.length <= 0) {
             spans[7].innerHTML = "Tienes que Confirmar tu Contraseña";
             spans[7].id = "errors";
+            errorFlag = false;
         };
 
         //Aceptar los terminos y Servicios
         if (!form.terminosServicios.checked) {
             spans[8].innerHTML = "Tienes que Aceptar los terminos y Servicios";
             spans[8].id = "errors";
+            errorFlag = false;
         };
-    });
 
+        if (errorFlag) {
+            form.submit();            
+        }
+
+    });
+    
     //Nombre y Apellido
     form.nombreApellido.addEventListener('input', (event) => {
         if (event.target.value.length < 2) {

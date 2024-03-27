@@ -5,11 +5,13 @@ window.addEventListener('load', () => {
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
+        let errorFlag = true;
 
         //Email
         if (form.email.value.length <= 0) {
             spans[0].innerHTML = "Tienes que escribir un Email";
             spans[0].id = "errors";
+            errorFlag = false;
         } else {
             try {
                 const response = await fetch(`/users/isEmailExist/${form.email.value}`);
@@ -17,6 +19,7 @@ window.addEventListener('load', () => {
                 if (!data) {
                     spans[0].innerHTML = "Este Email no está registrado";
                     spans[0].id = "errors";
+                    errorFlag = false;
                 }
             } catch (error) {
                 console.log(error);
@@ -27,7 +30,13 @@ window.addEventListener('load', () => {
         if (form.contrasena.value.length <= 0) {
             spans[1].innerHTML = "Tienes que escribir una Contraseña";
             spans[1].id = "errors";
+            errorFlag = false;
         };
+
+        if (errorFlag) {
+            form.submit();            
+        }
+
     });
 
     //Email

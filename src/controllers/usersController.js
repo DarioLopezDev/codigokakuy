@@ -45,11 +45,10 @@ const usersController = {
 
                     return res.redirect('/');
                 }
-
             }
             res.send('<h1>El usuario y/o contraseña son incorrectos</h1><button><a href="/users/login">Volver a logearse</a></button>');
         } catch (error) {
-
+            console.log(error.message);
         }
 
     },
@@ -61,6 +60,7 @@ const usersController = {
     create: (req, res) => {
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
+            console.log('error express validator', resultValidation.mapped());
             return res.render('./users/register.ejs', {
                 errors: resultValidation.mapped(), //Convierte el array en un objeto literal
                 oldData: req.body //Conserva lo ingresado por el usuario en el formulario                

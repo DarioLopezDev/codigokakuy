@@ -43,7 +43,7 @@ let validationsRegister = [
       }),
 
     //Fecha de Nacimiento
-    body('date')
+    body('fechaNacimiento')
     .notEmpty().withMessage('Tienes que elegir una Fecha de Nacimiento'),
 
     //Domicilio

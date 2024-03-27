@@ -53,11 +53,11 @@
 
 
                     <label for="fechaNacimiento" id="fechaNacimientoTitulo">Fecha de nacimiento:</label>
-                    <input type="date" id="fechaNacimiento" name="date" required 
-                    value="<%= locals.oldData ? oldData.date : null %>"><span></span>
-                    <% if (locals.errors && errors.date) { %>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required 
+                    value="<%= locals.oldData ? oldData.fechaNacimiento : null %>"><span></span>
+                    <% if (locals.errors && errors.fechaNacimiento) { %>
                         <div id="errors">
-                            <%= errors.date.msg %>
+                            <%= errors.fechaNacimiento.msg %>
                         </div>
                     <% } %>
 
