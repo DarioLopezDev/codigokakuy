@@ -54,7 +54,7 @@ Pagina para venta de libros electrónicos, tantos libros fisicos como e-books, c
 2. (https://www.casadellibro.com)
 3. (https://www.audible.es/)
 4. (https://tiendamia.com/ar/Libros)
-5. (https://www.planetadelibros.com.ar/libros/comics/00021)
+5. (https://www.planetadelibros.com.ar/)
 6. (https://mangadex.org/)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
