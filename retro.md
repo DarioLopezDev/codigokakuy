@@ -82,5 +82,23 @@ Con el actual Sprint7
 - Hacemos una charla y reunion para que aquellos que no estan al dia con las clases, también se actualicen y sea mas facil de aprender y ponerse al dia. 
 - Aún no se logró que todos los integrantes estén al día, lo que provoca una sobrecarga de responsabilidades para los demás y un desaprovechamiento del aprendizaje.
 
+SPRINT 8
+
+Conclusiones del Sprint7:
+
+- Lo que hicimos bien en el sprint anterior fue: 
+    *Pudimos lograr entregar a tiempo el sprint y realizarlo de forma correcta.
+- Lo que hicimos mal en el sprint anterior fue: 
+    *Entre las cosas a mejorar, desarrollamos mal el sprint6, por complicaciones para todos los integrantes, finales de materias de otros cursos y carreras, trabajo y familia. 
+- Lo que deberiamos empezar a hacer: 
+    *Organizarnos antes para no llegar los ultimos dias sin tiempo para terminar las tareas asignadas, ni tiempo para consultar cualquier problema que hayamos tenido con el codigo. 
+    *Darle mayor importancia al retro.md y al css que quedo pendiente del sprint2, mejorar esteticamente la pagina, terminar los buscadores con autocompletado de autores y editoriales.
+- lo que deberiamos dejar de hacer: 
+    *Es dejar todo a ultimo momento y no dedicarle las horas correspondientes al curso.
+
+Con el actual Sprint8 
+- Se realizan las tareas a asignar a cada integrante del grupo en trello
+- Hacemos una charla y reunion para que aquellos que no estan al dia con las clases, también se actualicen y sea mas facil de aprender y ponerse al dia. 
+- Aún no se logró que todos los integrantes estén al día, lo que provoca una sobrecarga de responsabilidades para los demás y un desaprovechamiento del aprendizaje.
 
 
