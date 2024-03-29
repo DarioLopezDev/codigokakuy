@@ -2,14 +2,6 @@ const db = require('../database/models');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-/*const fs = require('fs');
-const path = require('path');
-
-let usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')));
-
-let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.json')));*/
-
 const usersController = {
     login: (req, res) => {
         res.render('./users/login.ejs');
@@ -27,7 +19,6 @@ const usersController = {
                 });
 
             };
-            //let userFound = users.find(user => user.nombreUsuario == nombreUsuario);
 
             let userFound = await db.User.findOne({
                 where: {
@@ -147,6 +138,7 @@ const usersController = {
         res.redirect('/users/profile');
     },
 
+    //Para el Sprint7
     isEmailExist: async (req, res) => {
         try {
             const userEmail = req.params.email;
