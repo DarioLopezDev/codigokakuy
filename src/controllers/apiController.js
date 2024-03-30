@@ -17,6 +17,9 @@ const apiController = {
                 }
             });
             //const count = Object.values(usuarios);
+            rows.forEach(user => {
+                user.dataValues.detail = `http://localhost:4050/api/users/${user.user_id}`;
+            });
             res.json({
                 count, 
                 users: rows
@@ -37,6 +40,8 @@ const apiController = {
                     ]
                 }
             });
+            Object.values(usuario)[0].image = "/images/users/" + Object.values(usuario)[0].image;
+
             res.json({ usuario });
 
         } catch (error) {
@@ -63,6 +68,9 @@ const apiController = {
                 }
             });
             //const count = Object.values(usuarios);
+            rows.forEach(book => {
+                book.dataValues.detail = `http://localhost:4050/api/products/${book.book_id}`;
+            });
             res.json({
                 count, 
                 countByCategory: 'objeto literal con una propiedad por categoría con el total de productos',
