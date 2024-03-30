@@ -68,12 +68,59 @@ const apiController = {
                 }
             });
             //const count = Object.values(usuarios);
+
+            //Quiero calcular por cada género, cuantos libros hay. 
+            //Ej.: ¿Cuántos libros de Acción hay?
+            const countCategory = await db.Book.findAll({
+                attributes: {
+                    exclude: [
+                        'book_id',
+                        'title',
+                        'isbn',
+                        'price',
+                        'pages',
+                        'year',
+                        'stock',
+                        'image'
+                    ]
+                }
+            });
+            let accion = 0, romance = 0, drama = 0, cienciaF = 0, economia = 0, autoayuda = 0;
+            countCategory.forEach(element => {
+                if(element.dataValues.genre_id === 1) accion++; 
+                if(element.dataValues.genre_id === 2) romance++; 
+                if(element.dataValues.genre_id === 3) drama++; 
+                if(element.dataValues.genre_id === 4) cienciaF++; 
+                if(element.dataValues.genre_id === 5) economia++; 
+                if(element.dataValues.genre_id === 6) autoayuda++; 
+            });
+
+            const genres = await db.Genre.findAll({
+                attributes: {
+                    exclude: [
+                        'genre_id',
+                    ]
+                }
+            });
+
+            genres.forEach(genre => {
+                if(genre.dataValues.name === "Accion") genre.dataValues.Libros = accion;
+                if(genre.dataValues.name === "Romance") genre.dataValues.Libros = romance;
+                if(genre.dataValues.name === "Drama") genre.dataValues.Libros = drama;
+                if(genre.dataValues.name === "Ciencia Ficcion") genre.dataValues.Libros = cienciaF;
+                if(genre.dataValues.name === "Economia") genre.dataValues.Libros = economia;
+                if(genre.dataValues.name === "Autoayuda") genre.dataValues.Libros = autoayuda;
+            });
+
+            
+            //Editar el image para que pueda ser visualizado
             rows.forEach(book => {
                 book.dataValues.detail = `http://localhost:4050/api/products/${book.book_id}`;
             });
+
             res.json({
                 count, 
-                countByCategory: 'objeto literal con una propiedad por categoría con el total de productos',
+                countByCategory: {Géneros: genres},
                 products: rows
             });                        
         } catch (error) {
@@ -91,6 +138,7 @@ const apiController = {
                     ]
                 }
             });
+            Object.values(producto)[0].image = "/images/books/" + Object.values(producto)[0].image;
             res.json({ producto });
 
         } catch (error) {
