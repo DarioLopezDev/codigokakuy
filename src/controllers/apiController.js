@@ -131,6 +131,12 @@ const apiController = {
         try {
             const idP = req.params.id;
             const producto = await db.Book.findByPk(idP, {
+                include: [
+                    { association: 'author' },
+                    { association: 'genre' },
+                    { association: 'publisher' }
+                ]
+            },{
                 attributes: {
                     exclude: [
                         'password',
