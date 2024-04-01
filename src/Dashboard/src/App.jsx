@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Users } from './Components/Users'
+import { Books } from './Components/Books'
 
 function App() {
 
@@ -20,7 +21,11 @@ function App() {
           count is {count}
         </button>
       </div>
-      <Users />
+      <main>
+        <Users />
+        <Books />
+      </main>
+      
     </>
   )
 }

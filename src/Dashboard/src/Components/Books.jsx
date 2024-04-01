@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
-export const Users = () => {
-    const [countUsers, setCountUsers] = useState(0);
+export const Books = () => {
+    const [countBooks, setCountBooks] = useState(0);
 
     useEffect(() => {
         //fetch para traer la data de la API
@@ -9,21 +9,21 @@ export const Users = () => {
             try {
                 const response = await fetch(URI);
                 const data = await response.json();
-                setCountUsers(data.count);
+                setCountBooks(data.count);
 
             } catch (error) {
                 console.log(error.message);
 
             }
         };
-        getData('http://localhost:4050/api/users');
+        getData('http://localhost:4050/api/products');
 
     }, []);
 
     return (
         <div>
-            <h2>Usuarios</h2>
-            <p>{countUsers} usuarios</p>
+            <h2>Libros</h2>
+            <p>{countBooks} libros</p>
         </div>
     )
 }
