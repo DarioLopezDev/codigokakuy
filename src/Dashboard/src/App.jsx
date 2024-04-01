@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Users } from './Components/Users'
 import { Books } from './Components/Books'
+import { Categories } from './Components/Categories'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <main>
         <Users />
         <Books />
+        <Categories />
       </main>
       
     </>
