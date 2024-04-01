@@ -22,8 +22,8 @@ export const Users = () => {
 
     return (
         <div>
-            <h2>Usuarios</h2>
+            <h2>Total de Usuarios</h2>
             <p>{countUsers} usuarios</p>
         </div>
     )
-}
+};

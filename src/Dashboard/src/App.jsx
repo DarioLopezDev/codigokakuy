@@ -6,6 +6,7 @@ import { Users } from './Components/Users';
 import { Books } from './Components/Books';
 import { Categories } from './Components/Categories';
 import { LastItem } from './Components/LastItem';
+import { CategoriesProduct } from './Components/CategoriesProduct';
 
 function App() {
 
@@ -28,10 +29,11 @@ function App() {
         <Books />
         <Categories />
         <LastItem />
+        <CategoriesProduct />
       </main>
       
     </>
   )
 }
 
-export default App
+export default App;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-export const Categories = () => {
-    const [countCateg, setCountCateg] = useState(0);
+export const CategoriesProduct = () => {
+    const [countCategPro, setCountCategPro] = useState(0);
 
     useEffect(() => {
         //fetch para traer la data de la API
@@ -9,7 +9,7 @@ export const Categories = () => {
             try {
                 const response = await fetch(URI);
                 const data = await response.json();
-                setCountCateg(data.count);
+                setCountCategPro(data.count);
 
             } catch (error) {
                 console.log(error.message);
@@ -22,8 +22,8 @@ export const Categories = () => {
 
     return (
         <div>
-            <h2>Total de Categorías</h2>
-            <p>{countCateg} categorías</p>
+            <h2>Categorías y sus Productos</h2>
+            <p>{countCategPro} categorías</p>
         </div>
     )
 };

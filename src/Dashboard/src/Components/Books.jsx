@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 
 export const Books = () => {
     const [countBooks, setCountBooks] = useState(0);
@@ -22,8 +22,8 @@ export const Books = () => {
     
   return (
     <div>
-        <h2>Libros</h2>
+        <h2>Total de Libros</h2>
         <p>{countBooks} libros</p>
     </div>
   )
-}
+};

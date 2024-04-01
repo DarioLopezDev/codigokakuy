@@ -52,18 +52,18 @@ export const LastItem = () => {
 
     return (
         <div>
-            <h2>Último Usuario</h2>
+            <h2>Detalle del Último Usuario</h2>
             <div>
-                <p>{lastUser.user_id}</p>
-                <p>{lastUser.fullname}</p>
-                <p>{lastUser.username}</p>
-                <p>{lastUser.email}</p>
-                <p>{lastUser.birthday}</p>
-                <p>{lastUser.adress}</p>
+                <p>ID: {lastUser.user_id}</p>
+                <p>Nombre: {lastUser.fullname}</p>
+                <p>Usuario: {lastUser.username}</p>
+                <p>Email: {lastUser.email}</p>
+                <p>Cumpleaños: {lastUser.birthday}</p>
+                <p>Dirección: {lastUser.adress}</p>
                 <img src={'http://localhost:4050' + lastUser.image} 
                      alt={lastUser.fullname} 
                      width="170px" />
             </div>
         </div>
     )
-}
+};
