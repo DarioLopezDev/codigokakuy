@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState, useEffect} from 'react'
 
 export const Books = () => {
     const [countBooks, setCountBooks] = useState(0);
@@ -10,20 +10,20 @@ export const Books = () => {
                 const response = await fetch(URI);
                 const data = await response.json();
                 setCountBooks(data.count);
-
+                                
             } catch (error) {
                 console.log(error.message);
-
+                                
             }
         };
         getData('http://localhost:4050/api/products');
 
     }, []);
-
-    return (
-        <div>
-            <h2>Libros</h2>
-            <p>{countBooks} libros</p>
-        </div>
-    )
+    
+  return (
+    <div>
+        <h2>Libros</h2>
+        <p>{countBooks} libros</p>
+    </div>
+  )
 }

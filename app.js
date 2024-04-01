@@ -33,13 +33,13 @@ app.use(userLoggedMiddleware);
 app.use(methodOverride('_method'));
 
 //Solución SPRINT8 para el fetch sin cors
-app.use(function (req, res, next) {
+/*app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
- })
+ })*/
 //Solución SPRINT8 para el fetch con cors
-//app.use(cors());
+app.use(cors());
 
 
 //Uso de archivos EJS

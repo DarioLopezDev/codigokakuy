@@ -5,9 +5,9 @@ export const Users = () => {
 
     useEffect(() => {
         //fetch para traer la data de la API
-        const getData = async URI => {
+        async function getData() {
             try {
-                const response = await fetch(URI);
+                const response = await fetch('http://localhost:4050/api/users');
                 const data = await response.json();
                 setCountUsers(data.count);
 
@@ -16,7 +16,7 @@ export const Users = () => {
 
             }
         };
-        getData('http://localhost:4050/api/users');
+        getData();
 
     }, []);
 
