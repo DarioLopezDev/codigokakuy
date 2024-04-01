@@ -21,9 +21,9 @@ export const Books = () => {
     }, []);
     
   return (
-    <div>
+    <section>
         <h2>Total de Libros</h2>
         <p>{countBooks} libros</p>
-    </div>
+    </section>
   )
 };

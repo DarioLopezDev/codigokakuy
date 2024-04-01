@@ -21,9 +21,9 @@ export const Categories = () => {
     }, []);
 
     return (
-        <div>
+        <section>
             <h2>Total de Categorías</h2>
             <p>{countCateg} categorías</p>
-        </div>
+        </section>
     )
 };

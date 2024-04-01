@@ -21,9 +21,9 @@ export const CategoriesProduct = () => {
     }, []);
 
     return (
-        <div>
+        <section>
             <h2>Categorías y sus Productos</h2>
             <p>{countCategPro} categorías</p>
-        </div>
+        </section>
     )
 };

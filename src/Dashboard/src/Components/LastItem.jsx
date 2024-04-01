@@ -51,9 +51,9 @@ export const LastItem = () => {
     }, []);
 
     return (
-        <div>
+        <section>
             <h2>Detalle del Último Usuario</h2>
-            <div>
+            <main>
                 <p>ID: {lastUser.user_id}</p>
                 <p>Nombre: {lastUser.fullname}</p>
                 <p>Usuario: {lastUser.username}</p>
@@ -63,7 +63,7 @@ export const LastItem = () => {
                 <img src={'http://localhost:4050' + lastUser.image} 
                      alt={lastUser.fullname} 
                      width="170px" />
-            </div>
-        </div>
+            </main>
+        </section>
     )
 };

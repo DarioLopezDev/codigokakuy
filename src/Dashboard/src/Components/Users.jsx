@@ -21,9 +21,9 @@ export const Users = () => {
     }, []);
 
     return (
-        <div>
+        <section>
             <h2>Total de Usuarios</h2>
             <p>{countUsers} usuarios</p>
-        </div>
+        </section>
     )
 };

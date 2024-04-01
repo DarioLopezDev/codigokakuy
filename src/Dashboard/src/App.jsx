@@ -7,6 +7,7 @@ import { Books } from './Components/Books';
 import { Categories } from './Components/Categories';
 import { LastItem } from './Components/LastItem';
 import { CategoriesProduct } from './Components/CategoriesProduct';
+import { ListOfBooks } from './Components/ListOfBooks';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Categories />
         <LastItem />
         <CategoriesProduct />
+        <ListOfBooks />
       </main>
       
     </>
