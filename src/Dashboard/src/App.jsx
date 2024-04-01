@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React from 'react';
+import kakuyLogo from '/logo3.png';
 import './App.css';
 import { Users } from './Components/Users';
 import { Books } from './Components/Books';
@@ -11,21 +10,20 @@ import { ListOfBooks } from './Components/ListOfBooks';
 
 function App() {
 
-  const [count, setCount] = useState(1)
-
   return (
     <>
       <div>
-        <img src={viteLogo} className="logo" alt="Vite logo" />
-        <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="">
+          <img 
+          src={kakuyLogo} 
+          className="logo react" 
+          alt="Kakuy logo" 
+          />
+        </a>
+
       </div>
       <h1>Dashboard</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      <main>
+      <main id='main-app'>
         <Users />
         <Books />
         <Categories />
@@ -37,5 +35,4 @@ function App() {
     </>
   )
 }
-
 export default App;

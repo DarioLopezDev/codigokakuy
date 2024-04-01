@@ -23,6 +23,7 @@ export const Books = () => {
   return (
     <section>
         <h2>Total de Libros</h2>
+        <img src="../books.svg" alt="libros" />
         <p>{countBooks} libros</p>
     </section>
   )

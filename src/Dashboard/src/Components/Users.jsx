@@ -23,6 +23,7 @@ export const Users = () => {
     return (
         <section>
             <h2>Total de Usuarios</h2>
+            <img src="../usuarios.svg" alt="usuarios" />
             <p>{countUsers} usuarios</p>
         </section>
     )

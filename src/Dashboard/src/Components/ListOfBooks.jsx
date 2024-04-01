@@ -27,7 +27,7 @@ export const ListOfBooks = () => {
                 {listOfBooks.map(book => {
                         return (
                             <div key={book.book_id}>
-                                <h3>Título: {book.title}</h3>
+                                <h4>Título: {book.title}</h4>
                                 <p>Descripción: {book.description}</p>
                             </div>
                         );
