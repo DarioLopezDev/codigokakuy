@@ -14,6 +14,8 @@ router.get('/carrito', productsController.productCart);
 router.get('/create', productsController.create);
 router.post('/create', upload.single('imagenProducto'), validations, productsController.store);
 
+//All Authors to Create Book Form
+router.get('/cachifrula', productsController.cachifrula);
 
 router.get('/:id', productsController.detail);
 

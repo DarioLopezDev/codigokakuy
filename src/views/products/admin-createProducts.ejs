@@ -5,8 +5,8 @@
 
 <link rel="stylesheet" href="/css/admin-createProducts.css">
 
-<script src="../../../js/genre.js"></script>
-<script src="../../../js/validationsCreateFrontEnd.js"></script>
+<script type="text/javascript" src="../../../js/inputAuthor.js"></script>
+<script type="text/javascript" src="../../../js/validationsCreateFrontEnd.js"></script>
 
 <body>
 
@@ -48,6 +48,7 @@
 
 
                 <label for="autor" id="labelStyles">Autor</label>
+                <input type="hidden" name="authorHidden" id="authorHidden">
                 <input type="search" id="autor" name="autor" placeholder="Autor" required 
                 value="<%= locals.oldData ? oldData.autor : null %>"><span></span>
 

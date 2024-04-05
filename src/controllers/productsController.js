@@ -59,10 +59,29 @@ const productsController = {
             });
         };
 
+        const authorCreator = async (fullname) => {
+            try {
+                const ultimoElemento = await db.Author.findOne({
+                    order: [['author_id', 'DESC']] 
+                  });
+                const authorInfo = {author_id: ultimoElemento.author_id+1, fullname};
+                const newAuthor = await db.Author.create(authorInfo);    
+                return newAuthor.author_id;      
+            } catch (error) {
+                console.log(error.message);                
+            }
+        };
+
+        let author_id = req.body.authorHidden;
+
+        if (!author_id) {
+            author_id = await authorCreator(req.body.autor);      
+        }
+
         const newBook = {
             year: req.body.anio,
             title: req.body.titulo,
-            author_id: req.body.autor,
+            author_id,
             description: req.body.description,
             pages: req.body.cantidad_de_paginas,
             genre_id: req.body.genero,
@@ -160,6 +179,15 @@ const productsController = {
             }
         });
         res.redirect('/products');
+    },
+    cachifrula: async (req, res) => {
+        try {
+            const authors = await db.Author.findAll();
+            res.json(authors);
+            
+        } catch (error) {
+            console.log(error.message);            
+        }
     }
 }
 
