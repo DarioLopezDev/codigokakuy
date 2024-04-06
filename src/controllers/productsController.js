@@ -42,16 +42,17 @@ const productsController = {
             const genres = await db.Genre.findAll();
             const publishers = await db.Publisher.findAll();
             const authors = await db.Author.findAll();
-            res.render('./products/admin-createProducts.ejs', {genres, publishers, authors});
+            res.render('./products/admin-createProducts.ejs', { genres, publishers, authors });
         } catch (error) {
             console.log(error.message);
         }
     },
 
     store: async (req, res) => {
+    //Validaciones
         const resultValidation = validationResult(req);
-        if(resultValidation.errors.length > 0) {   
-            const genres = await db.Genre.findAll();         
+        if (resultValidation.errors.length > 0) {
+            const genres = await db.Genre.findAll();
             return res.render('./products/admin-createProducts.ejs', {
                 errors: resultValidation.mapped(), //Convierte el array en un objeto literal
                 oldData: req.body, //Conserva lo ingresado por el usuario en el formulario 
@@ -59,23 +60,46 @@ const productsController = {
             });
         };
 
+    //Adaptando al Autor que llega por body
+        //Función constructora de autores
         const authorCreator = async (fullname) => {
             try {
                 const ultimoElemento = await db.Author.findOne({
-                    order: [['author_id', 'DESC']] 
-                  });
-                const authorInfo = {author_id: ultimoElemento.author_id+1, fullname};
-                const newAuthor = await db.Author.create(authorInfo);    
-                return newAuthor.author_id;      
+                    order: [['author_id', 'DESC']]
+                });
+                const authorInfo = { author_id: ultimoElemento.author_id + 1, fullname };
+                const newAuthor = await db.Author.create(authorInfo);
+                return newAuthor.author_id;
             } catch (error) {
-                console.log(error.message);                
+                console.log(error.message);
             }
         };
 
         let author_id = req.body.authorHidden;
 
         if (!author_id) {
-            author_id = await authorCreator(req.body.autor);      
+            author_id = await authorCreator(req.body.autor);
+        }
+
+    //Adaptando a la Editorial que viene por body
+        //Función constructora de editoriales
+        const publisherCreator = async (name) => {
+            try {
+                const ultimoElemento = await db.Publisher.findOne({
+                    order: [['publisher_id', 'DESC']]
+                });
+                const publisherInfo = { publisher_id: ultimoElemento.publisher_id + 1, name };
+                const newPublisher = await db.Publisher.create(publisherInfo);
+                return newPublisher.publisher_id;
+            } catch (error) {
+                console.log(error.message);
+            }
+        };
+
+        let publisher_id = req.body.publisherHidden;
+
+        if (!publisher_id) {
+            publisher_id = await publisherCreator(req.body.editorial);
         }
 
         const newBook = {
@@ -86,7 +110,7 @@ const productsController = {
             pages: req.body.cantidad_de_paginas,
             genre_id: req.body.genero,
             price: req.body.price,
-            publisher_id: req.body.editorial,
+            publisher_id,
             isbn: req.body.ISBN,
             stock: req.body.stock,
             image: `${req.file?.filename || 'default-image.jpg'}`
@@ -180,13 +204,24 @@ const productsController = {
         });
         res.redirect('/products');
     },
-    cachifrula: async (req, res) => {
+
+    allAuthors: async (req, res) => {
         try {
             const authors = await db.Author.findAll();
             res.json(authors);
-            
+
         } catch (error) {
-            console.log(error.message);            
+            console.log(error.message);
+        }
+    },
+
+    allPublishers: async (req, res) => {
+        try {
+            const publishers = await db.Publisher.findAll();
+            res.json(publishers);
+
+        } catch (error) {
+            console.log(error.message);
         }
     }
 }
