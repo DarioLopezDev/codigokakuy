@@ -13,11 +13,12 @@
     --color5: rgb(142,86,73);
     --color6: rgb(179,133,109);
 }
-
+/*
 body main {
     width: 100%;
-}
+}*/
 main {
+    
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -25,8 +26,9 @@ main {
     min-height: 100vh;
     background-image: url(/images/libreria-register.webp);
     background-size: cover;
+    /*
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
 }
 /* #imagen-fondo {
     display: flex;
@@ -46,7 +48,7 @@ main {
     width: 100%;
     background-color: black;
     overflow: hidden;
-} */
+} 
 
 #cuadro-textual {
     display: flex;
@@ -90,8 +92,49 @@ main {
     background: rgba(0, 0, 0, 0.6);
 }
 
+/*********************************************************Carrusel*********************************************************/
 
-@media (min-width: 450px ) {
+.slider {
+    width: 30%;
+    max-width: 120em;
+    background-color: lightskyblue;
+    padding: 2em 3em 2em 2em;
+    margin: auto;
+
+    overflow-x: scroll;
+}
+
+.books-container {
+    width: 520%;
+    padding: 1em;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition-property: all;
+    transition-duration: 1s;
+
+
+}
+
+.book {
+    width: calc(100% / 5);
+    background-color: black;
+    min-height: 10vh;
+}
+
+.left, .right {
+    background-color: yellow;
+    width: 20px;
+    height: 20px;
+}
+
+/*********************************************************Media*********************************************************/
+/*@media (min-width: 450px ) {
     #footer-home {
         padding-top: 131px;
     }
@@ -102,3 +145,4 @@ main {
         padding-top: 2px;
     }
 }
+*/

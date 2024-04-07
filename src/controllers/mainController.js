@@ -6,19 +6,29 @@ const books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos
 */
 
 const controlador = {
-    index: (req, res) => {
-        db.Book.findAll({
-            include: [
-                { association: 'author' },
-                { association: 'genre' },
-                { association: 'publisher' }
-            ]
-        })
-        .then((books) => {
-            //console.log(books[0].dataValues);
-            res.render('index', {books});
-        })
-        .catch(error => console.log(error));
+    index: async (req, res) => {
+        try {
+            const books = await db.Book.findAll({
+                include: [
+                    { association: 'author' },
+                    { association: 'genre' },
+                    { association: 'publisher' }
+                ]
+            });
+
+            const lastBooks = [
+                books[books.length - 1].dataValues, 
+                books[books.length - 2].dataValues,
+                books[books.length - 3].dataValues,
+                books[books.length - 4].dataValues,
+                books[books.length - 5].dataValues
+            ];
+        
+            res.render('index', {books, lastBooks});
+
+        } catch (error) {
+            console.log(error.message); 
+        }
     }
 }
 
