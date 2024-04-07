@@ -203,13 +203,38 @@ footer {
 
 }
 
-@media only screen and (min-width: 395px) {
+@media (min-width: 260px) and (max-width: 391px) {
+    header {
+        flex-direction: column; /* Cambiar a columna para pantallas pequeñas */
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    #area-busqueda {
+        margin-top: 10px; /* Espacio entre el logo y la barra de búsqueda */
+    }
+
+    #entrada-busqueda-header {
+        max-width: 250px; /* Ancho máximo reducido para adaptarse mejor a pantallas pequeñas */
+    }
+
+    #boton-busqueda-header {
+        margin-top: 10px; /* Espacio entre el campo de búsqueda y el botón */
+    }
+
+    #darkmode,
+    #login-carrito {
+        margin-top: 20px; /* Espacio entre la barra de búsqueda y estos elementos */
+    }
+}
+
+@media (min-width: 392px) {
     #entrada-busqueda-header {
         width: 90%; /* Ancho máximo ajustado en pantallas de tamaño medio */
     }
 }
 
-@media only screen and (min-width: 790px) {
+@media (min-width: 790px) {
     header {
         flex-direction: row; /* Cambio a fila en pantallas medianas */
     }
@@ -219,7 +244,7 @@ footer {
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
     #entrada-busqueda-header {
         width: 400px; /* Ancho mayor en pantallas grandes */
     }
