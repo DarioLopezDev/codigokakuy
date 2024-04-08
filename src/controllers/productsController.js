@@ -8,18 +8,20 @@ let books = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/productos.j
 */
 
 const productsController = {
-    products: (req, res) => {
-        db.Book.findAll({
-            include: [
-                { association: 'author' },
-                { association: 'genre' },
-                { association: 'publisher' }
-            ]
-        })
-            .then((books) => {
-                res.render('./products/products.ejs', { books });
-            })
-            .catch(error => console.log(error));
+    products: async (req, res) => {
+        try {
+            const books = await db.Book.findAll({
+                include: [
+                    { association: 'author' },
+                    { association: 'genre' },
+                    { association: 'publisher' }
+                ]
+            });
+
+            res.render('./products/products.ejs', { books });
+        } catch (error) {
+            console.log(error.message);
+        }
     },
 
     productCart: (req, res) => {
