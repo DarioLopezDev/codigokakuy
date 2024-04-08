@@ -84,6 +84,29 @@ header {
     color: black; /* Color de ícono invertido */
 }
 
+#libros {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 65%;
+    display:flex;
+    position:block;
+}
+
+#libros li {
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: rgb(67, 64, 47);
+    border-radius: 5px;
+}
+
+#libros li:hover {
+    background-color: #b8b4b4;
+    cursor: pointer;
+}
+
 #darkmode,
 #login-carrito {
     display: flex;
