@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head') %>
+    <%- include('./partials/head') %>
 
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/product.css">
@@ -16,18 +16,19 @@
                 <a href="#" id="main-arrow"><i class="fa-solid fa-circle-up"></i></a>
                 <a href="/products/carrito" id="main-basket"><i class="fa-solid fa-basket-shopping"></i></a>
 
-                <span class="left"></span>
+
                 <section class="slider">
+                    <h2>Últimos libros agregados</h2>
                     <div class="books-container">
                         <% lastBooks.forEach(book => { %>
                             <article class="producto-libro book">
-                        
+                                
                                 <div class="box-izquierda">
                                     <a href="/products/<%= book.book_id %>">
                                         <img src="/images/books/<%= book.image %>" alt="<%= book.title %>">
                                     </a>
                                 </div>
-                        
+                                
                                 <div class="box-derecha">
                                     <p class="name">
                                         <%= book.title %>
@@ -38,17 +39,147 @@
                                     <p class="price">$<%= book.price %>
                                     </p>
                                 </div>
-                        
+                                
                             </article>
                         <% }) %>
-                    </div>          
+                    </div>     
+                    <div class="buttons-container">
+                        <span class="left"><</span>
+                        <span class="right">></span>          
+                    </div>     
                 </section>
-                <span class="right">a</span>          
+
+                <section class="slider">
+                    <h2>Libros de Acción</h2>
+                    <div class="action-books-container">
+                        <% actionBooks.forEach(book => { %>
+                            <article class="producto-libro book">
+                                
+                                <div class="box-izquierda">
+                                    <a href="/products/<%= book.book_id %>">
+                                        <img src="/images/books/<%= book.image %>" alt="<%= book.title %>">
+                                    </a>
+                                </div>
+                                
+                                <div class="box-derecha">
+                                    <p class="name">
+                                        <%= book.title %>
+                                    </p>
+                                    <p class="autor">
+                                        <%= book.author.fullname %>
+                                    </p>
+                                    <p class="price">$<%= book.price %>
+                                    </p>
+                                </div>
+                                
+                            </article>
+                        <% }) %>
+                    </div>     
+                    <div class="buttons-container">
+                        <span class="left-action"><</span>
+                        <span class="right-action">></span>          
+                    </div>     
+                </section>
+
+                <section class="slider">
+                    <h2>Libros de Ciencia Ficción</h2>
+                    <div class="scifi-books-container">
+                        <% scifiBooks.forEach(book => { %>
+                            <article class="producto-libro book">
+                                
+                                <div class="box-izquierda">
+                                    <a href="/products/<%= book.book_id %>">
+                                        <img src="/images/books/<%= book.image %>" alt="<%= book.title %>">
+                                    </a>
+                                </div>
+                                
+                                <div class="box-derecha">
+                                    <p class="name">
+                                        <%= book.title %>
+                                    </p>
+                                    <p class="autor">
+                                        <%= book.author.fullname %>
+                                    </p>
+                                    <p class="price">$<%= book.price %>
+                                    </p>
+                                </div>
+                                
+                            </article>
+                        <% }) %>
+                    </div>     
+                    <div class="buttons-container">
+                        <span class="left-scifi"><</span>
+                        <span class="right-scifi">></span>          
+                    </div>     
+                </section>
+
+                <section class="slider">
+                    <h2>Libros de Drama</h2>
+                    <div class="drama-books-container">
+                        <% dramaBooks.forEach(book => { %>
+                            <article class="producto-libro book">
+                                
+                                <div class="box-izquierda">
+                                    <a href="/products/<%= book.book_id %>">
+                                        <img src="/images/books/<%= book.image %>" alt="<%= book.title %>">
+                                    </a>
+                                </div>
+                                
+                                <div class="box-derecha">
+                                    <p class="name">
+                                        <%= book.title %>
+                                    </p>
+                                    <p class="autor">
+                                        <%= book.author.fullname %>
+                                    </p>
+                                    <p class="price">$<%= book.price %>
+                                    </p>
+                                </div>
+                                
+                            </article>
+                        <% }) %>
+                    </div>     
+                    <div class="buttons-container">
+                        <span class="left-drama"><</span>
+                        <span class="right-drama">></span>          
+                    </div>     
+                </section>
+
+                <section class="slider">
+                    <h2>Libros de Economía</h2>
+                    <div class="economy-books-container">
+                        <% economyBooks.forEach(book => { %>
+                            <article class="producto-libro book">
+                                
+                                <div class="box-izquierda">
+                                    <a href="/products/<%= book.book_id %>">
+                                        <img src="/images/books/<%= book.image %>" alt="<%= book.title %>">
+                                    </a>
+                                </div>
+                                
+                                <div class="box-derecha">
+                                    <p class="name">
+                                        <%= book.title %>
+                                    </p>
+                                    <p class="autor">
+                                        <%= book.author.fullname %>
+                                    </p>
+                                    <p class="price">$<%= book.price %>
+                                    </p>
+                                </div>
+                                
+                            </article>
+                        <% }) %>
+                    </div>     
+                    <div class="buttons-container">
+                        <span class="left-economy"><</span>
+                        <span class="right-economy">></span>          
+                    </div>     
+                </section>
 
             </main>
 
-            <%- include('./partials/footer') %>
+        <%- include('./partials/footer') %>
 
     </body>
-
 </html>

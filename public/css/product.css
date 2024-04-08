@@ -43,7 +43,7 @@ img {
 }
 
 
-@media (min-width: 395px) {
+@media (min-width: 155px) {
     .producto-libro {
         width: 70vw;
         height: 50vh;

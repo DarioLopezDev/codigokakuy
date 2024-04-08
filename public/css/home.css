@@ -13,10 +13,12 @@
     --color5: rgb(142,86,73);
     --color6: rgb(179,133,109);
 }
-/*
+
 body main {
     width: 100%;
-}*/
+    /* max-width: 1600px; */
+    margin: auto;
+}
 main {
     
     display: flex;
@@ -26,9 +28,13 @@ main {
     min-height: 100vh;
     background-image: url(/images/libreria-register.webp);
     background-size: cover;
-    /*
+    
     justify-content: center;
-    align-items: center;*/
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
 }
 /* #imagen-fondo {
     display: flex;
@@ -95,16 +101,23 @@ main {
 /*********************************************************Carrusel*********************************************************/
 
 .slider {
-    width: 30%;
-    max-width: 120em;
+    /*width: 30vw;
+    height: 50vh;*/
+    width: 400px;
     background-color: lightskyblue;
-    padding: 2em 3em 2em 2em;
+    padding: 1em 2em 1em 2em;
     margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
 
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
-.books-container {
+.books-container, 
+.action-books-container, 
+.scifi-books-container,
+.drama-books-container,
+.economy-books-container {
     width: 520%;
     padding: 1em;
     
@@ -118,7 +131,6 @@ main {
     transition-property: all;
     transition-duration: 1s;
 
-
 }
 
 .book {
@@ -127,10 +139,28 @@ main {
     min-height: 10vh;
 }
 
-.left, .right {
+.buttons-container {
+    display: flex;
+    flex-flow: row, nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.left, 
+.right, 
+.left-action, 
+.right-action, 
+.left-scifi, 
+.right-scifi,
+.left-drama,
+.right-drama,
+.left-economy,
+.right-economy {
     background-color: yellow;
-    width: 20px;
-    height: 20px;
+    font-size: 30px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
 }
 
 /*********************************************************Media*********************************************************/
