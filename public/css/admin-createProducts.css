@@ -90,15 +90,18 @@ body {
 #autores, #editoriales {
     list-style-type: none;
     padding: 0;
+    padding-left: -10%;
     margin: 0;
-    width: 65%;
+    width: 20%;
+    position:fixed;
+    z-index: 15;
 }
 #autores li, #editoriales li {
-    background-color: #f9f9f9;
+    background-color: rgba(82, 31, 1, 0.856);
     padding: 5px;
     border: 1px solid #ddd;
     text-align: center;
-    color: rgb(67, 64, 47);
+    color: rgb(245, 205, 6);
     border-radius: 5px;
 }
 #autores li:hover, #editoriales li:hover {
