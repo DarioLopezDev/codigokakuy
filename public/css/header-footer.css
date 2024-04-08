@@ -87,18 +87,19 @@ header {
 #libros {
     list-style-type: none;
     padding: 0;
+    padding-left: 25%;
     margin: 0;
-    width: 65%;
-    display:flex;
-    position:block;
+    position:fixed;
+    z-index: 15;
+    width: 50%;
 }
 
 #libros li {
-    background-color: #f9f9f9;
+    background-color: rgba(82, 31, 1, 0.856);
     padding: 5px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     text-align: center;
-    color: rgb(67, 64, 47);
+    color: rgb(245, 205, 6);
     border-radius: 5px;
 }
 
