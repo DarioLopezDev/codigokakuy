@@ -7,8 +7,11 @@ window.addEventListener('load', () => {
 
     left.addEventListener('click', () => {
         count++;
-        //Le cambio el valor de transform correspondiente
-        booksContainer.style.transform = `matrix(1, 0, 0, 1, ${count * 150}, 0)`;
+
+        if (count > 1) {
+            //Le cambio el valor de transform correspondiente
+            booksContainer.style.transform = `matrix(1, 0, 0, 1, ${count * 150}, 0)`;
+        }
     });
     
     right.addEventListener('click', () => {

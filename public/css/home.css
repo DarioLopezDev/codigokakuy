@@ -104,7 +104,7 @@ h2 {
     /*width: 30vw;
     height: 50vh;*/
     width: 400px;
-    background-color: lightskyblue;
+    background-color: rgba(0, 0, 0, 0.78);
     padding: 1em 2em 1em 2em;
     margin: auto;
     margin-top: 2em;
@@ -144,6 +144,7 @@ h2 {
     flex-flow: row, nowrap;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 .left, 
@@ -156,13 +157,29 @@ h2 {
 .right-drama,
 .left-economy,
 .right-economy {
-    background-color: yellow;
+    background-color: rgb(255, 182, 53, 0.76);
     font-size: 30px;
     padding: 10px;
     margin: 5px;
     cursor: pointer;
+    border-radius: 15px;
+    transition: rgb(255, 182, 53), 0.3s , transform 0.3s;
 }
 
+.left:hover, 
+.right:hover, 
+.left-action:hover, 
+.right-action:hover, 
+.left-scifi:hover, 
+.right-scifi:hover,
+.left-drama:hover,
+.right-drama:hover,
+.left-economy:hover,
+.right-economy:hover {
+    background-color: rgb(255, 182, 53);
+    transform: scale(1.2);
+
+}
 /*********************************************************Media*********************************************************/
 /*@media (min-width: 450px ) {
     #footer-home {
