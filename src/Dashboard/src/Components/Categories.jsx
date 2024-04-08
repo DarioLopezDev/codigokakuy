@@ -5,24 +5,25 @@ export const Categories = () => {
 
     useEffect(() => {
         //fetch para traer la data de la API
-        /*const getData = async URI => {
+        const getData = async URI => {
             try {
                 const response = await fetch(URI);
                 const data = await response.json();
-                setCountCateg(data.count);
+                setCountCateg(data.countByCategory.count);
 
             } catch (error) {
                 console.log(error.message);
 
             }
         };
-        getData('http://localhost:4050/api/products');*/
+        getData('http://localhost:4050/api/products');
 
     }, []);
 
     return (
         <section>
             <h2>Total de Categorías</h2>
+            <img src="../category.png" alt="categorías" width={100} />
             <p>{countCateg} categorías</p>
         </section>
     )
